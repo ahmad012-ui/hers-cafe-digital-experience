@@ -1,14 +1,23 @@
 # Hers Cafe Digital Experience
 
-A concept prototype for a connected digital experience for Hers Cafe, Karachi.
+An independent, interactive concept demo for a potential Hers Cafe digital menu and direct-ordering experience in Karachi.
 
-## Project goals
+## Open the demo
 
-Explore how Hers Cafe could provide a branded customer experience across dine-in, takeaway, direct online orders, and restaurant operations.
+The root `index.html` is a self-contained responsive website concept. Open it locally in a browser or publish the repository as a static site.
 
-## Proposed experience
+It currently demonstrates:
+- A branded cafe landing page and mobile-responsive layout
+- Sample menu categories and product cards
+- Add-to-tray, quantity controls, and subtotal calculation
+- A sample checkout interaction and confirmation toast
+- A QR-menu concept section
 
-The original design export contains up to 16 screen concepts:
+**Important:** This is a pitch prototype only. The menu, products, and PKR prices are illustrative placeholders, not verified Hers Cafe information. The cart and checkout do not submit orders or take payments.
+
+## Original Stitch screen concepts
+
+The `stitch_hers_cafe_digital_ecosystem/` folder contains exported HTML and screenshots for 16 screen concepts:
 
 1. QR menu landing
 2. Digital menu home
@@ -27,30 +36,21 @@ The original design export contains up to 16 screen concepts:
 15. Kitchen order display
 16. Admin / business dashboard
 
-## Design direction
+Design tokens and guidance are documented in [design.md](./design.md) and the original [Stitch design-system file](./stitch_hers_cafe_digital_ecosystem/warm_artisanal_bistro/DESIGN.md).
 
-The concept is intended to reflect Hers Cafe's existing brand and provide a modern, mobile-first menu and ordering experience. The designs should use the cafe's own logo and verified brand assets rather than inventing a replacement identity.
+## Before presenting or launching
 
-## Important status notes
-
-- This repository currently documents the concept and its intended screen structure.
-- Screen designs are prototype concepts, not a production-ready ordering or POS system.
-- Payment processing, live order tracking, inventory, POS integrations, customer accounts, and backend services must not be considered operational unless separately implemented and tested.
-- Menu items, prices, promotions, reviews, and business claims should be verified with Hers Cafe before public use.
-- Direct ordering can complement Foodpanda; any commission savings depend on actual order mix and operating costs.
+- Describe this as an independent concept, not an official Hers Cafe product.
+- Verify the real logo, menu, prices, location, operating hours, and brand assets with the owners.
+- Replace sample food photography and placeholder products with approved cafe assets.
+- Ask how dine-in orders are currently handled before proposing POS or kitchen integrations.
+- Confirm order handling, payment provider, delivery/pickup rules, privacy requirements, and ownership before production implementation.
+- Do not promise Foodpanda commission savings without comparing actual order volumes, platform fees, and direct-order operating costs.
 
 ## Source design
 
-Google Stitch project:
-https://stitch.withgoogle.com/projects/15408161197261594040
-
-## Next steps
-
-1. Add the exported Stitch screen HTML, screenshots, and design-system files to this repository.
-2. Review all screen designs against Hers Cafe's real logo, menu, colors, and operating workflow.
-3. Convert the approved screens into a responsive application.
-4. Implement and test ordering, POS, payment, and admin integrations only after requirements are confirmed.
+Google Stitch project: https://stitch.withgoogle.com/projects/15408161197261594040
 
 ## Disclaimer
 
-This is an independent concept prepared for discussion. It is not an official Hers Cafe product and does not imply endorsement by Hers Cafe.
+This repository is an independent discussion concept and does not imply endorsement by Hers Cafe. No live ordering, payment, tracking, customer account, POS, or admin backend is connected.
