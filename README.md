@@ -2,18 +2,14 @@
 
 An independent, interactive concept demo for a potential Hers Cafe digital menu and direct-ordering experience in Karachi.
 
-## Open the demo
+## Open the demos
 
-The root `index.html` is a self-contained responsive website concept. Open it locally in a browser or publish the repository as a static site.
+- **[Customer journey — compiled pages](./customer-flow.html)**: Home, menu, item details, cart, checkout, and confirmation screens in one interactive flow.
+- **[Website concept](./index.html)**: Landing page with menu, cart, checkout sample, and QR-menu concept.
 
-It currently demonstrates:
-- A branded cafe landing page and mobile-responsive layout
-- Sample menu categories and product cards
-- Add-to-tray, quantity controls, and subtotal calculation
-- A sample checkout interaction and confirmation toast
-- A QR-menu concept section
+The compiled customer journey lets you move between screens and try adding menu items, adjusting quantities, reviewing a subtotal, and previewing checkout confirmation.
 
-**Important:** This is a pitch prototype only. The menu, products, and PKR prices are illustrative placeholders, not verified Hers Cafe information. The cart and checkout do not submit orders or take payments.
+**Important:** This is a pitch prototype only. Menu names, food photos, and PKR prices are illustrative placeholders, not verified Hers Cafe information. The cart is local to the browser; checkout does not send orders, collect/process payments, or contact the cafe.
 
 ## Original Stitch screen concepts
 
