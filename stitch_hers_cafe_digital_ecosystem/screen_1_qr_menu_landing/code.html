@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hers Cafe Karachi — Dine-In Menu</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-tint": "#785748",
+            "inverse-on-surface": "#f3f0eb",
+            "surface-container-low": "#f6f3ee",
+            "secondary": "#97472e",
+            "primary": "#250f05",
+            "primary-fixed": "#ffdbcc",
+            "surface-container-highest": "#e5e2dd",
+            "surface-variant": "#e5e2dd",
+            "on-error": "#ffffff",
+            "inverse-surface": "#31302d",
+            "primary-container": "#3d2317",
+            "surface-container": "#f0ede9",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#2d150a",
+            "inverse-primary": "#e9bdab",
+            "outline": "#82746f",
+            "on-secondary-fixed": "#3a0a00",
+            "on-surface-variant": "#504440",
+            "surface-bright": "#fcf9f4",
+            "surface-dim": "#dcdad5",
+            "on-secondary-container": "#772f18",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "on-primary-fixed-variant": "#5e4032",
+            "error-container": "#ffdad6",
+            "tertiary": "#001a0a",
+            "background": "#fcf9f4",
+            "on-secondary-fixed-variant": "#793019",
+            "outline-variant": "#d4c3bd",
+            "tertiary-fixed": "#b9efc5",
+            "secondary-fixed-dim": "#ffb59f",
+            "primary-fixed-dim": "#e9bdab",
+            "on-tertiary-container": "#699c77",
+            "on-error-container": "#93000a",
+            "surface-container-high": "#ebe8e3",
+            "on-tertiary-fixed-variant": "#1e5031",
+            "tertiary-fixed-dim": "#9dd3aa",
+            "on-background": "#1c1c19",
+            "on-tertiary-fixed": "#00210e",
+            "on-surface": "#1c1c19",
+            "secondary-fixed": "#ffdbd0",
+            "surface": "#fcf9f4",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-container": "#af8878",
+            "secondary-container": "#fe997a",
+            "on-tertiary": "#ffffff",
+            "tertiary-container": "#003117"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-desktop": "1.5rem",
+            "margin-desktop": "3rem",
+            "space-xs": "0.25rem",
+            "margin": "1rem",
+            "space-md": "1rem",
+            "margin-tablet": "2rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "gutter": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "headline-sm": [
+              "Plus Jakarta Sans"
+            ],
+            "display-lg": [
+              "Playfair Display"
+            ],
+            "title-md": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-lg": [
+              "Playfair Display"
+            ],
+            "label-md": [
+              "Plus Jakarta Sans"
+            ],
+            "body-sm": [
+              "Plus Jakarta Sans"
+            ],
+            "label-sm": [
+              "Plus Jakarta Sans"
+            ],
+            "label-lg": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-md": [
+              "Playfair Display"
+            ],
+            "body-md": [
+              "Plus Jakarta Sans"
+            ],
+            "body-lg": [
+              "Plus Jakarta Sans"
+            ],
+            "display-lg-mobile": [
+              "Playfair Display"
+            ]
+          },
+          "fontSize": {
+            "headline-sm": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "700"
+              }
+            ],
+            "display-lg": [
+              "48px",
+              {
+                "lineHeight": "56px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "title-md": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "600"
+              }
+            ],
+            "headline-lg": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "600"
+              }
+            ],
+            "label-md": [
+              "12px",
+              {
+                "lineHeight": "16px",
+                "letterSpacing": "0.02em",
+                "fontWeight": "600"
+              }
+            ],
+            "body-sm": [
+              "12px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "400"
+              }
+            ],
+            "label-sm": [
+              "10px",
+              {
+                "lineHeight": "14px",
+                "letterSpacing": "0.04em",
+                "fontWeight": "700"
+              }
+            ],
+            "label-lg": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "letterSpacing": "0.01em",
+                "fontWeight": "700"
+              }
+            ],
+            "headline-md": [
+              "24px",
+              {
+                "lineHeight": "32px",
+                "fontWeight": "600"
+              }
+            ],
+            "body-md": [
+              "14px",
+              {
+                "lineHeight": "22px",
+                "fontWeight": "400"
+              }
+            ],
+            "body-lg": [
+              "16px",
+              {
+                "lineHeight": "26px",
+                "fontWeight": "400"
+              }
+            ],
+            "display-lg-mobile": [
+              "36px",
+              {
+                "lineHeight": "44px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "700"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col font-body-md text-body-md selection:bg-secondary-container selection:text-primary">
+<!-- TOP APP BAR (Shared Component JSON Blueprint) -->
+<header class="bg-surface/90 dark:bg-inverse-surface/90 backdrop-blur-md sticky top-0 z-40 flex justify-between items-center w-full px-4 h-16 max-w-7xl mx-auto shadow-sm">
+<div class="flex items-center gap-3">
+<button aria-label="Table Details" class="p-2 rounded-full hover:bg-surface-container active:scale-95 transition-all text-primary flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-primary text-[24px]">table_restaurant</span>
+</button>
+<div class="flex flex-col">
+<span class="text-headline-md font-headline-md font-bold text-primary tracking-tight leading-none">Hers Cafe</span>
+<span class="text-label-sm font-label-sm text-secondary font-bold tracking-wider pt-0.5">CLIFTON, KARACHI</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<!-- Quick Service Notification Icon -->
+<button aria-label="Call Waiter" class="p-2 rounded-full hover:bg-surface-container active:scale-95 transition-all text-primary flex items-center justify-center relative" type="button">
+<span class="material-symbols-outlined text-primary text-[24px]">room_service</span>
+<span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-secondary rounded-full ring-2 ring-surface"></span>
+</button>
+</div>
+</header>
+<!-- MAIN SCROLLABLE CONTENT CANVAS (Optimized for Mobile QR Dine-In) -->
+<main class="flex-1 w-full max-w-md mx-auto px-4 pt-3 pb-28">
+<!-- DINE-IN STATUS PILLS & BADGES -->
+<div class="flex items-center justify-between gap-2 mb-4">
+<div class="inline-flex items-center gap-1.5 bg-surface-container-high px-3 py-1.5 rounded-full border border-outline-variant/40 shadow-sm">
+<span class="text-secondary text-sm">📍</span>
+<span class="text-label-md font-label-md font-bold text-primary tracking-tight">Table 07 • Courtyard Hall</span>
+</div>
+<div class="inline-flex items-center gap-1.5 bg-surface-container-lowest px-3 py-1.5 rounded-full border border-outline-variant/40 shadow-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-[#1e7e34] animate-pulse"></span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-semibold">Kitchen Closes 11:30 PM</span>
+</div>
+</div>
+<!-- BRAND MASCOT & WELCOME INTRO -->
+<section class="bg-surface-container-lowest rounded-3xl p-5 mb-5 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] border border-outline-variant/30 text-center relative overflow-hidden">
+<!-- Mascot Illustrated Centerpiece -->
+<div class="relative mx-auto w-32 h-28 mb-1 flex items-center justify-center">
+<div class="absolute inset-0 bg-secondary-fixed/30 rounded-full blur-xl scale-90"></div>
+<img alt="Hers Cafe Signature Mascot Pastry Chef" class="relative max-h-full max-w-full object-contain drop-shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCccNeqoAzhHjppzId8_quovwmvkfhx7Y0X4HTQ_HXioKAlpdzRWpdJ8PW61NfrUVFyTNGuHkmwq13nlUgTo0RYC5JWVzhC4pAcb2Tvp7-Ss8MiyLoPnplb6jwTnTdGTrQKRaDBQvlov_bg-2SbQ47D2osf-I-DjxQd43EaXw0X3PMvPUb-osFFzilvKhMZw86idIpzSi_rVQtxWDrpUjJGlhu7aUAJks6brBgY_5NaSIFkJLnAST78tnhs5cWiiheE7aI"/>
+</div>
+<h1 class="text-display-lg-mobile font-display-lg-mobile text-primary tracking-tight mb-2">
+        Welcome to Hers Café
+      </h1>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-xs mx-auto leading-relaxed">
+        Handcrafted coffee, artisanal savouries &amp; decadent desserts made fresh for you in Karachi.
+      </p>
+<!-- Language & Dietary Preferences Bar -->
+<div class="mt-4 pt-4 border-t border-outline-variant/20 flex items-center justify-between px-1">
+<!-- Language Switcher Pill -->
+<div class="inline-flex bg-surface-container rounded-full p-0.5 border border-outline-variant/30 text-label-sm font-label-sm">
+<button class="px-3 py-1 bg-surface-container-lowest text-primary rounded-full font-bold shadow-sm" type="button">English</button>
+<button class="px-3 py-1 text-on-surface-variant hover:text-primary transition-colors" type="button">اردو</button>
+</div>
+<!-- Vegetarian Filter Toggle -->
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<span class="text-label-sm font-label-sm font-bold text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-green-700 text-base" data-weight="fill">spa</span>
+            Veg Only
+          </span>
+<div class="relative">
+<input class="sr-only peer" id="vegToggle" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-outline-variant after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</div>
+</label>
+</div>
+</section>
+<!-- HERO SHOWCASE CARD (Nutella French Toast, Iced Spanish Latte, Crispy Chicken Burger) -->
+<section class="mb-5">
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] border border-outline-variant/30">
+<!-- Hero Image Presentation -->
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500" data-alt="A delectable, warm-toned food photography spread at Hers Cafe in Karachi featuring golden brioche Nutella French toast dusted with powdered sugar, an artisanal iced Spanish latte with distinct creamy layers in a ribbed glass, and a crispy gourmet buttermilk fried chicken burger on a toasted brioche bun. Soft ambient bistro morning sunlight shines on a tactile wooden cafe table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_Q2ZB_n8eTgTAA3bfRF4JBxNU9zqFHScUAZB5IrNcyxjoVJ_D5wkAyWiGxZpvwJPI7Hz39LPzvLd5jS35kEhjbq4CV94dTyqzyyWIHT21TfVt0vmSPyJ9V8o91B1QUiRQZM6WliOVlREJgv1Ps9mK88i-brsSD8n_7PK_vKIgnMeowALAcYUIK9Qr-L-ow636B_UYaIFHfvcwm_gIlz_aTByi1m88cwJKNk9BSXR9yB02LhK1e7vt3A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<!-- Badges on Hero -->
+<div class="absolute top-3 left-3 flex gap-1.5 flex-wrap">
+<span class="inline-flex items-center gap-1 bg-[#FAF0EC] border border-[#FE997A]/40 text-[#A34B32] text-label-sm font-label-sm px-2.5 py-1 rounded-full font-bold shadow-sm backdrop-blur-sm">
+<span class="material-symbols-outlined text-xs" data-weight="fill">star</span>
+              Chef's Table Signature
+            </span>
+</div>
+<div class="absolute bottom-3 left-4 right-4 text-white">
+<p class="text-label-sm font-label-sm text-secondary-fixed uppercase tracking-wider font-bold">Featured Dine-in Trio</p>
+<h2 class="text-headline-md font-headline-md text-white drop-shadow-sm">The Courtyard Morning Feast</h2>
+<p class="text-body-sm font-body-sm text-surface-container-low line-clamp-1 mt-0.5">Brioche French toast, signature Spanish latte &amp; artisan chicken burger</p>
+</div>
+</div>
+<!-- Hero Card Quick Metrics -->
+<div class="p-4 bg-surface-container-lowest flex items-center justify-between border-t border-outline-variant/20">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Exclusive Dine-In Bundle</span>
+<span class="text-headline-sm font-headline-sm text-primary font-bold">PKR 2,450</span>
+</div>
+<button class="inline-flex items-center gap-1.5 bg-primary hover:bg-primary-container text-white px-4 py-2.5 rounded-full text-label-md font-label-md font-bold active:scale-95 transition-all shadow-sm" type="button">
+<span>Add Combo</span>
+<span class="material-symbols-outlined text-sm">add_circle</span>
+</button>
+</div>
+</div>
+</section>
+<!-- PRIMARY ACTION BUTTONS -->
+<section class="space-y-3 mb-6">
+<!-- Primary Action: View Full Menu -->
+<a class="w-full h-12 bg-primary hover:bg-primary-container text-white rounded-full flex items-center justify-between px-6 shadow-md active:scale-[0.98] transition-all" href="#full-menu">
+<span class="text-label-lg font-label-lg tracking-wide font-bold">View Full Menu</span>
+<span class="material-symbols-outlined text-xl">arrow_forward</span>
+</a>
+<!-- Secondary Action: Order Directly from Table 07 -->
+<button class="w-full h-12 bg-surface-container hover:bg-surface-container-high text-primary border border-outline-variant/60 rounded-full flex items-center justify-between px-6 active:scale-[0.98] transition-all" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-xl">touch_app</span>
+<span class="text-label-lg font-label-lg font-bold">Order Directly from Table 07</span>
+</div>
+<span class="text-label-sm font-label-sm font-bold bg-secondary-fixed/50 text-on-secondary-fixed px-2 py-0.5 rounded-full">Dine-in Instant</span>
+</button>
+</section>
+<!-- QUICK HIGHLIGHTS STRIP -->
+<section class="mb-6">
+<div class="bg-surface-container-low rounded-2xl p-3 border border-outline-variant/40 flex items-center justify-between text-center divide-x divide-outline-variant/40">
+<div class="flex-1 px-2">
+<span class="material-symbols-outlined text-primary text-lg block mb-0.5">wifi</span>
+<span class="text-label-sm font-label-sm font-bold text-primary block leading-tight">HersCafe_Guest</span>
+<span class="text-[10px] text-on-surface-variant">Free High Speed</span>
+</div>
+<div class="flex-1 px-2">
+<span class="material-symbols-outlined text-secondary text-lg block mb-0.5">coffee</span>
+<span class="text-label-sm font-label-sm font-bold text-primary block leading-tight">Drip Refills</span>
+<span class="text-[10px] text-on-surface-variant">Unlimited on table</span>
+</div>
+<div class="flex-1 px-2">
+<span class="material-symbols-outlined text-[#2A5235] text-lg block mb-0.5">bakery_dining</span>
+<span class="text-label-sm font-label-sm font-bold text-primary block leading-tight">Pure Dairy</span>
+<span class="text-[10px] text-on-surface-variant">Fresh Daily Bakes</span>
+</div>
+</div>
+</section>
+<!-- POPULAR TASTING HIGHLIGHTS (Bento-style preview grid) -->
+<section class="mb-6" id="full-menu">
+<div class="flex items-center justify-between mb-3 px-1">
+<h3 class="text-title-md font-title-md font-bold text-primary">Crowd Favorites</h3>
+<span class="text-label-sm font-label-sm text-secondary font-bold cursor-pointer">Browse Categories →</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Item 1: Nutella Brioche -->
+<div class="bg-surface-container-lowest p-3 rounded-2xl border border-outline-variant/30 flex flex-col justify-between shadow-sm">
+<div class="relative w-full aspect-square rounded-xl overflow-hidden bg-surface-container mb-2.5">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of thick golden French toast stuffed with melted Nutella hazelnut spread, garnished with organic sliced strawberries and fresh mint leaves on an artisanal ceramic bistro plate with warm soft cafe lighting in Hers Cafe Karachi." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWqjWfA3tNGTd40NeUvshpD6R1-k2HSVajEJ2jEgNs9sPKMbxpcROb2NZtuURbu1MlKJKYc7PcpxzWlOn7IXZ9oEwMKKXQ5ur0BJJCZ4mzeJH6or7iOVUDphSX-7uKSffPlsrzU7apF1iJKQg8gs7bQSUDYj-E-E-ioKdsJodcoKY706aUI0IbFDGDoIVZkLXTS1sML9HZKTnjjXmHTc-avubifQgTP9WrFDHvDA8zvmwagLmPXUN_Hg"/>
+<span class="absolute bottom-1.5 left-1.5 bg-[#FEF7EB] text-[#92400E] text-[10px] font-bold px-2 py-0.5 rounded-full border border-[#92400E]/20">Best Value</span>
+</div>
+<div>
+<h4 class="text-title-md font-title-md text-primary text-sm font-bold leading-snug">Nutella French Toast</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Thick brioche &amp; berries</p>
+</div>
+<div class="flex items-center justify-between mt-3 pt-2 border-t border-outline-variant/20">
+<span class="text-label-md font-label-md font-bold text-primary">PKR 890</span>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white active:scale-90 transition-all">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+</div>
+</div>
+<!-- Item 2: Spanish Latte -->
+<div class="bg-surface-container-lowest p-3 rounded-2xl border border-outline-variant/30 flex flex-col justify-between shadow-sm">
+<div class="relative w-full aspect-square rounded-xl overflow-hidden bg-surface-container mb-2.5">
+<img class="w-full h-full object-cover" data-alt="An iced Spanish latte in a ribbed glass tumbler showing distinct espresso and condensed sweetened milk gradient layers topped with dense cold foam, placed on a warm travertine coaster inside an elegant Karachi bistro." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApWsa719FoxRPDZzatqasDCdR0Wb5w479_zPt4H2CaV87t-A1JR6ObwfUDko0NVaKjL27OENQlgzrbdToPYlgz1oUoChxSjwlYuCsDAYM6bH4WD4hmHiE8GnZJncdYJHUYAe_DH_pjt5UhnuAhAMssicpVWtBJgbSiEeVh0xXiVjN_kCCl8U4EPqS-HrGDfcWPgHtlaoxmiGAFbByP3N3w28p67Q1GNh69Z63CwJa3ojd4ETddq4CvRg"/>
+<span class="absolute bottom-1.5 left-1.5 bg-[#FAF0EC] text-[#A34B32] text-[10px] font-bold px-2 py-0.5 rounded-full border border-[#A34B32]/20">Signature</span>
+</div>
+<div>
+<h4 class="text-title-md font-title-md text-primary text-sm font-bold leading-snug">Iced Spanish Latte</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Double shot &amp; condensed milk</p>
+</div>
+<div class="flex items-center justify-between mt-3 pt-2 border-t border-outline-variant/20">
+<span class="text-label-md font-label-md font-bold text-primary">PKR 650</span>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white active:scale-90 transition-all">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- WARM BRAND FOOTER -->
+<footer class="pt-6 pb-4 border-t border-outline-variant/30 text-center">
+<div class="flex items-center justify-center gap-1.5 mb-1.5 text-primary">
+<span class="material-symbols-outlined text-secondary text-sm">storefront</span>
+<span class="text-label-md font-label-md font-bold">Hers Café, Block 4, Clifton, Karachi</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+        Crafted with pride &amp; warmth for Karachi's dessert lovers
+      </p>
+<div class="mt-3 flex justify-center items-center gap-4 text-label-sm font-label-sm text-on-surface-variant">
+<span>GST # 3277874-9</span>
+<span>•</span>
+<span>Dine-In Session Active</span>
+<span>•</span>
+<span class="text-secondary font-bold">Need Help? Ring Table Bell</span>
+</div>
+</footer>
+</main>
+<!-- BOTTOM NAVIGATION BAR (Shared Component JSON Blueprint) -->
+<!-- Active Tab semantic match: 'Menu' is current screen intent -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 bg-surface/95 dark:bg-inverse-surface/95 backdrop-blur-md shadow-[0_-4px_24px_rgba(61,35,23,0.08)]">
+<!-- Item 1: Menu (ACTIVE) -->
+<button class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary-fixed text-on-primary dark:text-on-primary-fixed rounded-2xl px-3 py-1.5 transition-all active:scale-95 duration-150" type="button">
+<span class="material-symbols-outlined text-[20px]" data-weight="fill">menu_book</span>
+<span class="text-label-sm font-label-sm mt-0.5">Menu</span>
+</button>
+<!-- Item 2: Favorites -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-3 py-1.5 hover:text-primary dark:hover:text-inverse-primary transition-colors active:scale-95 duration-150" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+<span class="text-label-sm font-label-sm mt-0.5">Favorites</span>
+</button>
+<!-- Item 3: Active Order -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-3 py-1.5 hover:text-primary dark:hover:text-inverse-primary transition-colors active:scale-95 duration-150 relative" type="button">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+<span class="text-label-sm font-label-sm mt-0.5">Active Order</span>
+<span class="absolute top-1 right-3 w-1.5 h-1.5 bg-secondary rounded-full"></span>
+</button>
+<!-- Item 4: Assistance -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-3 py-1.5 hover:text-primary dark:hover:text-inverse-primary transition-colors active:scale-95 duration-150" type="button">
+<span class="material-symbols-outlined text-[20px]">concierge</span>
+<span class="text-label-sm font-label-sm mt-0.5">Assistance</span>
+</button>
+</nav>
+<!-- Interactive script for table order / dietary feedback -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const vegToggle = document.getElementById('vegToggle');
+      if (vegToggle) {
+        vegToggle.addEventListener('change', (e) => {
+          if (e.target.checked) {
+            console.log('Vegetarian filter applied for Table 07');
+          }
+        });
+      }
+    });
+  </script>
+</body></html>

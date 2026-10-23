@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Order Confirmation — Hers Cafe</title>
+<!-- Material Symbols & Typography -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with custom configuration -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed": "#b9efc5",
+            "surface": "#fcf9f4",
+            "error": "#ba1a1a",
+            "outline-variant": "#d4c3bd",
+            "surface-container-low": "#f6f3ee",
+            "primary-fixed-dim": "#e9bdab",
+            "on-secondary-fixed-variant": "#793019",
+            "surface-container-high": "#ebe8e3",
+            "inverse-on-surface": "#f3f0eb",
+            "primary-fixed": "#ffdbcc",
+            "on-tertiary-fixed": "#00210e",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#ffdbd0",
+            "surface-dim": "#dcdad5",
+            "on-tertiary-fixed-variant": "#1e5031",
+            "on-primary": "#ffffff",
+            "background": "#fcf9f4",
+            "tertiary": "#001a0a",
+            "on-secondary-fixed": "#3a0a00",
+            "on-surface-variant": "#504440",
+            "on-primary-fixed-variant": "#5e4032",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#ffb59f",
+            "on-background": "#1c1c19",
+            "tertiary-fixed-dim": "#9dd3aa",
+            "on-tertiary-container": "#699c77",
+            "on-secondary": "#ffffff",
+            "outline": "#82746f",
+            "inverse-primary": "#e9bdab",
+            "inverse-surface": "#31302d",
+            "surface-container": "#f0ede9",
+            "primary-container": "#3d2317",
+            "surface-variant": "#e5e2dd",
+            "surface-bright": "#fcf9f4",
+            "on-secondary-container": "#772f18",
+            "surface-tint": "#785748",
+            "tertiary-container": "#003117",
+            "on-primary-container": "#af8878",
+            "secondary-container": "#fe997a",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "error-container": "#ffdad6",
+            "primary": "#250f05",
+            "on-primary-fixed": "#2d150a",
+            "secondary": "#97472e",
+            "on-surface": "#1c1c19",
+            "surface-container-highest": "#e5e2dd"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "2.5rem",
+            "gutter": "1rem",
+            "gutter-desktop": "1.5rem",
+            "space-lg": "1.5rem",
+            "margin-desktop": "3rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "margin-tablet": "2rem",
+            "margin": "1rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "display-lg": ["Playfair Display", "serif"],
+            "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "title-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg": ["Playfair Display", "serif"],
+            "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "label-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "display-lg-mobile": ["Playfair Display", "serif"],
+            "label-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Playfair Display", "serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "label-lg": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          "fontSize": {
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+    }
+    @keyframes subtlePulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.08); opacity: 0.85; }
+    }
+    .status-pulse {
+      animation: subtlePulse 2.4s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen font-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Main Canvas Container: Optimized for tactile mobile & centered on tablet/desktop -->
+<div class="max-w-xl mx-auto min-h-screen flex flex-col bg-surface shadow-2xl relative">
+<!-- Top App Bar (Minimal Clean with Table 07 Badge & Home Action) -->
+<header class="sticky top-0 z-40 flex items-center justify-between px-margin py-3.5 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<a aria-label="Home" class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container text-primary hover:bg-surface-container-high transition-colors active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+</a>
+<div class="flex items-center gap-1.5 px-3 py-1 bg-surface-container-high rounded-full border border-outline-variant/40">
+<span class="material-symbols-outlined text-[16px] text-primary" data-weight="fill" style="font-variation-settings: 'FILL' 1;">table_restaurant</span>
+<span class="font-label-md text-label-md text-primary font-bold tracking-tight">Table 07</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Courtyard</span>
+</div>
+</div>
+<!-- Cafe Branding Logo -->
+<div class="flex items-center">
+<img alt="Hers Cafe" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlSchyz9AXAaLiJNy6fW1xwoC6yH4VBRMr9mVk8O3EfWwbABiKGn6VPt-v9bV6fRkeoLkBQOnp7Xha8BwTMXfB1JyKYQoHj_a60hIpQJKxAN_4onJZVGmjRUtCLQ0C_ibWeP-1HQLdFmX7cQ4eP9LfsyfcRu68XPEyAjI6VNeKPrnhTjPjR6aQsPznYkWATE8WK3Oacekzi0FAmaNagYK-aabC5SSxyDCDFMveNR4qZsP0stSuJx4VMU19XVf0296W-FU"/>
+</div>
+<a aria-label="Close" class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container text-primary hover:bg-surface-container-high transition-colors active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</a>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-margin py-space-md space-y-5 pb-10">
+<!-- Success Banner Section -->
+<section class="bg-surface-container-lowest rounded-[24px] p-space-lg border border-outline-variant/40 text-center relative overflow-hidden shadow-[0_4px_24px_rgba(61,35,23,0.06)]">
+<!-- Ambient Decorative Halo -->
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-48 h-48 bg-primary-fixed/30 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col items-center">
+<!-- Artisanal Circular Badge -->
+<div class="w-20 h-20 rounded-full bg-surface-container-low border-2 border-primary/10 flex items-center justify-center mb-4 shadow-inner relative">
+<div class="w-14 h-14 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[32px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="absolute -bottom-1 px-2.5 py-0.5 bg-secondary text-on-secondary font-label-sm text-label-sm rounded-full tracking-wider uppercase shadow-sm">Sent</span>
+</div>
+<!-- Headline & Subtitle -->
+<h1 class="font-headline-md text-headline-md text-primary mb-1.5 font-bold tracking-tight">Order Sent to Kitchen!</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-4 leading-relaxed">
+            Chef has received your table order. Fresh preparation has begun.
+          </p>
+<!-- Order Reference Chip -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-surface-container-low rounded-xl border border-outline-variant/30 text-on-surface-variant font-label-md text-label-md mb-5">
+<span class="font-bold text-primary">#HC-8429</span>
+<span class="text-outline-variant">•</span>
+<span>Table 07 (Courtyard)</span>
+</div>
+<!-- Estimated Wait Time Box -->
+<div class="w-full bg-surface-container/60 rounded-2xl p-3.5 flex items-center justify-between border border-outline-variant/20">
+<div class="flex items-center gap-2.5 text-left">
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">timer</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide">Estimated Wait Time</p>
+<p class="font-title-md text-title-md text-primary font-bold">18 - 22 mins</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest rounded-full border border-outline-variant/30 text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-md text-label-md font-bold">Live</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Visual Order Status Timeline (Mandatory 4-step progressive tracker) -->
+<section class="bg-surface-container-lowest rounded-[24px] p-space-lg border border-outline-variant/40 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)]">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Kitchen Progress</h2>
+<span class="font-label-md text-label-md text-secondary font-bold">Step 2 of 4</span>
+</div>
+<div class="relative pl-7 space-y-6">
+<!-- Timeline Vertical Connecting Line -->
+<div class="absolute left-3.5 top-2 bottom-3 w-[2px] bg-outline-variant/30 -translate-x-1/2">
+<!-- Active Progress Filler (Reaching Step 2) -->
+<div class="w-full h-1/3 bg-primary-container"></div>
+</div>
+<!-- Step 1: Order Received (Completed) -->
+<div class="relative flex items-start gap-3.5 group">
+<div class="absolute -left-7 top-0.5 w-7 h-7 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center border-2 border-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-[16px] font-bold" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="flex-1 flex items-center justify-between pt-0.5">
+<div>
+<p class="font-title-md text-title-md text-primary font-bold leading-none mb-1">Order Received</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Confirmed by barista terminal</p>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full font-medium">8:42 PM</span>
+</div>
+</div>
+<!-- Step 2: Preparing in Kitchen (Active / Pulse badge) -->
+<div class="relative flex items-start gap-3.5">
+<div class="absolute -left-7 top-0.5 w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center border-2 border-surface-container-lowest shadow-sm status-pulse">
+<span class="material-symbols-outlined text-[15px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">skillet</span>
+</div>
+<div class="flex-1 flex items-center justify-between pt-0.5">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<p class="font-title-md text-title-md text-primary font-bold leading-none">Preparing in Kitchen</p>
+<span class="inline-flex items-center px-2 py-0.5 bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm rounded-full font-bold">In Progress</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Chef is grilling burger patties &amp; steaming milk</p>
+</div>
+</div>
+</div>
+<!-- Step 3: Plated & Ready (Upcoming) -->
+<div class="relative flex items-start gap-3.5 opacity-60">
+<div class="absolute -left-7 top-0.5 w-7 h-7 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-[15px]">room_service</span>
+</div>
+<div class="flex-1 pt-0.5">
+<p class="font-title-md text-title-md text-on-surface font-semibold leading-none mb-1">Plated &amp; Ready</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Quality check at pass counter</p>
+</div>
+</div>
+<!-- Step 4: Served to Table 07 (Upcoming) -->
+<div class="relative flex items-start gap-3.5 opacity-60">
+<div class="absolute -left-7 top-0.5 w-7 h-7 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-[15px]">table_restaurant</span>
+</div>
+<div class="flex-1 pt-0.5">
+<p class="font-title-md text-title-md text-on-surface font-semibold leading-none mb-1">Served to Table 07</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Brought fresh to Courtyard</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Card: Order Summary Accordion / List -->
+<section class="bg-surface-container-lowest rounded-[24px] p-space-lg border border-outline-variant/40 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)]">
+<div class="flex items-center justify-between pb-3.5 border-b border-outline-variant/30 mb-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Order Summary</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">3 items • Dine-in service</p>
+</div>
+<span class="px-2.5 py-1 bg-surface-container rounded-full text-on-surface-variant font-label-md text-label-md font-semibold">Billed</span>
+</div>
+<!-- Item List -->
+<div class="space-y-3.5 mb-5">
+<!-- Item 1 -->
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-2.5">
+<span class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center font-label-md text-label-md font-bold text-primary shrink-0 mt-0.5">1×</span>
+<div>
+<p class="font-title-md text-title-md text-primary font-bold">The Hers Signature Smash</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Double Smash, Extra Cheddar</p>
+</div>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold tabular-nums">Rs. 1,850</span>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-2.5">
+<span class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center font-label-md text-label-md font-bold text-primary shrink-0 mt-0.5">1×</span>
+<div>
+<p class="font-title-md text-title-md text-primary font-bold">Crispy Nashville Hot Chicken Burger</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Medium Spice, Coleslaw</p>
+</div>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold tabular-nums">Rs. 1,550</span>
+</div>
+<!-- Item 3 -->
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-2.5">
+<span class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center font-label-md text-label-md font-bold text-primary shrink-0 mt-0.5">2×</span>
+<div>
+<p class="font-title-md text-title-md text-primary font-bold">Iced Spanish Latte</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Condensed Milk, Oat Milk Substitute</p>
+</div>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold tabular-nums">Rs. 1,449</span>
+</div>
+</div>
+<!-- Receipt Divider & Calculation -->
+<div class="pt-3.5 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<p class="font-title-md text-title-md text-primary font-bold">Total Billed</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Inclusive of taxes &amp; dine-in service</p>
+</div>
+<span class="font-headline-md text-headline-md text-primary font-bold tabular-nums">Rs. 4,849</span>
+</div>
+</section>
+<!-- Action Buttons -->
+<section class="space-y-3">
+<!-- Primary CTA: Track Live Preparation with beacon -->
+<button class="w-full h-13 py-3.5 px-6 rounded-2xl bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2.5 shadow-md hover:bg-primary transition-all active:scale-[0.98]">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span>Track Live Preparation</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<!-- Secondary CTA: Add More Items -->
+<button class="w-full h-12 py-3 px-6 rounded-2xl bg-surface-container-low border border-outline-variant/40 text-primary font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-surface-container transition-colors active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Add More Items to Table 07</span>
+</button>
+</section>
+<!-- Quick Service Strip -->
+<section class="space-y-3 pt-1">
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-bold px-1">At Your Service</h3>
+<div class="grid grid-cols-2 gap-3">
+<!-- Call Server / Water Refill -->
+<button class="p-3.5 rounded-2xl bg-surface-container-lowest border border-outline-variant/40 flex flex-col items-start justify-between text-left hover:border-primary/40 transition-colors active:scale-95 shadow-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-primary font-bold leading-tight">Call Server</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Water refill or cutlery</p>
+</div>
+</button>
+<!-- Request Bill Copy -->
+<button class="p-3.5 rounded-2xl bg-surface-container-lowest border border-outline-variant/40 flex flex-col items-start justify-between text-left hover:border-primary/40 transition-colors active:scale-95 shadow-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-primary font-bold leading-tight">Request Bill</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Digital or paper copy</p>
+</div>
+</button>
+</div>
+<!-- Wi-Fi Credentials Card -->
+<div class="rounded-2xl bg-surface-container-low p-4 border border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">wifi</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Network:</span>
+<span class="font-title-md text-title-md text-primary font-bold">HersCafe_Guest</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Password:</span>
+<span class="font-body-md text-body-md font-mono text-secondary font-bold">artisanalcoffee</span>
+</div>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-lowest border border-outline-variant/40 font-label-sm text-label-sm font-bold text-primary hover:bg-surface transition-colors active:scale-95" onclick="navigator.clipboard &amp;&amp; navigator.clipboard.writeText('artisanalcoffee');">
+            Copy
+          </button>
+</div>
+</section>
+</main>
+<!-- Artisanal Footer Sign-off -->
+<footer class="py-4 text-center border-t border-outline-variant/20 bg-surface">
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hers Cafe Karachi • Freshly handcrafted with passion</p>
+</footer>
+</div>
+</body></html>

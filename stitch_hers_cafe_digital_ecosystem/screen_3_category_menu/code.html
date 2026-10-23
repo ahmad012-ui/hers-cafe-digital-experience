@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hers Cafe Karachi - Burgers &amp; Sandwiches</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-tint": "#785748",
+            "inverse-on-surface": "#f3f0eb",
+            "surface-container-low": "#f6f3ee",
+            "secondary": "#97472e",
+            "primary": "#250f05",
+            "primary-fixed": "#ffdbcc",
+            "surface-container-highest": "#e5e2dd",
+            "surface-variant": "#e5e2dd",
+            "on-error": "#ffffff",
+            "inverse-surface": "#31302d",
+            "primary-container": "#3d2317",
+            "surface-container": "#f0ede9",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#2d150a",
+            "inverse-primary": "#e9bdab",
+            "outline": "#82746f",
+            "on-secondary-fixed": "#3a0a00",
+            "on-surface-variant": "#504440",
+            "surface-bright": "#fcf9f4",
+            "surface-dim": "#dcdad5",
+            "on-secondary-container": "#772f18",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "on-primary-fixed-variant": "#5e4032",
+            "error-container": "#ffdad6",
+            "tertiary": "#001a0a",
+            "background": "#fcf9f4",
+            "on-secondary-fixed-variant": "#793019",
+            "outline-variant": "#d4c3bd",
+            "tertiary-fixed": "#b9efc5",
+            "secondary-fixed-dim": "#ffb59f",
+            "primary-fixed-dim": "#e9bdab",
+            "on-tertiary-container": "#699c77",
+            "on-error-container": "#93000a",
+            "surface-container-high": "#ebe8e3",
+            "on-tertiary-fixed-variant": "#1e5031",
+            "tertiary-fixed-dim": "#9dd3aa",
+            "on-background": "#1c1c19",
+            "on-tertiary-fixed": "#00210e",
+            "on-surface": "#1c1c19",
+            "secondary-fixed": "#ffdbd0",
+            "surface": "#fcf9f4",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-container": "#af8878",
+            "secondary-container": "#fe997a",
+            "on-tertiary": "#ffffff",
+            "tertiary-container": "#003117"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-desktop": "1.5rem",
+            "margin-desktop": "3rem",
+            "space-xs": "0.25rem",
+            "margin": "1rem",
+            "space-md": "1rem",
+            "margin-tablet": "2rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "gutter": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "headline-sm": ["Plus Jakarta Sans"],
+            "display-lg": ["Playfair Display"],
+            "title-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "label-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Playfair Display"]
+          },
+          "fontSize": {
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill {
+      font-variation-settings: 'FILL' 1;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased min-h-screen selection:bg-secondary-container selection:text-on-secondary-container pb-28">
+<!-- Mobile View Container -->
+<div class="max-w-md mx-auto relative bg-background min-h-screen shadow-2xl flex flex-col">
+<!-- Top App Navigation Bar -->
+<header class="sticky top-0 z-40 bg-surface/90 backdrop-blur-md px-4 py-3 flex items-center justify-between border-b border-outline-variant/30">
+<div class="flex items-center gap-3">
+<button aria-label="Go Back" class="w-10 h-10 rounded-full flex items-center justify-center text-primary bg-surface-container hover:bg-surface-container-high active:scale-95 transition-all">
+<span class="material-symbols-outlined text-primary text-[22px]">arrow_back</span>
+</button>
+<div>
+<div class="flex items-center gap-2">
+<h1 class="font-headline-sm text-headline-sm text-primary tracking-tight">Burgers &amp; Sandwiches</h1>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span>Hers Cafe</span> • <span>Boutique Bistro</span>
+</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<!-- Table Badge Indicator -->
+<div class="flex items-center gap-1 bg-primary-container text-on-primary px-2.5 py-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary-container">table_restaurant</span>
+<span class="font-label-sm text-label-sm tracking-wider">TABLE 07</span>
+</div>
+<!-- Search Action -->
+<button aria-label="Search Menu" class="w-10 h-10 rounded-full flex items-center justify-center text-primary bg-surface-container hover:bg-surface-container-high active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[22px]">search</span>
+</button>
+</div>
+</header>
+<!-- Sub-header Editorial Banner -->
+<div class="px-4 pt-3 pb-1">
+<div class="bg-surface-container-low rounded-2xl p-3 border border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-[22px]">lunch_dining</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-primary leading-tight">Artisanal Breads &amp; Patties</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Freshly baked brioche &amp; prime chuck ground daily</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-highest px-2 py-0.5 rounded-md">5 Items</span>
+</div>
+</div>
+<!-- Filter Pills Bar (Horizontal Scroll) -->
+<nav class="sticky top-[65px] z-30 bg-surface/95 backdrop-blur-md py-3 px-4 flex gap-2 overflow-x-auto no-scrollbar border-b border-outline-variant/20">
+<!-- All (Active) -->
+<button class="flex items-center gap-1.5 px-4 h-9 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm shrink-0 active:scale-95 transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span>All</span>
+</button>
+<!-- Spicy -->
+<button class="flex items-center gap-1.5 px-3.5 h-9 rounded-full bg-surface-container-lowest border border-outline-variant/40 text-on-surface-variant hover:text-primary font-label-md text-label-md shrink-0 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px] text-error">local_fire_department</span>
+<span>Spicy</span>
+</button>
+<!-- Vegetarian -->
+<button class="flex items-center gap-1.5 px-3.5 h-9 rounded-full bg-surface-container-lowest border border-outline-variant/40 text-on-surface-variant hover:text-primary font-label-md text-label-md shrink-0 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">eco</span>
+<span>Vegetarian</span>
+</button>
+<!-- Chef Special -->
+<button class="flex items-center gap-1.5 px-3.5 h-9 rounded-full bg-surface-container-lowest border border-outline-variant/40 text-on-surface-variant hover:text-primary font-label-md text-label-md shrink-0 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px] text-secondary">star</span>
+<span>Chef Special</span>
+</button>
+<!-- Best Value -->
+<button class="flex items-center gap-1.5 px-3.5 h-9 rounded-full bg-surface-container-lowest border border-outline-variant/40 text-on-surface-variant hover:text-primary font-label-md text-label-md shrink-0 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px] text-surface-tint">sell</span>
+<span>Best Value</span>
+</button>
+</nav>
+<!-- Menu Item Cards List -->
+<main class="px-4 py-4 space-y-4 flex-1">
+<!-- ITEM 1: The Hers Signature Smash -->
+<article class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 overflow-hidden shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)] transition-shadow">
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A gourmet smash burger with two caramelized crispy-edged Pakistani beef chuck patties, molten yellow American cheese cascading down the sides, house secret burger sauce, and sliced dill pickles enclosed in a golden toasted brioche bun, set upon rustic baking parchment in warm morning cafe light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASP-5BQxrAM5ylGxY5sdl43V1GTICtwADDadYUc3d87nndSgYoZuFfENXJIshfX7S24OJhidDhaiQgz6YsaQsaePxTErvwCkPWN4VGD85DolwX4eFw-Pprz-qaTnPh37zGBfldcj3SJHv5OoLFLuichOwgkqy5k2Ef5zUutgKnBHfP50bBpz_2v6bYhWPRyHbijfYiBpCYpuNt2XdjbeKMlWJNHWacuUtMBVwDF15VBSR7sVJQ0vl7yw"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 bg-surface-container-lowest/90 backdrop-blur-sm text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-full border border-secondary/20 shadow-xs">
+<span class="material-symbols-outlined text-[13px] fill">stars</span>
+<span>Chef Special</span>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full border border-outline-variant/40 shadow-xs">
+<span class="material-symbols-outlined text-[13px] fill">local_fire_department</span>
+<span>Popular</span>
+</span>
+</div>
+</div>
+<div class="p-4">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary leading-tight">The Hers Signature Smash</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Double smashed Pakistani beef chuck, American cheese, house secret sauce, dill pickles, toasted brioche.</p>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between pt-3 border-t border-outline-variant/20">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary">Rs. 1,290</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant/80 mt-0.5">Single / Double available</p>
+</div>
+<button class="h-10 px-4 rounded-xl bg-primary-container text-on-primary flex items-center gap-1.5 font-label-lg text-label-lg active:scale-95 transition-all shadow-sm hover:bg-primary">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- ITEM 2: Crispy Nashville Hot Chicken Burger -->
+<article class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 overflow-hidden shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)] transition-shadow">
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A jumbo Nashville-style crispy fried chicken burger, ultra-crunchy crust glistening with spicy cayenne crimson pepper glaze, stacked atop creamy cooling buttermilk coleslaw and crinkle pickles inside a glossy golden potato bun, photographed on artisanal ceramic tableware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCggQ2M4mufdcNquSg5C_OSGdAI5eShs2UyDijjkdDgya0uW_6ANKmZx5M1BhYzGukZP1DE2xUuK95eJ2aWmNTdFJ3rUAbHtaIznPLefmGDARuvLMhZsgBOZpPKPc3HfE8zvk0a3xtDvSfmQi8AbGTbOZjEvTlSZeJIU7o7T18coxnFJjm2Eb7Lr6fXU6vnH48fg2OvH5LLF6yUr0WlR90j_j0f7a-Q5800Q3RrQwxYCzXXaSOUd4Qxig"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 bg-error-container/95 text-on-error-container font-label-sm text-label-sm px-2.5 py-1 rounded-full shadow-xs">
+<span class="material-symbols-outlined text-[13px] fill">whatshot</span>
+<span>Extra Spicy</span>
+</span>
+</div>
+</div>
+<div class="p-4">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary leading-tight">Crispy Nashville Hot Chicken Burger</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Crispy fried chicken breast dipped in fiery cayenne oil, coleslaw, house pickles, potato bun.</p>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between pt-3 border-t border-outline-variant/20">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary">Rs. 1,180</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant/80 mt-0.5">Mild or Blazing heat</p>
+</div>
+<button class="h-10 px-4 rounded-xl bg-primary-container text-on-primary flex items-center gap-1.5 font-label-lg text-label-lg active:scale-95 transition-all shadow-sm hover:bg-primary">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- ITEM 3: Grilled Chimichurri Steak Sandwich -->
+<article class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 overflow-hidden shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)] transition-shadow">
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Tender sliced medium-rare beef tenderloin steak sandwich dressed with vibrant emerald herb chimichurri relish, creamy garlic aioli, and wild roquette leaves between two grilled crusty sourdough ciabatta slices, gourmet cafe plating with warm earthen tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtuFwSzS8umrqbK5sawqdm55c5g7n6KLCeLmEvjQ7CYzduJNRyiAIyzlBCtDymyFc4ZM3TGabbc24OI1zXRH-JMeT8BzFYj1UIz2I9D7Jxv9W66v4RC9xmEOD3LibINlytAvUV_4nTQubJVbP1Ao_tKL9GnMlwGuvavh3RGBJadQDPOOuDas8M1iO5hzFjWyfkahqXVNIr3bgp0rrhce5T5hp7g9or6XzwSrHL2DpHj0oI71-am71GgA"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 bg-surface-container-lowest/90 backdrop-blur-sm text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-full border border-secondary/20 shadow-xs">
+<span class="material-symbols-outlined text-[13px] fill">stars</span>
+<span>Chef Special</span>
+</span>
+</div>
+</div>
+<div class="p-4">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary leading-tight">Grilled Chimichurri Steak Sandwich</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Thinly sliced tenderloin, chimichurri relish, garlic aioli, roquette leaves, sourdough ciabatta.</p>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between pt-3 border-t border-outline-variant/20">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary">Rs. 1,450</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant/80 mt-0.5">Chef's recommended</p>
+</div>
+<button class="h-10 px-4 rounded-xl bg-primary-container text-on-primary flex items-center gap-1.5 font-label-lg text-label-lg active:scale-95 transition-all shadow-sm hover:bg-primary">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- ITEM 4: Truffle Mushroom & Swiss Melt (Veg) -->
+<article class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 overflow-hidden shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)] transition-shadow">
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Artisanal toasted sourdough grilled cheese sandwich overflowing with rich sautéed portobello mushrooms, deep brown caramelized sweet onions, melted Swiss cheese pull, and fragrant black truffle butter, styled in an aesthetic chic cafe setting with warm natural light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoYx7DowZLdisAQHSUQ2OtWkVDhtVbNPSqsoErtIJltLrq6NTIfjasyMh-E-DMcELULQqdfhrKRxRht6nOvlnDwiJ2cu0AbAmQeB90dnQFm3qqQErgoArsAh8IVgy3zIQdqs36t5k4UOnJ8r1HwXNJhIwJhAv0NgEhgPV8HIuvrO7X-e7B0jDK06nwuQgaPnC0obDrUOGflDD4iofW_u6HkMX6M_NR5zhLUUfnjRpmiXxJpZOtMfqCVQ"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 bg-tertiary-fixed/90 text-on-tertiary-fixed font-label-sm text-label-sm px-2.5 py-1 rounded-full border border-tertiary-fixed-dim/40 shadow-xs">
+<span class="material-symbols-outlined text-[13px] fill">eco</span>
+<span>Vegetarian</span>
+</span>
+</div>
+</div>
+<div class="p-4">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary leading-tight">Truffle Mushroom &amp; Swiss Melt (Veg)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Sautéed portobello, caramelized onions, melted Swiss cheese, truffle butter on rustic sourdough.</p>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between pt-3 border-t border-outline-variant/20">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary">Rs. 1,050</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant/80 mt-0.5">Vegetarian kitchen specialty</p>
+</div>
+<button class="h-10 px-4 rounded-xl bg-primary-container text-on-primary flex items-center gap-1.5 font-label-lg text-label-lg active:scale-95 transition-all shadow-sm hover:bg-primary">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- ITEM 5: Classic Club Sandwich 3-Tier -->
+<article class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 overflow-hidden shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)] transition-shadow">
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Traditional high-end triple-decker cafe club sandwich cut into neat triangles with visible layers of herb grilled chicken, fried egg, turkey bacon, melted yellow cheddar cheese, ripe tomatoes, and crisp butterhead lettuce, accompanied by a side basket of golden seasoned skinny French fries." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKqI51wglqslfL389WLtWZY-ZvFWHMROC2yqxuASc43MtHgC83cAG7ul2sdaE_bo8HXBBuj5GDxMz8lUcDxpNn2VtrsfkXCbEn7acCwhybDdQNuFihCh0ZlSoRx_XoZtG0ZUnZWyUNv-BrfrR6pKxcdx0NDgrmW_qgt21jMEKSSmAL8dFpGBrKFl7ozHmE5J5Yzn1yu3pZY706SsQe16vS5LJGrvZcwQWZmFnxUX2hNKVFnj0LFlen8g"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded-full border border-outline-variant/40 shadow-xs">
+<span class="material-symbols-outlined text-[13px] fill">sell</span>
+<span>Best Value</span>
+</span>
+</div>
+</div>
+<div class="p-4">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary leading-tight">Classic Club Sandwich 3-Tier</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Grilled chicken, fried egg, turkey bacon, cheddar, tomato, crisp lettuce with seasoned skinny fries.</p>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between pt-3 border-t border-outline-variant/20">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary">Rs. 980</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant/80 mt-0.5">Served with seasoned fries</p>
+</div>
+<button class="h-10 px-4 rounded-xl bg-primary-container text-on-primary flex items-center gap-1.5 font-label-lg text-label-lg active:scale-95 transition-all shadow-sm hover:bg-primary">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</article>
+</main>
+<!-- Sticky Cart Preview Floating Banner -->
+<aside class="fixed bottom-16 left-0 right-0 z-40 max-w-md mx-auto px-4 pointer-events-none">
+<div class="pointer-events-auto bg-primary-container/95 backdrop-blur-md text-on-primary rounded-2xl p-3 shadow-[0_8px_30px_rgba(61,35,23,0.3)] border border-primary/20 flex items-center justify-between transition-transform active:scale-98">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center text-on-secondary shadow-inner">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-white">1 Item</span>
+<span class="text-outline-variant">•</span>
+<span class="font-headline-sm text-headline-sm text-secondary-container">Rs. 1,290</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline-variant">The Hers Signature Smash</p>
+</div>
+</div>
+<button class="flex items-center gap-1 bg-secondary-container text-on-secondary-container px-3.5 py-2 rounded-xl font-label-md text-label-md hover:bg-secondary-fixed transition-colors">
+<span>View Table Order</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</aside>
+<!-- Shared Bottom Navigation Bar (Docked bottom) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 bg-surface/95 backdrop-blur-md border-t border-outline-variant/30 shadow-[0_-4px_24px_rgba(61,35,23,0.08)] max-w-md mx-auto right-0">
+<!-- Menu (Active) -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary rounded-2xl px-3 py-1.5 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px] fill">menu_book</span>
+<span class="font-label-sm text-label-sm mt-0.5">Menu</span>
+</a>
+<!-- Favorites -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+<span class="font-label-sm text-label-sm mt-0.5">Favorites</span>
+</a>
+<!-- Active Order -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:text-primary transition-colors relative" href="#">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+<span class="absolute top-1 right-3 w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm mt-0.5">Active Order</span>
+</a>
+<!-- Assistance -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">concierge</span>
+<span class="font-label-sm text-label-sm mt-0.5">Assistance</span>
+</a>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Screen 14 — POS &amp; Cashier Station | Hers Cafe</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#1e5031",
+            "on-tertiary-fixed": "#00210e",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#ffb59f",
+            "inverse-surface": "#31302d",
+            "surface-container-low": "#f6f3ee",
+            "on-secondary-fixed-variant": "#793019",
+            "surface-variant": "#e5e2dd",
+            "secondary-container": "#fe997a",
+            "primary-fixed": "#ffdbcc",
+            "secondary": "#97472e",
+            "primary-container": "#3d2317",
+            "tertiary-container": "#003117",
+            "inverse-on-surface": "#f3f0eb",
+            "on-surface-variant": "#504440",
+            "on-tertiary-container": "#699c77",
+            "tertiary-fixed": "#b9efc5",
+            "surface-container-lowest": "#ffffff",
+            "background": "#fcf9f4",
+            "on-primary-container": "#af8878",
+            "surface-container": "#f0ede9",
+            "outline-variant": "#d4c3bd",
+            "on-primary-fixed-variant": "#5e4032",
+            "on-surface": "#1c1c19",
+            "surface-dim": "#dcdad5",
+            "outline": "#82746f",
+            "on-secondary-container": "#772f18",
+            "on-primary-fixed": "#2d150a",
+            "error-container": "#ffdad6",
+            "primary": "#250f05",
+            "surface": "#fcf9f4",
+            "on-tertiary": "#ffffff",
+            "surface-tint": "#785748",
+            "surface-container-high": "#ebe8e3",
+            "on-background": "#1c1c19",
+            "primary-fixed-dim": "#e9bdab",
+            "surface-container-highest": "#e5e2dd",
+            "on-secondary-fixed": "#3a0a00",
+            "error": "#ba1a1a",
+            "tertiary": "#001a0a",
+            "on-error": "#ffffff",
+            "on-primary": "#ffffff",
+            "surface-bright": "#fcf9f4",
+            "tertiary-fixed-dim": "#9dd3aa",
+            "inverse-primary": "#e9bdab",
+            "secondary-fixed": "#ffdbd0",
+            "on-secondary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1rem",
+            "margin-desktop": "3rem",
+            "space-xl": "2.5rem",
+            "space-sm": "0.5rem",
+            "margin-tablet": "2rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "gutter-desktop": "1.5rem",
+            "space-lg": "1.5rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "display-lg": ["Playfair Display"],
+            "headline-md": ["Playfair Display"],
+            "title-md": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Playfair Display"],
+            "label-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700"}],
+            "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+            "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+            "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+            "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700"}],
+            "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f6f3ee;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #d4c3bd;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #af8878;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface h-full flex flex-col font-body-md text-body-md antialiased overflow-hidden select-none">
+<!-- TOP BAR: POS TERMINAL HEADER (Shared Components TopAppBar Anchor adapted for High-Frequency Cashier Console) -->
+<header class="bg-surface/90 backdrop-blur-md text-primary shadow-sm sticky top-0 z-40 flex justify-between items-center w-full px-4 h-16 border-b border-outline-variant/30 flex-shrink-0">
+<div class="flex items-center gap-4">
+<!-- Brand & Mascot Logo -->
+<div class="flex items-center gap-3">
+<div class="h-10 w-14 bg-surface-container-lowest rounded-xl flex items-center justify-center p-1 border border-outline-variant/40 shadow-sm overflow-hidden">
+<img alt="Hers Cafe Official Mascot Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7Rof9Rqp3tLlAYoTHyCTNRK2k6bMCFAswmH4Ah1ZUdqQFQCkYhpIjYOlFuxa-AFpOVp_9L_f-nljrK5d82o51Wg6UNA4cBX7OTLtdQf7zWBDaUexg8xJ2ETORv2h-KVAq9z49XJk8aMeyznueMnxTBnpurO2mUKdVqnKwmE1i5Mw9fFoTbAL3gmRebGcMUE5DDfOk4dlBCKt3J3lY4gEsyuVE4HU0o9cnkdi8E5RX0O4TIERGWXPUaphh0bfaeKE5ugQ"/>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-headline-md font-headline-md font-bold text-primary tracking-tight">Hers Cafe</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary/10 text-secondary text-label-sm font-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span> KARACHI • LIVE
+            </span>
+</div>
+<p class="text-label-md font-label-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary" data-icon="table_restaurant">table_restaurant</span>
+<span>Counter 01 • Main Cashier Terminal</span>
+</p>
+</div>
+</div>
+</div>
+<!-- Active Cashier Profile & Station Meta -->
+<div class="flex items-center gap-3">
+<!-- Quick System Clock & Ping -->
+<div class="hidden md:flex flex-col items-end mr-2 text-right">
+<span class="font-title-md text-title-md text-primary tabular-nums" id="live-clock">18:42:15</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span> System Online • 18ms
+        </span>
+</div>
+<!-- Staff Badge -->
+<div class="flex items-center gap-2.5 bg-surface-container-low px-3 py-1.5 rounded-2xl border border-outline-variant/40">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-body-sm shadow-sm">
+          ZA
+        </div>
+<div class="text-left pr-1">
+<p class="text-label-md font-label-md text-primary font-bold leading-tight">Zubair Ahmed</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant leading-none">Senior Cashier</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary p-1 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+<!-- Quick Action Utilities -->
+<div class="flex items-center gap-1 border-l border-outline-variant/40 pl-3">
+<button class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-on-primary active:scale-95 transition-all" title="Kitchen Display / Room Service Call">
+<span class="material-symbols-outlined text-[20px]" data-icon="room_service">room_service</span>
+</button>
+<button class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-error-container hover:text-error active:scale-95 transition-all" title="Full Terminal Lock">
+<span class="material-symbols-outlined text-[20px]" data-icon="lock">lock</span>
+</button>
+</div>
+</div>
+</header>
+<!-- WORKSPACE BODY (3-Zone POS Workflow) -->
+<div class="flex-1 flex overflow-hidden">
+<!-- LEFT PANEL: ORDER CHANNELS & TABLES NAVIGATION (Width: 260px) -->
+<aside class="w-64 bg-surface-container-low border-r border-outline-variant/30 flex flex-col flex-shrink-0 z-10">
+<!-- Order Mode Selectors -->
+<div class="p-3 border-b border-outline-variant/20">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-2 px-1">ORDER CHANNEL</p>
+<div class="space-y-1">
+<!-- Channel 1: All Orders -->
+<button class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-left text-body-md font-medium text-on-surface-variant hover:bg-surface transition-all active:scale-98">
+<span class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[19px]" data-icon="receipt_long">receipt_long</span>
+<span>All Orders</span>
+</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary text-label-sm font-label-sm font-bold">24</span>
+</button>
+<!-- Channel 2: Dine-In (Tables) - ACTIVE -->
+<button class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-left text-body-md font-bold bg-primary-container text-on-primary shadow-sm transition-all active:scale-98">
+<span class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[19px] text-primary-fixed" data-icon="table_restaurant">table_restaurant</span>
+<span>Dine-In (Tables)</span>
+</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary text-on-secondary text-label-sm font-label-sm">11 Active</span>
+</button>
+<!-- Channel 3: Takeaway -->
+<button class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-left text-body-md font-medium text-on-surface-variant hover:bg-surface transition-all active:scale-98">
+<span class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[19px]" data-icon="shopping_bag">shopping_bag</span>
+<span>Takeaway / Direct Pickup</span>
+</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary text-label-sm font-label-sm">6</span>
+</button>
+<!-- Channel 4: Direct Delivery -->
+<button class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-left text-body-md font-medium text-on-surface-variant hover:bg-surface transition-all active:scale-98">
+<span class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[19px]" data-icon="moped">moped</span>
+<span>Direct Delivery</span>
+</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary text-label-sm font-label-sm">3</span>
+</button>
+<!-- Channel 5: External Foodpanda -->
+<button class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-left text-body-md font-medium text-on-surface-variant hover:bg-surface transition-all active:scale-98">
+<span class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[19px] text-secondary" data-icon="delivery_dining">delivery_dining</span>
+<span>Foodpanda Orders</span>
+</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold text-label-sm font-label-sm animate-pulse">4 New</span>
+</button>
+</div>
+</div>
+<!-- Quick Dine-In Table Status Grid -->
+<div class="flex-1 overflow-y-auto custom-scrollbar p-3">
+<div class="flex items-center justify-between mb-2 px-1">
+<p class="text-label-sm font-label-sm text-on-surface-variant">ACTIVE SEATING (FLOOR 1)</p>
+<span class="text-label-sm font-label-sm text-secondary cursor-pointer hover:underline">Change Floor</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<!-- Table 07: Active Current Ticket Target -->
+<div class="p-2.5 rounded-xl bg-surface-container-lowest border-2 border-secondary shadow-sm relative cursor-pointer ring-2 ring-secondary/20">
+<div class="flex justify-between items-start">
+<span class="text-title-md font-title-md font-bold text-primary">T-07</span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-0.5">Courtyard • 4 Pax</p>
+<div class="mt-2 flex items-center justify-between text-label-sm font-label-sm">
+<span class="font-bold text-secondary">PKR 5,770</span>
+<span class="text-on-surface-variant">24m</span>
+</div>
+<div class="mt-1 text-[10px] text-secondary font-bold tracking-wider">CURRENT BILLING</div>
+</div>
+<!-- Table 04: Occupied -->
+<div class="p-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/40 hover:border-primary cursor-pointer transition-all">
+<div class="flex justify-between items-start">
+<span class="text-title-md font-title-md font-bold text-primary">T-04</span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-0.5">Mezzanine • 2 Pax</p>
+<div class="mt-2 flex items-center justify-between text-label-sm font-label-sm">
+<span class="font-bold text-primary">PKR 2,490</span>
+<span class="text-on-surface-variant">12m</span>
+</div>
+</div>
+<!-- Table 12: Occupied -->
+<div class="p-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/40 hover:border-primary cursor-pointer transition-all">
+<div class="flex justify-between items-start">
+<span class="text-title-md font-title-md font-bold text-primary">T-12</span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-0.5">Indoor AC • 6 Pax</p>
+<div class="mt-2 flex items-center justify-between text-label-sm font-label-sm">
+<span class="font-bold text-primary">PKR 6,120</span>
+<span class="text-on-surface-variant">38m</span>
+</div>
+</div>
+<!-- Table 02: Vacant / Available -->
+<div class="p-2.5 rounded-xl bg-surface border border-dashed border-outline-variant/60 hover:bg-surface-container-lowest cursor-pointer transition-all opacity-85">
+<div class="flex justify-between items-start">
+<span class="text-title-md font-title-md font-medium text-on-surface-variant">T-02</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-0.5">Indoor AC • 2 Pax</p>
+<div class="mt-2 text-label-sm font-label-sm text-on-tertiary-fixed-variant font-medium">
+              Available
+            </div>
+</div>
+<!-- Table 09: Billed / Waiting payment -->
+<div class="p-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/40 hover:border-primary cursor-pointer transition-all">
+<div class="flex justify-between items-start">
+<span class="text-title-md font-title-md font-bold text-primary">T-09</span>
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container"></span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-0.5">Terrace • 3 Pax</p>
+<div class="mt-2 flex items-center justify-between text-label-sm font-label-sm">
+<span class="font-bold text-primary">PKR 3,340</span>
+<span class="text-secondary font-bold">Printed</span>
+</div>
+</div>
+<!-- Table 15: Vacant -->
+<div class="p-2.5 rounded-xl bg-surface border border-dashed border-outline-variant/60 hover:bg-surface-container-lowest cursor-pointer transition-all opacity-85">
+<div class="flex justify-between items-start">
+<span class="text-title-md font-title-md font-medium text-on-surface-variant">T-15</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-0.5">Balcony • 4 Pax</p>
+<div class="mt-2 text-label-sm font-label-sm text-on-tertiary-fixed-variant font-medium">
+              Available
+            </div>
+</div>
+</div>
+</div>
+<!-- Quick Shift Summary Tile at Drawer Bottom -->
+<div class="p-3 bg-surface-container border-t border-outline-variant/30 text-body-sm">
+<div class="flex justify-between text-on-surface-variant text-label-sm font-label-sm">
+<span>Shift Gross (Z-01)</span>
+<span class="font-bold text-primary">PKR 94,820</span>
+</div>
+<div class="flex justify-between text-on-surface-variant text-label-sm font-label-sm mt-1">
+<span>Cash in Drawer</span>
+<span class="font-bold text-primary">PKR 32,500</span>
+</div>
+</div>
+</aside>
+<!-- CENTER PANEL: SPEED CATALOG & CATEGORY GRID -->
+<main class="flex-1 flex flex-col bg-background overflow-hidden min-w-0">
+<!-- Top Action Ribbon: Search & Category Filter Pills -->
+<div class="p-4 border-b border-outline-variant/30 bg-surface/60 backdrop-blur-sm space-y-3 flex-shrink-0">
+<div class="flex items-center gap-3">
+<!-- Instant Item Lookup Search Field -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]" data-icon="search">search</span>
+<input class="w-full bg-[#fdfcfa] border-1.5 border-outline-variant/50 focus:border-primary-container focus:ring-0 rounded-2xl pl-10 pr-12 py-2.5 text-body-md text-primary placeholder-outline transition-all" placeholder="Instant Search (Code # or Name e.g. Smash, Latte, Pasta, Lotus)... [F2]" type="text"/>
+<span class="absolute right-3.5 top-1/2 -translate-y-1/2 text-label-sm font-label-sm text-outline border border-outline-variant/60 px-1.5 py-0.5 rounded-md bg-surface-container">⌘K</span>
+</div>
+<!-- Quick Action Barcodes / Quick Add by PLU -->
+<button class="flex items-center gap-1.5 px-3.5 py-2.5 bg-surface-container-lowest border border-outline-variant/50 rounded-2xl text-label-md font-label-md text-primary hover:bg-surface-container active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="barcode_scanner">barcode_scanner</span>
+<span class="hidden sm:inline">Scan PLU</span>
+</button>
+<!-- Refresh Menu Cache -->
+<button class="p-2.5 bg-surface-container-lowest border border-outline-variant/50 rounded-2xl text-on-surface-variant hover:text-primary active:scale-95 transition-all shadow-sm" title="Sync Menu Updates">
+<span class="material-symbols-outlined text-[20px]" data-icon="sync">sync</span>
+</button>
+</div>
+<!-- Horizontal Scrolling Category Chips -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 custom-scrollbar">
+<!-- Category Chip: All -->
+<button class="h-10 px-4 rounded-full bg-primary-container text-on-primary font-bold text-label-md font-label-md flex items-center gap-2 flex-shrink-0 shadow-sm active:scale-95 transition-transform">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+            All Items
+          </button>
+<!-- Category Chip: Artisan Coffee -->
+<button class="h-10 px-4 rounded-full bg-surface-container-lowest border border-outline-variant/50 text-on-surface-variant hover:text-primary hover:border-primary font-medium text-label-md font-label-md flex items-center gap-1.5 flex-shrink-0 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[17px]" data-icon="coffee">coffee</span>
+            Artisan Coffee
+          </button>
+<!-- Category Chip: Gourmet Burgers (Active Filter Demonstration) -->
+<button class="h-10 px-4 rounded-full bg-secondary/10 border border-secondary text-secondary font-bold text-label-md font-label-md flex items-center gap-1.5 flex-shrink-0 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[17px] text-secondary" data-icon="lunch_dining">lunch_dining</span>
+            Gourmet Burgers
+          </button>
+<!-- Category Chip: Handcrafted Pastas -->
+<button class="h-10 px-4 rounded-full bg-surface-container-lowest border border-outline-variant/50 text-on-surface-variant hover:text-primary hover:border-primary font-medium text-label-md font-label-md flex items-center gap-1.5 flex-shrink-0 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[17px]" data-icon="dinner_dining">dinner_dining</span>
+            Handcrafted Pastas
+          </button>
+<!-- Category Chip: French Toast & Cakes -->
+<button class="h-10 px-4 rounded-full bg-surface-container-lowest border border-outline-variant/50 text-on-surface-variant hover:text-primary hover:border-primary font-medium text-label-md font-label-md flex items-center gap-1.5 flex-shrink-0 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[17px]" data-icon="bakery_dining">bakery_dining</span>
+            French Toast &amp; Cakes
+          </button>
+<!-- Category Chip: Cold Beverages -->
+<button class="h-10 px-4 rounded-full bg-surface-container-lowest border border-outline-variant/50 text-on-surface-variant hover:text-primary hover:border-primary font-medium text-label-md font-label-md flex items-center gap-1.5 flex-shrink-0 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[17px]" data-icon="local_bar">local_bar</span>
+            Cold Beverages
+          </button>
+<!-- Category Chip: Extras & Sides -->
+<button class="h-10 px-4 rounded-full bg-surface-container-lowest border border-outline-variant/50 text-on-surface-variant hover:text-primary hover:border-primary font-medium text-label-md font-label-md flex items-center gap-1.5 flex-shrink-0 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[17px]" data-icon="fastfood">fastfood</span>
+            Extras &amp; Add-ons
+          </button>
+</div>
+</div>
+<!-- Bento-Styled Tactile Menu Item Grid (Fast-Tap Buttons) -->
+<div class="flex-1 overflow-y-auto p-4 custom-scrollbar">
+<div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5">
+<!-- ITEM 1: Hers Wagyu Smash (In Current Ticket) -->
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 hover:border-secondary p-3 flex flex-col justify-between shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)] transition-all cursor-pointer group active:scale-98 relative overflow-hidden">
+<div class="absolute top-2.5 right-2.5 z-10 flex gap-1">
+<span class="px-2 py-0.5 rounded-full bg-[#faf0ec] text-secondary font-bold text-[10px] tracking-wide border border-[#fe997a]/40">
+                CHEF'S PICK
+              </span>
+</div>
+<div class="aspect-[4/3] w-full rounded-xl overflow-hidden bg-surface-container mb-2.5 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A gourmet artisan double wagyu smash burger with golden melted cheddar cheese oozing between toasted brioche buns on a warm marble bistro counter at Hers Cafe. High-key natural warm cafe lighting with espresso brown tones, crisp studio focus, and freshly prepared steam." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCczwuuGQz-xTFpoao0WqVtY6oJq3VDw7UG936oxx8vtyLPpAIkOee_HreQmANZFFTy85gIQ71mqlDYDoakdwbEVH6TMJ_xDAbRkUH7wqR-mXPA1ZSo9fXGm1xdm73e-z4wFRCyfBwXJDJOkPPO_PckyurZXZA0Jr-VoFamAHKDTW-HzEveMLgIoLxdo2mNoaOlWCho9Zl96wYr09uaCbiTE5kpm1kOgOnh6OnL8xM3hGDTFrqO2cPJZg"/>
+<span class="absolute bottom-1.5 left-1.5 bg-primary-container/85 text-surface-container-lowest text-[10px] font-bold px-2 py-0.5 rounded-md backdrop-blur-xs">
+                BUR-01
+              </span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-bold group-hover:text-secondary transition-colors line-clamp-1">Hers Wagyu Smash</h4>
+<p class="text-on-surface-variant text-body-sm line-clamp-1">Brioche, double patty, secret bistro glaze</p>
+</div>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/20 flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">PRICE</span>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">PKR 1,290</p>
+</div>
+<button class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center group-hover:bg-secondary transition-colors shadow-sm active:scale-90">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- ITEM 2: Crispy Nashville Hot Chicken -->
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 hover:border-secondary p-3 flex flex-col justify-between shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)] transition-all cursor-pointer group active:scale-98 relative overflow-hidden">
+<div class="absolute top-2.5 right-2.5 z-10 flex gap-1">
+<span class="px-2 py-0.5 rounded-full bg-[#fdefef] text-[#991b1b] font-bold text-[10px] tracking-wide border border-[#ba1a1a]/30">
+                SPICY 🔥
+              </span>
+</div>
+<div class="aspect-[4/3] w-full rounded-xl overflow-hidden bg-surface-container mb-2.5 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Deep fried crispy Nashville hot chicken sandwich coated in fiery red cayenne glaze with dill pickles and creamy buttermilk slaw in soft potato bun. Ambient warm cafe lighting emphasizing crunchy texture and artisanal craftsmanship in a cozy Karachi cafe ambiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFeCcauY8-BS0w-6LHmVjwvb1VxVuyVuthj6FLoX27LEWbNvHPg17U0pYtNd3XOH8sER9_iG_Oly6IREaoVLWl0hu0n-255npByren3uFaQT9RKoaCAlfeY0w8k2hEbam7XRgAFfc355QpkC70LE02I74ZnUXglD5hK26120QAy4qy93w4hStOfv3pK_6uoQUkcpgMBYcQME5pufBqaye85JOOCD5n4RKQK47ThzvOfxibbn38jt3eMw"/>
+<span class="absolute bottom-1.5 left-1.5 bg-primary-container/85 text-surface-container-lowest text-[10px] font-bold px-2 py-0.5 rounded-md backdrop-blur-xs">
+                BUR-04
+              </span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-bold group-hover:text-secondary transition-colors line-clamp-1">Crispy Nashville Hot Chicken</h4>
+<p class="text-on-surface-variant text-body-sm line-clamp-1">Buttermilk fried thigh, honey glaze, pickles</p>
+</div>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/20 flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">PRICE</span>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">PKR 1,180</p>
+</div>
+<button class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center group-hover:bg-secondary transition-colors shadow-sm active:scale-90">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- ITEM 3: Iced Spanish Latte -->
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 hover:border-secondary p-3 flex flex-col justify-between shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)] transition-all cursor-pointer group active:scale-98 relative overflow-hidden">
+<div class="absolute top-2.5 right-2.5 z-10 flex gap-1">
+<span class="px-2 py-0.5 rounded-full bg-[#fef7eb] text-[#92400e] font-bold text-[10px] tracking-wide border border-[#e5e2dd]">
+                TOP SELLER
+              </span>
+</div>
+<div class="aspect-[4/3] w-full rounded-xl overflow-hidden bg-surface-container mb-2.5 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Layered artisanal Iced Spanish Latte in a sleek ribbed glassware showing espresso dripping through condensed milk and creamy oat milk over crystalline ice cubes on a warm wooden bistro table. Rich coffee tones, elegant foam rim, boutique Karachi cafe aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjdOpTydXMIOW4ejb3aqapFmLDD8iFrqMLJbHcjQaSOpxul4mhKSqNUK9ISQcsDexC8YF2YNBUpzrp9g_d9HJJqj2OAerLcDydXe7L-lfGyVjHmXb3bSj2bPV1JBryrNyJ4ZC7yrtx1M-Go3f0cmb6c0jHAyZ_WeB84_N4iO9THRq6yMgTmRISkvpZET44-Z9Ze2ky63LOmV6eBIx0RvInMViTGx0bEgiMRw-uv0NKWrz5A-pG3pQ1Ig"/>
+<span class="absolute bottom-1.5 left-1.5 bg-primary-container/85 text-surface-container-lowest text-[10px] font-bold px-2 py-0.5 rounded-md backdrop-blur-xs">
+                BEV-02
+              </span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-bold group-hover:text-secondary transition-colors line-clamp-1">Iced Spanish Latte</h4>
+<p class="text-on-surface-variant text-body-sm line-clamp-1">Double espresso shot, condensed milk drizzle</p>
+</div>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/20 flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">PRICE</span>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">PKR 680</p>
+</div>
+<button class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center group-hover:bg-secondary transition-colors shadow-sm active:scale-90">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- ITEM 4: Truffle Parmesan Fries -->
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 hover:border-secondary p-3 flex flex-col justify-between shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)] transition-all cursor-pointer group active:scale-98 relative overflow-hidden">
+<div class="aspect-[4/3] w-full rounded-xl overflow-hidden bg-surface-container mb-2.5 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Golden crisp hand-cut French fries tossed with black truffle oil, fresh parsley flakes and finely grated aged parmesan cheese served in a terracotta bowl on cafe parchment paper. Bright light-mode hospitality photography with delicious tactile warmth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAghIvPzUVovacrMNQCjs944oNOc5OyURFsx67Sw5aQjfW0K5brxWmB3ys0lOZOMjPpkn-P5jC4Qr8ae_03Hbg3qe4YKmoS7tJy8VUYv70KIXn7AVZsD9GyEETHByUP3Aaa_AHr3P9HNTalXQ-4WOSkoLLVxFMMhawJlUKaOTKNVEqaHKT1jQDl_UxJ0TfizgEYQbZOPf9ilKm64IVWVbtCUWjhwcHs5lZBsyQavG6iicy5erABMbARTg"/>
+<span class="absolute bottom-1.5 left-1.5 bg-primary-container/85 text-surface-container-lowest text-[10px] font-bold px-2 py-0.5 rounded-md backdrop-blur-xs">
+                SD-03
+              </span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-bold group-hover:text-secondary transition-colors line-clamp-1">Truffle Parmesan Fries</h4>
+<p class="text-on-surface-variant text-body-sm line-clamp-1">White truffle glaze, aged Grana Padano</p>
+</div>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/20 flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">PRICE</span>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">PKR 480</p>
+</div>
+<button class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center group-hover:bg-secondary transition-colors shadow-sm active:scale-90">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- ITEM 5: Lotus Biscoff French Toast -->
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 hover:border-secondary p-3 flex flex-col justify-between shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)] transition-all cursor-pointer group active:scale-98 relative overflow-hidden">
+<div class="absolute top-2.5 right-2.5 z-10 flex gap-1">
+<span class="px-2 py-0.5 rounded-full bg-[#ebf3ee] text-on-tertiary-fixed-variant font-bold text-[10px] tracking-wide border border-[#c2dec9]">
+                DESSERT ICON
+              </span>
+</div>
+<div class="aspect-[4/3] w-full rounded-xl overflow-hidden bg-surface-container mb-2.5 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Thick cut caramelized brioche French toast drenched in warm Lotus Biscoff spread, crushed spiced speculoos biscuits, and topped with a quenelle of whipped Madagascar vanilla cream. Editorial food photography with creamy warm caramel and espresso color grading." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDR59xRq267o598w9Y0eoRf6sJ8JjUh7TRaqAtwuue9f2_Khau3y4cawIRUIi40wQjarDPw6Pu64w3A0AvaF2HYfPjhsu_N9b98kuzdOsBpg72JgD6gh4aqwzSjiGkjUlH5TXrLEiSg68lJ8Un6vcp23u3jjBhMnvwoAwP-y8NsWZKiddLtcsdfQINjX_c9rdzmKgmjxUZ0bpgjC22HHI1JFxBZmWRnmPHe_ijd5Kop03IjcEU14mYgQ"/>
+<span class="absolute bottom-1.5 left-1.5 bg-primary-container/85 text-surface-container-lowest text-[10px] font-bold px-2 py-0.5 rounded-md backdrop-blur-xs">
+                SW-08
+              </span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-bold group-hover:text-secondary transition-colors line-clamp-1">Lotus French Toast</h4>
+<p class="text-on-surface-variant text-body-sm line-clamp-1">Brioche slab, Biscoff lava, Chantilly</p>
+</div>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/20 flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">PRICE</span>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">PKR 980</p>
+</div>
+<button class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center group-hover:bg-secondary transition-colors shadow-sm active:scale-90">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- ITEM 6: Creamy Fettuccine Alfredo -->
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 hover:border-secondary p-3 flex flex-col justify-between shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)] transition-all cursor-pointer group active:scale-98 relative overflow-hidden">
+<div class="aspect-[4/3] w-full rounded-xl overflow-hidden bg-surface-container mb-2.5 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Artisanal hand-rolled fettuccine pasta swirled in velvet garlic cream sauce with grilled chicken breast strips, cracked black pepper, and shaved parmesan curls in a warm cream ceramic bowl. Gourmet light bistro ambiance with steam and micro-herbs garnish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAftzafhXjPM884djDTJ7FkgUzlkPlQA8nHb9VVFikXXWgjB89sDrvkjJMgFd71XKGmZhKLyljm9NPREOIVSxRXBgnCR2YwZVwlV2X0S_mebNyqu9I7NQh1G9gZ9bHQsmfiz0h9EuWjjJtjTdluNzO6Xexivh1OK8npauii58ApIM7ppzAioB9RqRZUYpzK6VJoLk-JYFMxKjmQg52bw-uYLO99xajya7U51yIs9WVn4Z_0qaBQ3Kzdyw"/>
+<span class="absolute bottom-1.5 left-1.5 bg-primary-container/85 text-surface-container-lowest text-[10px] font-bold px-2 py-0.5 rounded-md backdrop-blur-xs">
+                PAS-02
+              </span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-bold group-hover:text-secondary transition-colors line-clamp-1">Creamy Fettuccine Alfredo</h4>
+<p class="text-on-surface-variant text-body-sm line-clamp-1">Fresh handmade pasta, roasted garlic cream</p>
+</div>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/20 flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">PRICE</span>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">PKR 1,140</p>
+</div>
+<button class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center group-hover:bg-secondary transition-colors shadow-sm active:scale-90">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- ITEM 7: Artisanal Pistachio Croissant -->
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 hover:border-secondary p-3 flex flex-col justify-between shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)] transition-all cursor-pointer group active:scale-98 relative overflow-hidden">
+<div class="aspect-[4/3] w-full rounded-xl overflow-hidden bg-surface-container mb-2.5 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Flaky golden brown French croissant filled with rich Sicilian pistachio cream, dusted with powdered confectioners sugar and roasted emerald green pistachios on a marble cafe display counter. Warm buttery morning light with crisp pastry lamination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdAH2uAJVZVwtbT-sblxqHQCfU-OQAYCeJuifBzA3S8qm3L3g2ihM34bfM74vEBeZ8g9A3pOiO-Do_WHbBXQozDnQm3Wu5inNIBKbOSYEPjd-WWmrFwnXkrOHYjJOQwxZ-SdkHmHVHD-Dqpq7XnC1NQXXBzRhv78MEbrp7ugTqq4RAgjQD7f8DTYEuo54o2w88lVOQscv8RRvZkuw28mI6Y-HkwplZDSE00pK_2Rve9oz0Uutx-45WzQ"/>
+<span class="absolute bottom-1.5 left-1.5 bg-primary-container/85 text-surface-container-lowest text-[10px] font-bold px-2 py-0.5 rounded-md backdrop-blur-xs">
+                BAK-05
+              </span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-bold group-hover:text-secondary transition-colors line-clamp-1">Pistachio Croissant</h4>
+<p class="text-on-surface-variant text-body-sm line-clamp-1">Double-baked butter layers, pure pistachio</p>
+</div>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/20 flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">PRICE</span>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">PKR 540</p>
+</div>
+<button class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center group-hover:bg-secondary transition-colors shadow-sm active:scale-90">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- ITEM 8: Classic Cortado -->
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 hover:border-secondary p-3 flex flex-col justify-between shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)] transition-all cursor-pointer group active:scale-98 relative overflow-hidden">
+<div class="aspect-[4/3] w-full rounded-xl overflow-hidden bg-surface-container mb-2.5 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A steaming classic Cortado in a small Gibraltar glass tumbler with precise tulip latte art resting on an oat-colored ceramic saucer with raw sugar cube. Warm cafe table setting with roasted espresso beans scattered in background, peaceful boutique cafe vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCptPy-v1ZQibgn44ZaOxwUVFhyYA6EYbKkjDKh_T_B88QhaISZyxhmK68ocSJ4E339JK98FSMUVRD7809iMvwNWJgBSH9L9GQrZtQVlQg2OzgA-Q4PDhvHKLn1b3MZGclHFnYn2MvUG8QykthXdhBkZxdM5kXmmwpF36bkVptDwLFvMKcZ99SPlHkWSlS8rY4i_GYF8UHe1Z-haZ4S_BfS6TsCEhHlniOseTSeADMyyhbmPkMm5OrssA"/>
+<span class="absolute bottom-1.5 left-1.5 bg-primary-container/85 text-surface-container-lowest text-[10px] font-bold px-2 py-0.5 rounded-md backdrop-blur-xs">
+                BEV-01
+              </span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-bold group-hover:text-secondary transition-colors line-clamp-1">Classic Cortado 4oz</h4>
+<p class="text-on-surface-variant text-body-sm line-clamp-1">1:1 Ethiopian blend espresso to textured milk</p>
+</div>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/20 flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">PRICE</span>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">PKR 520</p>
+</div>
+<button class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center group-hover:bg-secondary transition-colors shadow-sm active:scale-90">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- RIGHT PANEL: ACTIVE TICKET & FINANCIAL EXECUTION (Width: 380px) -->
+<section class="w-96 bg-surface-container-lowest border-l border-outline-variant/30 flex flex-col flex-shrink-0 z-20 shadow-[-4px_0_24px_rgba(61,35,23,0.04)]">
+<!-- Current Order Ticket Header -->
+<div class="p-3.5 border-b border-outline-variant/30 bg-surface-container-low/60">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">#HC-POS-9124</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary text-on-secondary text-label-sm font-label-sm font-bold">Dine-In</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-0.5 flex items-center gap-2">
+<span><strong>Table 07</strong> (Courtyard)</span>
+<span>•</span>
+<span>Server: Hamza K.</span>
+</p>
+</div>
+<!-- Dine-In / Takeaway Toggle Switch -->
+<div class="flex items-center bg-surface-container p-1 rounded-xl border border-outline-variant/30">
+<button class="px-2.5 py-1 rounded-lg text-label-sm font-label-sm font-bold bg-primary-container text-on-primary shadow-xs">
+              Table
+            </button>
+<button class="px-2.5 py-1 rounded-lg text-label-sm font-label-sm text-on-surface-variant hover:text-primary">
+              Pack
+            </button>
+</div>
+</div>
+</div>
+<!-- Order Ticket Items List (Ergonomic Steppers & Modifiers) -->
+<div class="flex-1 overflow-y-auto p-3 space-y-2.5 custom-scrollbar">
+<!-- ITEM ROW 1: Hers Wagyu Smash -->
+<div class="p-2.5 rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-outline transition-all">
+<div class="flex items-start justify-between">
+<div class="flex-1 pr-2">
+<div class="flex items-center justify-between">
+<h5 class="font-title-md text-title-md text-primary font-bold">Hers Wagyu Smash</h5>
+<span class="font-title-md text-title-md text-primary font-bold">PKR 2,580</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant">PKR 1,290 each</p>
+<!-- Modifiers Indented -->
+<div class="mt-1.5 pl-2 border-l-2 border-secondary/40 space-y-0.5">
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="add_circle">add_circle</span>
+                    Double Patty Upgrade
+                  </span>
+<span>+PKR 350</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="check_circle">check_circle</span>
+                    Truffle Mayo on side
+                  </span>
+<span>Free</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-secondary">
+<span class="flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-[14px]" data-icon="block">block</span>
+                    No raw onions
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quantity Stepper & Actions -->
+<div class="mt-2.5 pt-2 border-t border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded-lg bg-surface-container-lowest border border-outline-variant/40 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px]" data-icon="remove">remove</span>
+</button>
+<span class="w-8 text-center font-bold text-title-md text-primary">2</span>
+<button class="w-7 h-7 rounded-lg bg-surface-container-lowest border border-outline-variant/40 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px]" data-icon="add">add</span>
+</button>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container" title="Edit Modifiers">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit_note">edit_note</span>
+</button>
+<button class="p-1 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/30" title="Delete Item">
+<span class="material-symbols-outlined text-[18px]" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ITEM ROW 2: Iced Spanish Latte -->
+<div class="p-2.5 rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-outline transition-all">
+<div class="flex items-start justify-between">
+<div class="flex-1 pr-2">
+<div class="flex items-center justify-between">
+<h5 class="font-title-md text-title-md text-primary font-bold">Iced Spanish Latte</h5>
+<span class="font-title-md text-title-md text-primary font-bold">PKR 1,360</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant">PKR 680 each</p>
+<!-- Modifiers Indented -->
+<div class="mt-1.5 pl-2 border-l-2 border-secondary/40 space-y-0.5">
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="add_circle">add_circle</span>
+                    Oat Milk Upgrade (1 Cup)
+                  </span>
+<span>+PKR 120</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="check_circle">check_circle</span>
+                    Less Sweet (50% syrup)
+                  </span>
+<span>Free</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quantity Stepper -->
+<div class="mt-2.5 pt-2 border-t border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded-lg bg-surface-container-lowest border border-outline-variant/40 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px]" data-icon="remove">remove</span>
+</button>
+<span class="w-8 text-center font-bold text-title-md text-primary">2</span>
+<button class="w-7 h-7 rounded-lg bg-surface-container-lowest border border-outline-variant/40 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px]" data-icon="add">add</span>
+</button>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container" title="Edit Modifiers">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit_note">edit_note</span>
+</button>
+<button class="p-1 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/30" title="Delete Item">
+<span class="material-symbols-outlined text-[18px]" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ITEM ROW 3: Truffle Parmesan Fries -->
+<div class="p-2.5 rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-outline transition-all">
+<div class="flex items-start justify-between">
+<div class="flex-1 pr-2">
+<div class="flex items-center justify-between">
+<h5 class="font-title-md text-title-md text-primary font-bold">Truffle Parmesan Fries</h5>
+<span class="font-title-md text-title-md text-primary font-bold">PKR 480</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Regular Serving</p>
+</div>
+</div>
+<!-- Quantity Stepper -->
+<div class="mt-2.5 pt-2 border-t border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded-lg bg-surface-container-lowest border border-outline-variant/40 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px]" data-icon="remove">remove</span>
+</button>
+<span class="w-8 text-center font-bold text-title-md text-primary">1</span>
+<button class="w-7 h-7 rounded-lg bg-surface-container-lowest border border-outline-variant/40 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px]" data-icon="add">add</span>
+</button>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container" title="Edit Modifiers">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit_note">edit_note</span>
+</button>
+<button class="p-1 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/30" title="Delete Item">
+<span class="material-symbols-outlined text-[18px]" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Ticket Operations Toolbar -->
+<div class="grid grid-cols-4 gap-1.5 pt-1">
+<button class="py-1.5 px-2 rounded-xl bg-surface-container text-primary hover:bg-surface-container-high text-label-sm font-label-sm flex flex-col items-center justify-center gap-0.5 border border-outline-variant/30 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[17px]" data-icon="note_add">note_add</span>
+<span>Kitchen Note</span>
+</button>
+<button class="py-1.5 px-2 rounded-xl bg-surface-container text-primary hover:bg-surface-container-high text-label-sm font-label-sm flex flex-col items-center justify-center gap-0.5 border border-outline-variant/30 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[17px]" data-icon="percent">percent</span>
+<span>Discount</span>
+</button>
+<button class="py-1.5 px-2 rounded-xl bg-surface-container text-primary hover:bg-surface-container-high text-label-sm font-label-sm flex flex-col items-center justify-center gap-0.5 border border-outline-variant/30 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[17px]" data-icon="call_split">call_split</span>
+<span>Split Bill</span>
+</button>
+<button class="py-1.5 px-2 rounded-xl bg-[#faf0ec] text-secondary hover:bg-[#fe997a]/30 text-label-sm font-label-sm flex flex-col items-center justify-center gap-0.5 border border-[#fe997a]/30 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[17px]" data-icon="pause_circle">pause_circle</span>
+<span>Hold Order</span>
+</button>
+</div>
+</div>
+<!-- Financial Breakdown & Totals (Sindh SST 13% Compliant) -->
+<div class="p-3.5 bg-surface-container-low border-t border-outline-variant/30 space-y-1.5 text-body-sm">
+<div class="flex justify-between text-on-surface-variant text-label-md font-label-md">
+<span>Subtotal (5 items)</span>
+<span class="font-bold text-primary">PKR 4,890</span>
+</div>
+<div class="flex justify-between text-on-surface-variant text-label-sm font-label-sm">
+<span>Sindh Sales Tax (SST 13%)</span>
+<span class="font-medium text-primary">PKR 635</span>
+</div>
+<div class="flex justify-between text-on-surface-variant text-label-sm font-label-sm">
+<span>Dine-In Service Charge (5%)</span>
+<span class="font-medium text-primary">PKR 245</span>
+</div>
+<!-- Big Total Accent Box -->
+<div class="pt-2 mt-1 border-t border-outline-variant/40 flex justify-between items-baseline">
+<div>
+<span class="text-label-sm font-label-sm text-secondary font-bold uppercase tracking-wider">Payable Amount</span>
+<p class="font-headline-lg text-headline-lg font-bold text-primary">PKR 5,770</p>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-label-sm font-bold">
+            Unpaid
+          </span>
+</div>
+</div>
+<!-- Payment Execution Channels & Final CTA -->
+<div class="p-3.5 bg-surface-container-lowest border-t border-outline-variant/30 space-y-2">
+<!-- Quick Payment Method Selector -->
+<div class="grid grid-cols-3 gap-2">
+<!-- Option: Cash -->
+<button class="py-2.5 px-2 rounded-xl border-2 border-primary-container bg-surface-container-lowest text-primary flex flex-col items-center justify-center gap-1 font-bold text-label-md font-label-md shadow-xs active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="payments">payments</span>
+<span>Cash (PKR)</span>
+</button>
+<!-- Option: Card -->
+<button class="py-2.5 px-2 rounded-xl border border-outline-variant/40 bg-surface text-on-surface-variant hover:border-primary flex flex-col items-center justify-center gap-1 text-label-md font-label-md active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="credit_card">credit_card</span>
+<span>Card (POS)</span>
+</button>
+<!-- Option: Raast / QR Pay -->
+<button class="py-2.5 px-2 rounded-xl border border-outline-variant/40 bg-surface text-on-surface-variant hover:border-primary flex flex-col items-center justify-center gap-1 text-label-md font-label-md active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="qr_code_scanner">qr_code_scanner</span>
+<span>Raast / QR</span>
+</button>
+</div>
+<!-- Primary Execution Button: Charge & Print KOT -->
+<button class="w-full h-14 rounded-2xl bg-primary-container text-on-primary hover:bg-[#1e110a] font-bold text-title-md font-title-md flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(61,35,23,0.22)] active:scale-98 transition-all">
+<span class="material-symbols-outlined text-[22px]" data-icon="print">print</span>
+<span>Charge PKR 5,770 &amp; Print KOT</span>
+</button>
+</div>
+</section>
+</div>
+<!-- Bottom Global Key Helper & Quick Bar (For POS Speed Execution) -->
+<footer class="h-8 bg-surface-container border-t border-outline-variant/30 px-4 flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant flex-shrink-0">
+<div class="flex items-center gap-4">
+<span><kbd class="px-1.5 py-0.5 bg-surface-container-lowest border border-outline-variant rounded text-[10px]">F1</kbd> New Sale</span>
+<span><kbd class="px-1.5 py-0.5 bg-surface-container-lowest border border-outline-variant rounded text-[10px]">F2</kbd> Search</span>
+<span><kbd class="px-1.5 py-0.5 bg-surface-container-lowest border border-outline-variant rounded text-[10px]">F4</kbd> Custom Discount</span>
+<span><kbd class="px-1.5 py-0.5 bg-surface-container-lowest border border-outline-variant rounded text-[10px]">F8</kbd> Hold Ticket</span>
+<span><kbd class="px-1.5 py-0.5 bg-surface-container-lowest border border-outline-variant rounded text-[10px]">F12</kbd> Instant Cash Out</span>
+</div>
+<div class="flex items-center gap-3">
+<span>Sindh Revenue Board (SRB) POS Integrated: #0294-HERS-KHI</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-bold text-primary">Thermal Printer: EPSON TM-T88VI (Ready)</span>
+</div>
+</footer>
+<!-- Light Vanilla Script for Live Dynamic Clock -->
+<script>
+    function updateClock() {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      const clockEl = document.getElementById('live-clock');
+      if (clockEl) {
+        clockEl.textContent = `${hours}:${minutes}:${seconds}`;
+      }
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body></html>

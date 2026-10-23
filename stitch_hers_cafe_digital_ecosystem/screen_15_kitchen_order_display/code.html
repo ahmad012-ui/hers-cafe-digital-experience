@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Screen 15 — Kitchen Order Display | Hers Cafe</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#1e5031",
+            "on-tertiary-fixed": "#00210e",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#ffb59f",
+            "inverse-surface": "#31302d",
+            "surface-container-low": "#f6f3ee",
+            "on-secondary-fixed-variant": "#793019",
+            "surface-variant": "#e5e2dd",
+            "secondary-container": "#fe997a",
+            "primary-fixed": "#ffdbcc",
+            "secondary": "#97472e",
+            "primary-container": "#3d2317",
+            "tertiary-container": "#003117",
+            "inverse-on-surface": "#f3f0eb",
+            "on-surface-variant": "#504440",
+            "on-tertiary-container": "#699c77",
+            "tertiary-fixed": "#b9efc5",
+            "surface-container-lowest": "#ffffff",
+            "background": "#fcf9f4",
+            "on-primary-container": "#af8878",
+            "surface-container": "#f0ede9",
+            "outline-variant": "#d4c3bd",
+            "on-primary-fixed-variant": "#5e4032",
+            "on-surface": "#1c1c19",
+            "surface-dim": "#dcdad5",
+            "outline": "#82746f",
+            "on-secondary-container": "#772f18",
+            "on-primary-fixed": "#2d150a",
+            "error-container": "#ffdad6",
+            "primary": "#250f05",
+            "surface": "#fcf9f4",
+            "on-tertiary": "#ffffff",
+            "surface-tint": "#785748",
+            "surface-container-high": "#ebe8e3",
+            "on-background": "#1c1c19",
+            "primary-fixed-dim": "#e9bdab",
+            "surface-container-highest": "#e5e2dd",
+            "on-secondary-fixed": "#3a0a00",
+            "error": "#ba1a1a",
+            "tertiary": "#001a0a",
+            "on-error": "#ffffff",
+            "on-primary": "#ffffff",
+            "surface-bright": "#fcf9f4",
+            "tertiary-fixed-dim": "#9dd3aa",
+            "inverse-primary": "#e9bdab",
+            "secondary-fixed": "#ffdbd0",
+            "on-secondary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1rem",
+            "margin-desktop": "3rem",
+            "space-xl": "2.5rem",
+            "space-sm": "0.5rem",
+            "margin-tablet": "2rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "gutter-desktop": "1.5rem",
+            "space-lg": "1.5rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "display-lg": ["Playfair Display"],
+            "headline-md": ["Playfair Display"],
+            "title-md": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Playfair Display"],
+            "label-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Kitchen pulse animation for critical ticket priority */
+    @keyframes alert-pulse {
+      0%, 100% { border-color: rgba(186, 26, 26, 0.4); box-shadow: 0 0 0 0 rgba(186, 26, 26, 0.2); }
+      50% { border-color: rgba(186, 26, 26, 1); box-shadow: 0 0 0 6px rgba(186, 26, 26, 0.15); }
+    }
+    .kds-rush-pulse {
+      animation: alert-pulse 1.8s infinite cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    /* Custom scrollbar for prep lines */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f0ede9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #d4c3bd;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #82746f;
+    }
+  </style>
+</head>
+<body class="bg-[#19110d] text-surface-container-lowest font-body-md antialiased h-full flex flex-col selection:bg-secondary selection:text-white">
+<!-- ================= TOP KITCHEN SYSTEM BAR ================= -->
+<header class="bg-[#241711] text-surface-container-lowest border-b border-[#3d2a21] shadow-md shrink-0 px-4 lg:px-6 py-2.5 z-30">
+<div class="flex flex-wrap items-center justify-between gap-3 max-w-[1920px] mx-auto">
+<!-- Brand & Mascot Logo & Station Anchor -->
+<div class="flex items-center gap-3.5">
+<div class="bg-[#332017] p-1 rounded-xl border border-[#4d3224] flex items-center justify-center shrink-0 shadow-inner">
+<img alt="Hers Cafe Mascot" class="h-10 w-auto object-contain drop-shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7Rof9Rqp3tLlAYoTHyCTNRK2k6bMCFAswmH4Ah1ZUdqQFQCkYhpIjYOlFuxa-AFpOVp_9L_f-nljrK5d82o51Wg6UNA4cBX7OTLtdQf7zWBDaUexg8xJ2ETORv2h-KVAq9z49XJk8aMeyznueMnxTBnpurO2mUKdVqnKwmE1i5Mw9fFoTbAL3gmRebGcMUE5DDfOk4dlBCKt3J3lY4gEsyuVE4HU0o9cnkdi8E5RX0O4TIERGWXPUaphh0bfaeKE5ugQ"/>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold tracking-tight text-[#ffdbcc]">Hers Café</span>
+<span class="bg-[#41271b] text-[#fe997a] font-label-sm text-label-sm px-2 py-0.5 rounded-full border border-[#5d3827]">KDS #02</span>
+</div>
+<div class="flex items-center gap-2 text-[#d4c3bd] font-body-sm text-body-sm mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-[#fe997a]">table_restaurant</span>
+<span class="font-semibold text-white">Main Hot Line & Pastry Station</span>
+<span class="text-[#82746f]">•</span>
+<span>Clifton Flagship, Karachi</span>
+</div>
+</div>
+</div>
+<!-- Station Metrics Counter Badges -->
+<div class="flex items-center gap-2 lg:gap-3 bg-[#1e130d] px-3.5 py-1.5 rounded-2xl border border-[#382319]">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-[#2e190f] border border-[#482819]">
+<span class="w-2.5 h-2.5 rounded-full bg-[#fe997a] animate-ping"></span>
+<span class="font-label-md text-label-md font-bold text-white">4</span>
+<span class="font-label-sm text-label-sm text-[#ffdbcc]">Active Tickets</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-[#351d11] border border-[#572e1c]">
+<span class="material-symbols-outlined text-[16px] text-[#fe997a]">skillet</span>
+<span class="font-label-md text-label-md font-bold text-white">2</span>
+<span class="font-label-sm text-label-sm text-[#d4c3bd]">Preparing</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-[#132c1b] border border-[#235332]">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">check_circle</span>
+<span class="font-label-md text-label-md font-bold text-tertiary-fixed">1</span>
+<span class="font-label-sm text-label-sm text-[#b9efc5]">Ready</span>
+</div>
+</div>
+<!-- Chefs on Duty & Live Clock & Sound Control -->
+<div class="flex items-center gap-4">
+<!-- Chefs Badge -->
+<div class="hidden md:flex items-center gap-2 bg-[#2a1b14] px-3 py-1.5 rounded-xl border border-[#442c20]">
+<span class="material-symbols-outlined text-[#e9bdab] text-[18px]">person_apron</span>
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-label-sm text-[#82746f]">On Duty</span>
+<span class="font-label-md text-label-md font-bold text-[#ffdbcc]">Chef Farhan • Chef Tariq</span>
+</div>
+</div>
+<!-- Clock & Alert Sound Indicator -->
+<div class="flex items-center gap-3">
+<div class="text-right">
+<div class="font-title-md text-title-md font-bold text-white tracking-wider font-mono" id="liveClock">19:42:18</div>
+<div class="font-label-sm text-label-sm text-[#e9bdab]">Thursday Dinner Rush</div>
+</div>
+<button class="w-10 h-10 rounded-xl bg-[#382319] hover:bg-[#4a2e21] border border-[#573525] flex items-center justify-center text-[#ffdbcc] active:scale-95 transition-all" onclick="toggleAudioMute(this)" title="Kitchen Chime Sound">
+<span class="material-symbols-outlined text-[20px]" id="soundIcon">volume_up</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- ================= SUB-NAV FILTERS / QUICK STATUS BAR ================= -->
+<div class="bg-[#20140e] border-b border-[#362218] px-4 lg:px-6 py-2 flex flex-wrap items-center justify-between gap-3 text-xs">
+<div class="flex items-center gap-2 overflow-x-auto py-0.5 no-scrollbar">
+<span class="font-label-sm text-label-sm text-[#d4c3bd] uppercase tracking-wider pr-1">Filter View:</span>
+<button class="bg-[#ffdbcc] text-[#250f05] font-bold px-3 py-1 rounded-full text-xs transition-colors flex items-center gap-1 shadow-sm">
+<span>All Stations</span>
+<span class="bg-[#250f05] text-[#ffdbcc] text-[10px] px-1.5 py-0.2 rounded-full">7</span>
+</button>
+<button class="bg-[#2e1d15] text-[#d4c3bd] hover:text-white px-3 py-1 rounded-full text-xs transition-colors border border-[#442b20]">
+        Hot Kitchen (5)
+      </button>
+<button class="bg-[#2e1d15] text-[#d4c3bd] hover:text-white px-3 py-1 rounded-full text-xs transition-colors border border-[#442b20]">
+        Pastry & Bakery (2)
+      </button>
+<button class="bg-[#2e1d15] text-[#d4c3bd] hover:text-white px-3 py-1 rounded-full text-xs transition-colors border border-[#442b20]">
+        Cold / Beverages
+      </button>
+</div>
+<!-- Quick Audio Bell / Refresh Action -->
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 text-[#a3d9b0] text-[11px] font-medium bg-[#14291c] px-2 py-0.5 rounded border border-[#20492e]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#34d399] animate-pulse"></span> POS Connected Live
+      </span>
+<button class="bg-[#41271b] hover:bg-[#543323] text-[#ffdbcc] px-2.5 py-1 rounded-lg text-xs font-semibold flex items-center gap-1 border border-[#5d3827] active:scale-95 transition-all" onclick="playChime()">
+<span class="material-symbols-outlined text-[15px]">notifications_active</span>
+<span>Bell Floor</span>
+</button>
+</div>
+</div>
+<!-- ================= MAIN KANBAN LANES CANVAS ================= -->
+<main class="flex-1 overflow-x-auto p-3 lg:p-5 bg-[#170f0b]">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 h-full min-w-[1240px] max-w-[1920px] mx-auto items-start">
+<!-- ================= LANE 1: NEW / RECEIVED (URGENT) ================= -->
+<section class="flex flex-col bg-[#1e130d] rounded-2xl border-2 border-[#542d1e] shadow-xl overflow-hidden max-h-full">
+<!-- Lane Header -->
+<div class="bg-gradient-to-r from-[#381a10] to-[#2b150c] p-3.5 border-b border-[#4d2618] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#fe997a] animate-ping"></span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-white tracking-tight">1. NEW / RECEIVED</h2>
+</div>
+<span class="bg-[#fe997a] text-[#3a0a00] font-label-lg text-label-lg font-bold px-2.5 py-0.5 rounded-full shadow">
+            2 Tickets
+          </span>
+</div>
+<!-- Lane Content Container -->
+<div class="p-3 space-y-3.5 overflow-y-auto flex-1">
+<!-- Ticket HC-8435 (Dine-In Table 04) -->
+<article class="bg-[#281811] rounded-2xl border-2 border-[#fe997a] p-3.5 shadow-lg relative transition-all duration-200 hover:border-white">
+<!-- Ticket Top Header -->
+<div class="flex items-start justify-between gap-2 border-b border-[#42291d] pb-2.5 mb-2.5">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-mono text-base font-extrabold text-white tracking-wider">#HC-8435</span>
+<span class="bg-[#fe997a] text-[#250f05] font-bold text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] fill-icon">restaurant</span> Dine-In
+                  </span>
+</div>
+<div class="font-headline-sm text-headline-sm text-[#ffdbcc] font-black mt-0.5">
+                  Table 04 <span class="text-xs font-normal text-[#d4c3bd]">(Indoor Main)</span>
+</div>
+</div>
+<!-- Live Elapsed Badge -->
+<div class="text-right">
+<div class="bg-[#3d1e11] text-[#fe997a] border border-[#6b311b] font-mono text-sm font-black px-2 py-1 rounded-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] animate-spin">timelapse</span>
+<span class="timer-display" data-start="135">02:15</span>
+</div>
+<span class="text-[10px] text-[#a08a80] block mt-0.5 font-medium">Just Arrived</span>
+</div>
+</div>
+<!-- Items List -->
+<div class="space-y-2.5 mb-3.5">
+<!-- Item 1 -->
+<div class="bg-[#1c110b] p-2.5 rounded-xl border border-[#3b2419]">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="w-6 h-6 rounded-md bg-[#fe997a] text-[#250f05] font-black text-sm flex items-center justify-center shrink-0">2</span>
+<div>
+<p class="font-title-md text-title-md font-bold text-white leading-snug">Crispy Nashville Hot Chicken</p>
+<span class="inline-block bg-[#481212] text-[#ffdad6] border border-[#ba1a1a] font-bold text-[11px] px-2 py-0.5 rounded-md mt-1">
+                        🔥 Extra Spicy • Double Pickles
+                      </span>
+</div>
+</div>
+<input class="w-5 h-5 rounded border-2 border-[#82746f] bg-transparent text-[#fe997a] focus:ring-0 cursor-pointer mt-1" type="checkbox"/>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-[#1c110b] p-2.5 rounded-xl border border-[#3b2419]">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="w-6 h-6 rounded-md bg-[#e5e2dd] text-[#250f05] font-black text-sm flex items-center justify-center shrink-0">1</span>
+<div>
+<p class="font-title-md text-title-md font-bold text-white leading-snug">Truffle Wild Mushroom Tagliatelle</p>
+<span class="text-xs text-[#d4c3bd] block mt-0.5 font-medium">Standard creamy parmesan truffle emulsion</span>
+</div>
+</div>
+<input class="w-5 h-5 rounded border-2 border-[#82746f] bg-transparent text-[#fe997a] focus:ring-0 cursor-pointer mt-1" type="checkbox"/>
+</div>
+</div>
+</div>
+<!-- Notes -->
+<div class="bg-[#382319] border-l-4 border-[#fe997a] px-2.5 py-1.5 rounded-r-lg mb-3">
+<span class="text-[11px] font-bold text-[#ffdbcc] flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">edit_note</span> Guest Note:
+              </span>
+<p class="text-xs text-white italic">"Serve chicken sizzling hot, guest has severe peanut allergy."</p>
+</div>
+<!-- Primary Action Button -->
+<button class="w-full bg-[#fe997a] hover:bg-[#ffb59f] text-[#250f05] font-headline-sm text-headline-sm font-extrabold py-3 px-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-all shadow-md" onclick="moveTicket(this, 'PREPARING')">
+<span class="material-symbols-outlined font-black">outdoor_grill</span>
+<span>Accept & Start Prep</span>
+</button>
+</article>
+<!-- Ticket HC-ON-5825 (Direct Delivery) -->
+<article class="bg-[#281811] rounded-2xl border-2 border-[#82442d] p-3.5 shadow-lg relative transition-all duration-200 hover:border-white">
+<!-- Ticket Top Header -->
+<div class="flex items-start justify-between gap-2 border-b border-[#42291d] pb-2.5 mb-2.5">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-mono text-base font-extrabold text-white tracking-wider">#HC-ON-5825</span>
+<span class="bg-[#3b271e] text-[#ffdbcc] font-bold text-[11px] px-2 py-0.5 rounded-full border border-[#5d3b2c] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">local_shipping</span> Direct Delivery
+                  </span>
+</div>
+<div class="font-title-md text-title-md text-[#ffdbcc] font-bold mt-0.5">
+                  Hers Online Web <span class="text-xs text-[#a08a80]">(DHA Phase 6)</span>
+</div>
+</div>
+<!-- Live Elapsed Badge -->
+<div class="text-right">
+<div class="bg-[#2b170f] text-[#ffdbcc] border border-[#522b1c] font-mono text-sm font-black px-2 py-1 rounded-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="timer-display" data-start="70">01:10</span>
+</div>
+<span class="text-[10px] text-[#a08a80] block mt-0.5 font-medium">Standard Courier</span>
+</div>
+</div>
+<!-- Items List -->
+<div class="space-y-2.5 mb-3.5">
+<div class="bg-[#1c110b] p-2.5 rounded-xl border border-[#3b2419]">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="w-6 h-6 rounded-md bg-[#e5e2dd] text-[#250f05] font-black text-sm flex items-center justify-center shrink-0">1</span>
+<div>
+<p class="font-title-md text-title-md font-bold text-white leading-snug">Hers Weekend Brunch Box</p>
+<span class="text-xs text-[#ffdbcc] block mt-0.5 font-medium">Brioche scrambled eggs, smoked turkey, sour cherry jam, mini croissants</span>
+</div>
+</div>
+<input class="w-5 h-5 rounded border-2 border-[#82746f] bg-transparent text-[#fe997a] focus:ring-0 cursor-pointer mt-1" type="checkbox"/>
+</div>
+</div>
+<div class="bg-[#1c110b] p-2.5 rounded-xl border border-[#3b2419]">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="w-6 h-6 rounded-md bg-[#e5e2dd] text-[#250f05] font-black text-sm flex items-center justify-center shrink-0">2</span>
+<div>
+<p class="font-title-md text-title-md font-bold text-white leading-snug">Iced Spanish Latte</p>
+<span class="inline-block bg-[#1f3726] text-[#b9efc5] text-[11px] px-2 py-0.5 rounded font-semibold mt-1">
+                        Oat Milk Sub • Less Sweet
+                      </span>
+</div>
+</div>
+<input class="w-5 h-5 rounded border-2 border-[#82746f] bg-transparent text-[#fe997a] focus:ring-0 cursor-pointer mt-1" type="checkbox"/>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full bg-[#97472e] hover:bg-[#b05336] text-white font-title-md text-title-md font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-all shadow" onclick="moveTicket(this, 'PREPARING')">
+<span class="material-symbols-outlined">skillet</span>
+<span>Accept & Start Prep</span>
+</button>
+</article>
+</div>
+</section>
+<!-- ================= LANE 2: PREPARING (LIVE COOKING) ================= -->
+<section class="flex flex-col bg-[#1e130d] rounded-2xl border-2 border-[#a35e3b] shadow-xl overflow-hidden max-h-full">
+<!-- Lane Header -->
+<div class="bg-gradient-to-r from-[#442314] to-[#2d170d] p-3.5 border-b border-[#5e321e] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#ffb59f] text-[22px]">skillet</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-white tracking-tight">2. PREPARING</h2>
+</div>
+<span class="bg-[#3d2317] text-[#ffdbcc] font-label-lg text-label-lg font-bold px-2.5 py-0.5 rounded-full border border-[#6b3d27]">
+            2 Active
+          </span>
+</div>
+<!-- Lane Content -->
+<div class="p-3 space-y-3.5 overflow-y-auto flex-1">
+<!-- Ticket HC-8429 (Table 07 Courtyard - Amber Timer) -->
+<article class="bg-[#2a1a12] rounded-2xl border-2 border-[#e68a5c] p-3.5 shadow-lg relative">
+<div class="flex items-start justify-between gap-2 border-b border-[#472c1f] pb-2.5 mb-2.5">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-mono text-base font-extrabold text-white tracking-wider">#HC-8429</span>
+<span class="bg-[#382319] text-[#fe997a] font-bold text-[11px] px-2 py-0.5 rounded-full border border-[#5c3726] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] fill-icon">yard</span> Courtyard
+                  </span>
+</div>
+<div class="font-headline-sm text-headline-sm text-[#ffdbcc] font-black mt-0.5">
+                  Table 07 <span class="text-xs font-normal text-[#d4c3bd]">(Station B)</span>
+</div>
+</div>
+<!-- Live Timer: Amber / On Schedule -->
+<div class="text-right">
+<div class="bg-[#4d3208] text-[#facc15] border border-[#a16207] font-mono text-base font-black px-2.5 py-1 rounded-lg flex items-center gap-1 shadow-inner">
+<span class="material-symbols-outlined text-[17px]">hourglass_top</span>
+<span class="timer-display" data-start="760">12:40</span>
+</div>
+<span class="text-[10px] text-[#facc15] font-bold block mt-0.5">Target: 18m</span>
+</div>
+</div>
+<!-- Ticket Items with Checkboxes for Kitchen Progress -->
+<div class="space-y-2.5 mb-3.5">
+<!-- Item 1 -->
+<div class="bg-[#1c110b] p-2.5 rounded-xl border border-[#3b2419]">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="w-6 h-6 rounded-md bg-[#e5e2dd] text-[#250f05] font-black text-sm flex items-center justify-center shrink-0">1</span>
+<div>
+<p class="font-title-md text-title-md font-bold text-white">The Hers Signature Smash</p>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="bg-[#3d2317] text-[#ffdbcc] border border-[#6b3d27] font-bold text-[10px] px-1.5 py-0.5 rounded">Double Patty</span>
+<span class="bg-[#3d2317] text-[#ffdbcc] border border-[#6b3d27] font-bold text-[10px] px-1.5 py-0.5 rounded">Well Done</span>
+<span class="bg-[#481212] text-[#ffdad6] border border-[#93000a] font-bold text-[10px] px-1.5 py-0.5 rounded">NO RAW ONIONS</span>
+</div>
+</div>
+</div>
+<input checked="" class="w-5 h-5 rounded border-2 border-[#82746f] bg-transparent text-[#fe997a] focus:ring-0 cursor-pointer mt-1" type="checkbox"/>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-[#1c110b] p-2.5 rounded-xl border border-[#3b2419]">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="w-6 h-6 rounded-md bg-[#e5e2dd] text-[#250f05] font-black text-sm flex items-center justify-center shrink-0">1</span>
+<div>
+<p class="font-title-md text-title-md font-bold text-white">Crispy Nashville Hot Chicken</p>
+<span class="inline-block bg-[#3b2612] text-[#fed7aa] border border-[#854d0e] font-bold text-[11px] px-2 py-0.5 rounded mt-1">
+                        🌶 Medium Spice
+                      </span>
+</div>
+</div>
+<input class="w-5 h-5 rounded border-2 border-[#82746f] bg-transparent text-[#fe997a] focus:ring-0 cursor-pointer mt-1" type="checkbox"/>
+</div>
+</div>
+<!-- Item 3: Beverage Link -->
+<div class="bg-[#161f18] p-2 rounded-xl border border-[#274630] flex items-center justify-between">
+<div class="flex items-center gap-2 text-xs text-[#b9efc5]">
+<span class="material-symbols-outlined text-[16px]">coffee</span>
+<span>2x Iced Spanish Latte (Fulfilling at Barista Bay)</span>
+</div>
+<span class="bg-[#1f4a2d] text-[#b9efc5] text-[10px] font-bold px-1.5 py-0.5 rounded">In Prep</span>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full bg-[#e68a5c] hover:bg-[#ff9f73] text-[#250f05] font-headline-sm text-headline-sm font-extrabold py-3 px-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-all shadow" onclick="moveTicket(this, 'READY')">
+<span class="material-symbols-outlined font-black">done_all</span>
+<span>Mark Plated & Ready</span>
+</button>
+</article>
+<!-- Ticket HC-FP-3012 (Foodpanda Rush Warning / Red Timer) -->
+<article class="bg-[#2d1512] rounded-2xl border-2 border-[#ba1a1a] p-3.5 shadow-xl relative kds-rush-pulse">
+<!-- Rush Banner -->
+<div class="bg-[#ba1a1a] text-white text-[11px] font-black uppercase tracking-wider py-0.5 px-3 rounded-full mb-2.5 inline-flex items-center gap-1 shadow">
+<span class="material-symbols-outlined text-[14px]">warning</span> RUSH / OVERDUE WARNING
+            </div>
+<div class="flex items-start justify-between gap-2 border-b border-[#54211a] pb-2.5 mb-2.5">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-mono text-base font-extrabold text-white tracking-wider">#HC-FP-3012</span>
+<span class="bg-[#d70f64] text-white font-bold text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">two_wheeler</span> Foodpanda
+                  </span>
+</div>
+<div class="font-title-md text-title-md text-[#ffdad6] font-bold mt-0.5">
+                  Rider Arrived <span class="text-xs text-[#ffb4ab]">• Bay #03</span>
+</div>
+</div>
+<!-- Critical Red Timer -->
+<div class="text-right">
+<div class="bg-[#ba1a1a] text-white font-mono text-base font-black px-2.5 py-1 rounded-lg flex items-center gap-1 shadow">
+<span class="material-symbols-outlined text-[18px] animate-pulse">timer_off</span>
+<span class="timer-display" data-start="1100">18:20</span>
+</div>
+<span class="text-[10px] text-[#ffdad6] font-bold block mt-0.5">+3m Late</span>
+</div>
+</div>
+<!-- Items -->
+<div class="space-y-2.5 mb-3.5">
+<div class="bg-[#1f0f0c] p-2.5 rounded-xl border border-[#481c15]">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="w-6 h-6 rounded-md bg-[#ba1a1a] text-white font-black text-sm flex items-center justify-center shrink-0">2</span>
+<div>
+<p class="font-title-md text-title-md font-bold text-white">Hers Wagyu Smash</p>
+<span class="text-xs text-[#ffdad6] block mt-0.5">Brioche Bun • Caramelized Onions • Hers Secret Relish</span>
+</div>
+</div>
+<input checked="" class="w-5 h-5 rounded border-2 border-[#82746f] bg-transparent text-[#fe997a] focus:ring-0 cursor-pointer mt-1" type="checkbox"/>
+</div>
+</div>
+<div class="bg-[#1f0f0c] p-2.5 rounded-xl border border-[#481c15]">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="w-6 h-6 rounded-md bg-[#ba1a1a] text-white font-black text-sm flex items-center justify-center shrink-0">2</span>
+<div>
+<p class="font-title-md text-title-md font-bold text-white">Truffle Fries</p>
+<span class="text-xs text-[#d4c3bd] block mt-0.5">Grated parmesan & garlic aioli dip</span>
+</div>
+</div>
+<input checked="" class="w-5 h-5 rounded border-2 border-[#82746f] bg-transparent text-[#fe997a] focus:ring-0 cursor-pointer mt-1" type="checkbox"/>
+</div>
+</div>
+</div>
+<!-- Priority Ready Button -->
+<button class="w-full bg-[#ba1a1a] hover:bg-[#d92929] text-white font-headline-sm text-headline-sm font-extrabold py-3 px-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-all shadow-lg animate-bounce" onclick="moveTicket(this, 'READY')">
+<span class="material-symbols-outlined font-black">priority_high</span>
+<span>Expedite to Courier</span>
+</button>
+</article>
+</div>
+</section>
+<!-- ================= LANE 3: READY / EXPEDITE ================= -->
+<section class="flex flex-col bg-[#1e130d] rounded-2xl border-2 border-[#2b5938] shadow-xl overflow-hidden max-h-full">
+<!-- Lane Header -->
+<div class="bg-gradient-to-r from-[#173822] to-[#122819] p-3.5 border-b border-[#285735] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#b9efc5] text-[22px]">room_service</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-white tracking-tight">3. READY / EXPEDITE</h2>
+</div>
+<span class="bg-[#245e35] text-[#b9efc5] font-label-lg text-label-lg font-bold px-2.5 py-0.5 rounded-full border border-[#3e8654]">
+            2 Ready
+          </span>
+</div>
+<!-- Lane Content -->
+<div class="p-3 space-y-3.5 overflow-y-auto flex-1">
+<!-- Ticket HC-8420 (Dine-In Table 02 - Server Hamza) -->
+<article class="bg-[#1c261e] rounded-2xl border-2 border-[#37754b] p-3.5 shadow-lg relative">
+<div class="flex items-start justify-between gap-2 border-b border-[#2b4d36] pb-2.5 mb-2.5">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-mono text-base font-extrabold text-white tracking-wider">#HC-8420</span>
+<span class="bg-[#265333] text-[#b9efc5] font-bold text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] fill-icon">restaurant</span> Dine-In
+                  </span>
+</div>
+<div class="font-headline-sm text-headline-sm text-[#d1fae5] font-black mt-0.5">
+                  Table 02 <span class="text-xs font-semibold text-[#86efac]">• Server: Hamza</span>
+</div>
+</div>
+<!-- Pass Timer -->
+<div class="text-right">
+<div class="bg-[#13331e] text-[#a7f3d0] border border-[#235834] font-mono text-sm font-black px-2 py-1 rounded-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span>03:00 at Pass</span>
+</div>
+<span class="text-[10px] text-[#a7f3d0] block mt-0.5">Bell rung 1x</span>
+</div>
+</div>
+<!-- Items Ready -->
+<div class="space-y-2 mb-3.5">
+<div class="bg-[#141e16] p-2.5 rounded-xl border border-[#233d2a] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-md bg-[#2d6a40] text-white font-black text-xs flex items-center justify-center shrink-0">1</span>
+<span class="font-title-md text-title-md font-bold text-white">Lotus Biscoff French Toast</span>
+</div>
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">check_circle</span>
+</div>
+<div class="bg-[#141e16] p-2.5 rounded-xl border border-[#233d2a] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-md bg-[#2d6a40] text-white font-black text-xs flex items-center justify-center shrink-0">1</span>
+<span class="font-title-md text-title-md font-bold text-white">Cortado (Double Shot)</span>
+</div>
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">check_circle</span>
+</div>
+</div>
+<!-- Complete Action -->
+<button class="w-full bg-[#27673c] hover:bg-[#32834d] text-white font-headline-sm text-headline-sm font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-all shadow" onclick="moveTicket(this, 'COMPLETED')">
+<span class="material-symbols-outlined font-black">check</span>
+<span>Dispatched / Served</span>
+</button>
+</article>
+<!-- Ticket HC-TK-1089 (Takeaway Counter - Rider In Transit) -->
+<article class="bg-[#1c261e] rounded-2xl border-2 border-[#37754b] p-3.5 shadow-lg relative">
+<div class="flex items-start justify-between gap-2 border-b border-[#2b4d36] pb-2.5 mb-2.5">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-mono text-base font-extrabold text-white tracking-wider">#HC-TK-1089</span>
+<span class="bg-[#382319] text-[#ffdbcc] font-bold text-[11px] px-2 py-0.5 rounded-full border border-[#5d3827]">
+                    Takeaway Counter
+                  </span>
+</div>
+<div class="font-title-md text-title-md text-[#d1fae5] font-bold mt-0.5">
+                  Pickup Bag #12 <span class="text-xs text-[#86efac]">• Guest: Ayesha M.</span>
+</div>
+</div>
+<div class="text-right">
+<span class="bg-[#143d22] text-[#6ee7b7] text-[11px] font-bold px-2 py-0.5 rounded border border-[#216337] block">
+                  Sealed & Packaged
+                </span>
+<span class="text-[10px] text-[#a7f3d0] block mt-1">Ready at front desk</span>
+</div>
+</div>
+<div class="space-y-2 mb-3.5">
+<div class="bg-[#141e16] p-2.5 rounded-xl border border-[#233d2a] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-md bg-[#2d6a40] text-white font-black text-xs flex items-center justify-center shrink-0">1</span>
+<span class="font-title-md text-title-md font-bold text-white">Pistachio Rose Milk Cake Box</span>
+</div>
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">verified</span>
+</div>
+</div>
+<button class="w-full bg-[#1b4e2c] hover:bg-[#25683b] text-white font-title-md text-title-md font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-all shadow" onclick="moveTicket(this, 'COMPLETED')">
+<span class="material-symbols-outlined">front_hand</span>
+<span>Handed Over</span>
+</button>
+</article>
+</div>
+</section>
+<!-- ================= LANE 4: COMPLETED (RECENT AUDIT) ================= -->
+<section class="flex flex-col bg-[#1c120c] rounded-2xl border border-[#3b251a] shadow-lg overflow-hidden max-h-full">
+<!-- Lane Header -->
+<div class="bg-[#241710] p-3.5 border-b border-[#3b251a] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#82746f] text-[20px]">history</span>
+<h2 class="font-title-md text-title-md font-bold text-[#d4c3bd] tracking-tight">4. COMPLETED (PAST 15M)</h2>
+</div>
+<span class="text-xs text-[#82746f] font-mono font-medium">3 Orders Cleared</span>
+</div>
+<!-- Lane Content -->
+<div class="p-3 space-y-2.5 overflow-y-auto flex-1 opacity-80 hover:opacity-100 transition-opacity" id="completedList">
+<!-- Order 1 -->
+<div class="bg-[#221610] p-3 rounded-xl border border-[#382319] hover:border-[#523325] transition-colors">
+<div class="flex items-center justify-between text-xs mb-1.5">
+<span class="font-mono font-bold text-[#e5e2dd]">#HC-8415 • Table 11</span>
+<span class="text-[#a7f3d0] font-mono text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Cleared 4m ago
+              </span>
+</div>
+<p class="text-xs text-[#d4c3bd] line-clamp-1">1x Shakshuka Royale, 2x Flat White</p>
+<div class="flex items-center justify-between mt-2 pt-1.5 border-t border-[#311e15] text-[11px] text-[#82746f]">
+<span>Prep Time: 11m 40s</span>
+<button class="hover:text-white underline" onclick="reopenTicket(this)">Recall Ticket</button>
+</div>
+</div>
+<!-- Order 2 -->
+<div class="bg-[#221610] p-3 rounded-xl border border-[#382319] hover:border-[#523325] transition-colors">
+<div class="flex items-center justify-between text-xs mb-1.5">
+<span class="font-mono font-bold text-[#e5e2dd]">#HC-8412 • Table 05</span>
+<span class="text-[#a7f3d0] font-mono text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Cleared 8m ago
+              </span>
+</div>
+<p class="text-xs text-[#d4c3bd] line-clamp-1">2x Avocado Sourdough Tartine, 1x Filter Coffee</p>
+<div class="flex items-center justify-between mt-2 pt-1.5 border-t border-[#311e15] text-[11px] text-[#82746f]">
+<span>Prep Time: 09m 12s</span>
+<button class="hover:text-white underline" onclick="reopenTicket(this)">Recall Ticket</button>
+</div>
+</div>
+<!-- Order 3 -->
+<div class="bg-[#221610] p-3 rounded-xl border border-[#382319] hover:border-[#523325] transition-colors">
+<div class="flex items-center justify-between text-xs mb-1.5">
+<span class="font-mono font-bold text-[#e5e2dd]">#HC-TK-1085 • Takeaway</span>
+<span class="text-[#a7f3d0] font-mono text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Cleared 14m ago
+              </span>
+</div>
+<p class="text-xs text-[#d4c3bd] line-clamp-1">3x Classic Almond Croissant Box</p>
+<div class="flex items-center justify-between mt-2 pt-1.5 border-t border-[#311e15] text-[11px] text-[#82746f]">
+<span>Prep Time: 04m 20s</span>
+<button class="hover:text-white underline" onclick="reopenTicket(this)">Recall Ticket</button>
+</div>
+</div>
+<!-- Empty placeholder / summary card -->
+<div class="p-3 text-center border border-dashed border-[#3d271c] rounded-xl text-[#82746f] text-xs">
+<span class="material-symbols-outlined text-[20px] mb-1 block">inventory_2</span>
+            Earlier shift tickets archived to POS history.
+          </div>
+</div>
+</section>
+</div>
+</main>
+<!-- ================= PERSISTENT BOTTOM FOOTER SUMMARY BAR ================= -->
+<footer class="bg-[#1b100b] border-t border-[#331f16] px-4 py-2 shrink-0 flex flex-wrap items-center justify-between gap-3 text-xs text-[#d4c3bd]">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+<span class="font-semibold text-white">Kitchen Display v2.4</span>
+</div>
+<span class="text-[#573d32]">•</span>
+<span>Avg Expedite Speed: <strong class="text-[#fed7aa] font-mono font-bold">11m 32s</strong></span>
+<span class="text-[#573d32]">•</span>
+<span>Tickets Completed Today: <strong class="text-white font-mono font-bold">142</strong></span>
+</div>
+<!-- Quick Audio Bell / Keyboard shortcuts help -->
+<div class="flex items-center gap-3">
+<span class="hidden sm:inline text-[#82746f]">Shortcuts: [Space] Next Ticket • [R] Refresh Line</span>
+<button class="bg-[#382319] hover:bg-[#4d3023] text-[#ffdbcc] px-3 py-1 rounded-lg border border-[#5c3726] flex items-center gap-1 font-semibold active:scale-95 transition-all" onclick="simulateNewOrder()">
+<span class="material-symbols-outlined text-[14px]">add_alert</span>
+<span>Simulate POS Ticket</span>
+</button>
+</div>
+</footer>
+<!-- ================= KITCHEN INTERACTIVE SCRIPT ================= -->
+<script>
+    // Live Clock Display
+    function updateClock() {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      const clockEl = document.getElementById('liveClock');
+      if (clockEl) {
+        clockEl.textContent = `${hours}:${minutes}:${seconds}`;
+      }
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // Incremental Timer Engine for Kitchen display
+    const timers = document.querySelectorAll('.timer-display');
+    setInterval(() => {
+      timers.forEach(timer => {
+        let currentSeconds = parseInt(timer.getAttribute('data-start') || '0', 10);
+        currentSeconds++;
+        timer.setAttribute('data-start', currentSeconds);
+        const m = String(Math.floor(currentSeconds / 60)).padStart(2, '0');
+        const s = String(currentSeconds % 60).padStart(2, '0');
+        timer.textContent = `${m}:${s}`;
+      });
+    }, 1000);
+
+    // Audio chime simulation
+    let audioMuted = false;
+    function playChime() {
+      if (audioMuted) return;
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(880, ctx.currentTime); // A5
+        osc.frequency.exponentialRampToValueAtTime(440, ctx.currentTime + 0.3);
+        gain.gain.setValueAtTime(0.3, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.45);
+      } catch (e) {
+        // Fallback silently if audio context is blocked
+      }
+    }
+
+    function toggleAudioMute(button) {
+      audioMuted = !audioMuted;
+      const icon = document.getElementById('soundIcon');
+      if (audioMuted) {
+        icon.textContent = 'volume_off';
+        button.classList.add('opacity-50');
+      } else {
+        icon.textContent = 'volume_up';
+        button.classList.remove('opacity-50');
+        playChime();
+      }
+    }
+
+    // Ticket State Progression Handler
+    function moveTicket(btn, targetStage) {
+      playChime();
+      const ticket = btn.closest('article');
+      if (!ticket) return;
+
+      // Animate transition
+      ticket.classList.add('scale-95', 'opacity-50', 'transition-all');
+      setTimeout(() => {
+        ticket.remove();
+      }, 250);
+    }
+
+    function reopenTicket(btn) {
+      alert("Ticket recalled to Ready Pass column.");
+    }
+
+    function simulateNewOrder() {
+      playChime();
+      alert("New Order #HC-8442 received from Dine-In Table 09!");
+    }
+  </script>
+</body></html>

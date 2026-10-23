@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Hers Signature Smash Burger — Hers Cafe</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts for Design Tokens -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-tint": "#785748",
+            "inverse-on-surface": "#f3f0eb",
+            "surface-container-low": "#f6f3ee",
+            "secondary": "#97472e",
+            "primary": "#250f05",
+            "primary-fixed": "#ffdbcc",
+            "surface-container-highest": "#e5e2dd",
+            "surface-variant": "#e5e2dd",
+            "on-error": "#ffffff",
+            "inverse-surface": "#31302d",
+            "primary-container": "#3d2317",
+            "surface-container": "#f0ede9",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#2d150a",
+            "inverse-primary": "#e9bdab",
+            "outline": "#82746f",
+            "on-secondary-fixed": "#3a0a00",
+            "on-surface-variant": "#504440",
+            "surface-bright": "#fcf9f4",
+            "surface-dim": "#dcdad5",
+            "on-secondary-container": "#772f18",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "on-primary-fixed-variant": "#5e4032",
+            "error-container": "#ffdad6",
+            "tertiary": "#001a0a",
+            "background": "#fcf9f4",
+            "on-secondary-fixed-variant": "#793019",
+            "outline-variant": "#d4c3bd",
+            "tertiary-fixed": "#b9efc5",
+            "secondary-fixed-dim": "#ffb59f",
+            "primary-fixed-dim": "#e9bdab",
+            "on-tertiary-container": "#699c77",
+            "on-error-container": "#93000a",
+            "surface-container-high": "#ebe8e3",
+            "on-tertiary-fixed-variant": "#1e5031",
+            "tertiary-fixed-dim": "#9dd3aa",
+            "on-background": "#1c1c19",
+            "on-tertiary-fixed": "#00210e",
+            "on-surface": "#1c1c19",
+            "secondary-fixed": "#ffdbd0",
+            "surface": "#fcf9f4",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-container": "#af8878",
+            "secondary-container": "#fe997a",
+            "on-tertiary": "#ffffff",
+            "tertiary-container": "#003117"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-desktop": "1.5rem",
+            "margin-desktop": "3rem",
+            "space-xs": "0.25rem",
+            "margin": "1rem",
+            "space-md": "1rem",
+            "margin-tablet": "2rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "gutter": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "headline-sm": ["Plus Jakarta Sans"],
+            "display-lg": ["Playfair Display"],
+            "title-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "label-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Playfair Display"]
+          },
+          "fontSize": {
+            "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+            "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+            "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+            "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700"}],
+            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+            "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+            "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+            "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    /* Custom subtle scrollbar & tap highlights */
+    body {
+      -webkit-tap-highlight-color: transparent;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      display: none;
+    }
+    .custom-scroll {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen pb-32">
+<!-- Mobile Viewport Wrapper (390px - 430px optimal context) -->
+<div class="max-w-md mx-auto min-h-screen bg-surface relative flex flex-col shadow-2xl">
+<!-- Top App Bar / Context Header (Sub-Page Context with Back Action) -->
+<header class="sticky top-0 z-40 bg-surface/90 backdrop-blur-md px-4 h-16 flex items-center justify-between border-b border-outline-variant/30 shadow-sm transition-all duration-200">
+<div class="flex items-center gap-2">
+<button aria-label="Go back to menu" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<!-- Table Indicator Badge -->
+<div class="flex items-center gap-1.5 px-3 py-1 bg-surface-container-low rounded-full border border-outline-variant/40 shadow-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">table_restaurant</span>
+<span class="font-label-md text-label-md text-primary font-bold tracking-tight">Table 07</span>
+</div>
+</div>
+<!-- Trailing Action Icons -->
+<div class="flex items-center gap-1">
+<button aria-label="Share item" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[22px]">share</span>
+</button>
+<button aria-label="Add to favorites" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-secondary hover:bg-surface-container active:scale-95 transition-all" id="favorite-btn" onclick="toggleFavorite()" type="button">
+<span class="material-symbols-outlined text-[22px]" id="favorite-icon">favorite</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-4 pt-2 space-y-5">
+<!-- Hero Food Photo Card -->
+<div class="relative w-full rounded-3xl overflow-hidden bg-surface-container shadow-[0_8px_24px_-6px_rgba(61,35,23,0.12)] border border-outline-variant/30">
+<div class="aspect-[4/3] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700 ease-out" data-alt="A mouth-watering gourmet double smash beef burger presented on a warm rustic ceramic plate inside an artisanal Parisian bistro. Two sizzling seared beef chuck patties are blanketed in melted golden cheddar cheese, dripping with glossy caramelized onions, crisp artisanal dill pickles, and creamy signature coral sauce, all nestled within a glossy, golden-toasted brioche bun. The lighting is warm and directional with soft ambient cafe shadows, evoking the boutique warmth and culinary luxury of Hers Cafe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfWJtBrgYyRFCFHqDO_PdklmD1Q3atuV7DWGO_I-d9QbxKlXk_Kz7qnGWO_Xgwas67_GuizL0emqSVBIt2_QeKW7mOpG185IOFQfAlmsrxAxbOVDO42SxD42PR6Q6QOx-ZjF130gUuyUPi2Q0Vi4LrZIY0wg1OVZit5MZhC7Ii1yEfGpb7UpgM6PRe9-2KmeCRBanD8ED8mkUR0zDc5Z64ilzkwgt7lG9le2hKm2Vv2b-oQq5A5rl6Xw"/>
+<!-- Subtle mascot watermark icon in corner for cafe branding warmth -->
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 border border-outline-variant/30 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">bakery_dining</span>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Artisanal Bistro</span>
+</div>
+</div>
+</div>
+<!-- Food Title, Badges & Pricing Section -->
+<div class="bg-surface-container-lowest p-5 rounded-3xl border border-outline-variant/30 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] space-y-3">
+<!-- Badges Row -->
+<div class="flex items-center flex-wrap gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/40 text-secondary border border-secondary/20 font-label-md text-label-md">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+            Chef Special
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed/50 text-primary-container border border-outline-variant/50 font-label-md text-label-md">
+<span class="material-symbols-outlined text-[15px]">room_service</span>
+            Dine-In Favorite
+          </span>
+</div>
+<!-- Title & Price Block -->
+<div class="flex items-start justify-between gap-4">
+<h1 class="font-headline-lg text-headline-lg text-primary leading-tight tracking-tight">
+            The Hers Signature Smash Burger
+          </h1>
+</div>
+<div class="flex items-baseline gap-2 pt-1">
+<span class="font-headline-md text-headline-md text-secondary font-bold tracking-tight" id="base-price-display">
+            Rs. 1,290
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tax inclusive</span>
+</div>
+<!-- Editorial Description -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed pt-1 border-t border-outline-variant/20">
+          Handcrafted double beef chuck smash patties with melted cheddar, caramelized onions, house dill pickles and secret Hers sauce on toasted artisanal brioche.
+        </p>
+</div>
+<!-- Customization Section: Patty Size (Required Radio Group) -->
+<div class="bg-surface-container-lowest p-5 rounded-3xl border border-outline-variant/30 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-title-md text-title-md text-primary flex items-center gap-1.5">
+              Patty Size
+              <span class="text-error font-body-sm text-body-sm">*</span>
+</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Choose your meat indulgence</p>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold uppercase tracking-wider">
+            Required
+          </span>
+</div>
+<!-- Radio Options Container -->
+<div class="space-y-2.5">
+<!-- Option: Single Smash -->
+<label class="patty-option group flex items-center justify-between p-3.5 rounded-2xl border border-outline-variant/40 bg-surface hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<input class="w-5 h-5 text-primary-container border-outline focus:ring-primary-container bg-surface-container-lowest" name="patty_size" onchange="updateBurgerConfig()" type="radio" value="1050"/>
+<div>
+<span class="font-label-lg text-label-lg text-primary block">Single Smash</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1x 120g Certified Angus Patty</span>
+</div>
+</div>
+<span class="font-label-lg text-label-lg text-primary">Rs. 1,050</span>
+</label>
+<!-- Option: Double Smash (Default Selected) -->
+<label class="patty-option group flex items-center justify-between p-3.5 rounded-2xl border-2 border-primary-container bg-primary-fixed/20 transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<input checked="" class="w-5 h-5 text-primary-container border-outline focus:ring-primary-container bg-surface-container-lowest" name="patty_size" onchange="updateBurgerConfig()" type="radio" value="1290"/>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-primary font-bold block">Double Smash</span>
+<span class="px-2 py-0.2 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm">Standard</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2x 100g Sizzled Chuck Patties</span>
+</div>
+</div>
+<span class="font-label-lg text-label-lg text-primary font-bold">Rs. 1,290</span>
+</label>
+<!-- Option: Triple Smash -->
+<label class="patty-option group flex items-center justify-between p-3.5 rounded-2xl border border-outline-variant/40 bg-surface hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<input class="w-5 h-5 text-primary-container border-outline focus:ring-primary-container bg-surface-container-lowest" name="patty_size" onchange="updateBurgerConfig()" type="radio" value="1590"/>
+<div>
+<span class="font-label-lg text-label-lg text-primary block">Triple Smash</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3x 100g Chuck + Extra Cheese</span>
+</div>
+</div>
+<span class="font-label-lg text-label-lg text-primary">Rs. 1,590</span>
+</label>
+</div>
+</div>
+<!-- Customization Section: Add Extras (Checkboxes) -->
+<div class="bg-surface-container-lowest p-5 rounded-3xl border border-outline-variant/30 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-title-md text-title-md text-primary">Add Extras</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Customize with decadent toppings</p>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold uppercase tracking-wider">
+            Optional
+          </span>
+</div>
+<div class="space-y-2.5">
+<!-- Extra: Cheddar Slice -->
+<label class="flex items-center justify-between p-3 rounded-2xl border border-outline-variant/30 hover:border-outline-variant bg-surface transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<input class="extra-checkbox w-5 h-5 rounded text-primary-container border-outline-variant focus:ring-primary-container" onchange="updateBurgerConfig()" type="checkbox" value="120"/>
+<span class="font-label-lg text-label-lg text-primary">Extra Cheddar Slice</span>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold">+Rs. 120</span>
+</label>
+<!-- Extra: Beef Bacon Strips -->
+<label class="flex items-center justify-between p-3 rounded-2xl border border-outline-variant/30 hover:border-outline-variant bg-surface transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<input class="extra-checkbox w-5 h-5 rounded text-primary-container border-outline-variant focus:ring-primary-container" onchange="updateBurgerConfig()" type="checkbox" value="220"/>
+<span class="font-label-lg text-label-lg text-primary">Beef Bacon Strips</span>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold">+Rs. 220</span>
+</label>
+<!-- Extra: Truffle Mayo -->
+<label class="flex items-center justify-between p-3 rounded-2xl border border-outline-variant/30 hover:border-outline-variant bg-surface transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<input class="extra-checkbox w-5 h-5 rounded text-primary-container border-outline-variant focus:ring-primary-container" onchange="updateBurgerConfig()" type="checkbox" value="160"/>
+<span class="font-label-lg text-label-lg text-primary">Truffle Mayo</span>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold">+Rs. 160</span>
+</label>
+<!-- Extra: Jalapeno Pickles -->
+<label class="flex items-center justify-between p-3 rounded-2xl border border-outline-variant/30 hover:border-outline-variant bg-surface transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<input class="extra-checkbox w-5 h-5 rounded text-primary-container border-outline-variant focus:ring-primary-container" onchange="updateBurgerConfig()" type="checkbox" value="80"/>
+<span class="font-label-lg text-label-lg text-primary">Jalapeno Pickles</span>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold">+Rs. 80</span>
+</label>
+</div>
+</div>
+<!-- Special Instructions Textarea -->
+<div class="bg-surface-container-lowest p-5 rounded-3xl border border-outline-variant/30 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] space-y-3">
+<div class="flex items-center justify-between">
+<label class="font-title-md text-title-md text-primary flex items-center gap-1.5" for="special-instructions">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">edit_note</span>
+            Special Request
+          </label>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chef Kitchen Note</span>
+</div>
+<textarea class="w-full bg-[#FDFCFA] rounded-2xl border border-outline-variant/50 p-3.5 text-body-md font-body-md text-primary placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all resize-none shadow-inner" id="special-instructions" placeholder="e.g., No onions, extra napkins, allergy notes" rows="3"></textarea>
+</div>
+<!-- Recommended Sides Section -->
+<div class="space-y-3 pt-2">
+<div class="flex items-center justify-between px-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Recommended Sides</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pairs delightfully with your burger</p>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold cursor-pointer">Hers Pairings</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Recommendation 1: Iced Spanish Latte -->
+<div class="bg-surface-container-lowest p-3 rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col justify-between space-y-2 hover:shadow-md transition-shadow">
+<div class="aspect-[4/3] rounded-xl overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="An exquisite artisanal iced Spanish latte served in a textured ribbed tumbler at Hers Cafe Karachi. Layers of condensed milk, chilled organic milk, and freshly extracted dark espresso create a dramatic gradient topped with silky crema, photographed under natural sunlit cafe lighting on an oat-toned cafe marble table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF6KG3TdlQ9CXBgfI-wmHLdAUKn6j39tIuOFCRJZetgdlLt9QOPRk0U6GuZBUF9esm-WWGZuwKefPZxxZ1tQPHie89860jnMPKEPXZKRvteJcS2pHWX8LQ3KqFw-rRGiYvK8Y7n1HAZYGL4nASrZg3wSLjGYv2htehmAgLGMkUNEbhcFNzc_biGJwjkHVU_6suTf4tV-JhF-8EYp8t5H1XATcD-QOkCHHmW9AcqPlB0tHFpbWJmbVlIA"/>
+<span class="absolute top-2 left-2 bg-surface/90 backdrop-blur-sm px-2 py-0.5 rounded-full font-label-sm text-label-sm text-primary font-bold">
+                Bestseller
+              </span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-primary line-clamp-1">Iced Spanish Latte</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Espresso &amp; condensed milk</p>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-outline-variant/20">
+<span class="font-label-lg text-label-lg text-primary font-bold">Rs. 680</span>
+<button class="h-9 px-3 rounded-full bg-surface-container text-primary hover:bg-primary-container hover:text-on-primary transition-all flex items-center justify-center gap-1 font-label-md text-label-md active:scale-95" onclick="toggleSideAdd(this, 'Latte Added!')" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+                Add
+              </button>
+</div>
+</div>
+<!-- Recommendation 2: Truffle Parmesan Fries -->
+<div class="bg-surface-container-lowest p-3 rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col justify-between space-y-2 hover:shadow-md transition-shadow">
+<div class="aspect-[4/3] rounded-xl overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="Golden crisp hand-cut French fries tossed with fragrant black truffle oil, freshly grated aged parmesan cheese, and minced parsley, piled high in a warm ceramic bistro bowl. Soft natural light highlights the melted cheese snow and golden crunch, fitting the warm boutique aesthetic of Hers Cafe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-zZZ8YYvgqnXNVx_VllMz__zJu2XvJqmKJgA0jzw65jfA4E3iDf7gAyeWiE2ITXw4QV2gdG60xphsANVjB9v50JYaU3jvlWpHWHAF627Hhzba61C4Ez39zgYG42MSHV-xdthTvYr1iwENpzfdSjj6VIRPQW25DyxKZfomM65wbg02TsSH82YFvbXL46JNQmNO5xIFJVBJ5dkk10fdIAdO-tamPjvkkJ8N9_zOhF-QmFZ5gngHCwS7Xg"/>
+<span class="absolute top-2 left-2 bg-surface/90 backdrop-blur-sm px-2 py-0.5 rounded-full font-label-sm text-label-sm text-secondary font-bold">
+                Crispy
+              </span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-primary line-clamp-1">Truffle Parmesan Fries</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Truffle oil &amp; aged cheese</p>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-outline-variant/20">
+<span class="font-label-lg text-label-lg text-primary font-bold">Rs. 480</span>
+<button class="h-9 px-3 rounded-full bg-surface-container text-primary hover:bg-primary-container hover:text-on-primary transition-all flex items-center justify-center gap-1 font-label-md text-label-md active:scale-95" onclick="toggleSideAdd(this, 'Fries Added!')" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+                Add
+              </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Sticky Ordering Pill Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-50 max-w-md mx-auto p-4 bg-surface/95 backdrop-blur-md border-t border-outline-variant/30 shadow-[0_-4px_24px_rgba(61,35,23,0.1)]">
+<div class="flex items-center gap-3">
+<!-- Quantity Stepper Component -->
+<div class="flex items-center bg-surface-container-high rounded-full p-1 border border-outline-variant/40 shadow-inner">
+<button aria-label="Decrease quantity" class="w-9 h-9 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-lowest active:scale-90 transition-all" onclick="decreaseQty()" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<span class="w-8 text-center font-title-md text-title-md text-primary font-bold select-none" id="quantity-display">
+            1
+          </span>
+<button aria-label="Increase quantity" class="w-9 h-9 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-lowest active:scale-90 transition-all" onclick="increaseQty()" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<!-- Primary Action Button: Add to Table Order -->
+<button class="flex-1 h-12 bg-primary-container hover:bg-primary text-on-primary rounded-full px-4 flex items-center justify-between shadow-[0_4px_16px_rgba(61,35,23,0.2)] active:scale-95 transition-all" id="add-to-order-btn" onclick="handleAddToOrder()" type="button">
+<span class="font-label-lg text-label-lg font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px]">room_service</span>
+            Add to Table Order
+          </span>
+<span class="font-label-lg text-label-lg font-bold tracking-tight bg-on-primary/15 px-3 py-1 rounded-full" id="final-total-display">
+            Rs. 1,290
+          </span>
+</button>
+</div>
+</div>
+<!-- Notification Toast for Cart Action Feedback -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-primary-container text-on-primary px-5 py-2.5 rounded-full shadow-xl opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-2 max-w-[90%]" id="toast">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md" id="toast-text">Added to Table 07 order!</span>
+</div>
+</div>
+<!-- Interactive State Engine Script -->
+<script>
+    let quantity = 1;
+    let basePrice = 1290;
+    let isFavorited = false;
+
+    function updateBurgerConfig() {
+      // 1. Get Selected Patty Price
+      const pattyRadios = document.getElementsByName('patty_size');
+      for (let radio of pattyRadios) {
+        const container = radio.closest('.patty-option');
+        if (radio.checked) {
+          basePrice = parseInt(radio.value, 10);
+          container.classList.remove('border-outline-variant/40', 'bg-surface');
+          container.classList.add('border-2', 'border-primary-container', 'bg-primary-fixed/20');
+        } else {
+          container.classList.remove('border-2', 'border-primary-container', 'bg-primary-fixed/20');
+          container.classList.add('border-outline-variant/40', 'bg-surface');
+        }
+      }
+
+      // Update header base price indicator
+      document.getElementById('base-price-display').innerText = 'Rs. ' + basePrice.toLocaleString();
+
+      // 2. Sum Extras
+      let extrasTotal = 0;
+      const checkboxes = document.querySelectorAll('.extra-checkbox');
+      checkboxes.forEach(cb => {
+        if (cb.checked) {
+          extrasTotal += parseInt(cb.value, 10);
+        }
+      });
+
+      // 3. Compute Final Combined Total
+      const singleItemTotal = basePrice + extrasTotal;
+      const finalGrandTotal = singleItemTotal * quantity;
+
+      // 4. Update Button Price Display
+      document.getElementById('final-total-display').innerText = 'Rs. ' + finalGrandTotal.toLocaleString();
+    }
+
+    function increaseQty() {
+      if (quantity < 15) {
+        quantity++;
+        document.getElementById('quantity-display').innerText = quantity;
+        updateBurgerConfig();
+      }
+    }
+
+    function decreaseQty() {
+      if (quantity > 1) {
+        quantity--;
+        document.getElementById('quantity-display').innerText = quantity;
+        updateBurgerConfig();
+      }
+    }
+
+    function toggleFavorite() {
+      isFavorited = !isFavorited;
+      const favIcon = document.getElementById('favorite-icon');
+      if (isFavorited) {
+        favIcon.innerText = 'favorite';
+        favIcon.style.fontVariationSettings = "'FILL' 1";
+        favIcon.classList.add('text-secondary');
+        showToast('Saved to your favorites');
+      } else {
+        favIcon.innerText = 'favorite';
+        favIcon.style.fontVariationSettings = "'FILL' 0";
+        favIcon.classList.remove('text-secondary');
+        showToast('Removed from favorites');
+      }
+    }
+
+    function toggleSideAdd(btn, message) {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[16px]">check</span> Added`;
+      btn.classList.remove('bg-surface-container', 'text-primary');
+      btn.classList.add('bg-primary-container', 'text-on-primary');
+      showToast(message);
+    }
+
+    function handleAddToOrder() {
+      const button = document.getElementById('add-to-order-btn');
+      button.classList.add('scale-95');
+      setTimeout(() => button.classList.remove('scale-95'), 150);
+
+      const notes = document.getElementById('special-instructions').value.trim();
+      const toastMsg = notes 
+        ? `${quantity}x Smash Burger queued for Table 07 with instructions!` 
+        : `${quantity}x Smash Burger sent to Table 07 order!`;
+        
+      showToast(toastMsg);
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toast-text');
+      toastText.innerText = message;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 2600);
+    }
+
+    // Initialize logic on dom load
+    document.addEventListener('DOMContentLoaded', () => {
+      updateBurgerConfig();
+    });
+  </script>
+</body></html>

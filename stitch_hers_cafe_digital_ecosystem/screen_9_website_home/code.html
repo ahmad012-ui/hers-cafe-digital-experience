@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hers Cafe | Boutique Bistro &amp; Coffee Roastery Karachi</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration Script -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed-variant": "#5e4032",
+            "surface": "#fcf9f4",
+            "secondary-fixed": "#ffdbd0",
+            "on-primary-fixed": "#2d150a",
+            "inverse-surface": "#31302d",
+            "outline": "#82746f",
+            "error": "#ba1a1a",
+            "on-background": "#1c1c19",
+            "surface-container": "#f0ede9",
+            "surface-container-highest": "#e5e2dd",
+            "surface-tint": "#785748",
+            "surface-variant": "#e5e2dd",
+            "surface-container-low": "#f6f3ee",
+            "inverse-primary": "#e9bdab",
+            "tertiary-fixed-dim": "#9dd3aa",
+            "tertiary-container": "#003117",
+            "surface-bright": "#fcf9f4",
+            "on-tertiary-container": "#699c77",
+            "on-surface": "#1c1c19",
+            "on-error": "#ffffff",
+            "primary-fixed": "#ffdbcc",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed": "#00210e",
+            "on-secondary-container": "#772f18",
+            "secondary": "#97472e",
+            "on-primary-container": "#af8878",
+            "on-secondary-fixed": "#3a0a00",
+            "error-container": "#ffdad6",
+            "primary-container": "#3d2317",
+            "on-tertiary": "#ffffff",
+            "primary-fixed-dim": "#e9bdab",
+            "tertiary-fixed": "#b9efc5",
+            "inverse-on-surface": "#f3f0eb",
+            "tertiary": "#001a0a",
+            "surface-container-high": "#ebe8e3",
+            "on-secondary-fixed-variant": "#793019",
+            "primary": "#250f05",
+            "outline-variant": "#d4c3bd",
+            "secondary-container": "#fe997a",
+            "on-primary": "#ffffff",
+            "on-surface-variant": "#504440",
+            "secondary-fixed-dim": "#ffb59f",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#1e5031",
+            "on-error-container": "#93000a",
+            "surface-dim": "#dcdad5",
+            "background": "#fcf9f4"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-desktop": "1.5rem",
+            "space-xl": "2.5rem",
+            "margin-desktop": "3rem",
+            "gutter": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "margin": "1rem",
+            "margin-tablet": "2rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "display-lg": ["Playfair Display"],
+            "label-md": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Playfair Display"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "label-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f0ede9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #d4c3bd;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Announcement Notification Strip -->
+<aside aria-label="Announcement" class="bg-primary text-on-primary py-2 px-4 text-center border-b border-outline-variant/30 flex items-center justify-center gap-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-surface animate-ping"></span> Live Now
+    </span>
+<p class="font-body-sm text-body-sm text-surface-variant font-medium">
+      Clifton Flagship Open Daily till 12:30 AM • Fresh Viennoiserie Bakes from 8:00 AM • Complimentary Valet on Street 4
+    </p>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary-fixed underline hover:text-white transition-colors ml-2" href="#locations">
+      Directions <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</aside>
+<!-- Section 1: Top Navigation Bar (Shared Component TopAppBar Integration) -->
+<header class="bg-surface/90 backdrop-blur-md shadow-sm sticky top-0 z-40 transition-all duration-200">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Brand & Mascot Logo Lockup -->
+<a class="flex items-center gap-3.5 group" href="#">
+<div class="relative w-12 h-12 rounded-xl bg-surface-container-low p-1 border border-outline-variant/40 shadow-sm flex items-center justify-center overflow-hidden transition-transform duration-200 group-hover:scale-105">
+<img alt="Hers Cafe Mascot and Signature Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO4jTWmGsE8C6QoRfOkPmVAU8hCEz0eBj4ppPGoDg-ohkqzaw_UIUzv21E_Tw_ednNoErjF2mABlSnmHGsqJo7PyZO0Wu-gkvyIf0TMHpE8n3XUGrvBhCOKYkWbiq8dHC4zirT6xnmJMOLUjIyMygqMY_hX0ZxcEOY4ue4QcxRpeYg7kLclb_o9yCWPrc91uvx8cT87twQn4Zw9pXpv03Z6BCgiRjIu1O3VHYPK11-8yshQxfq7LILUBon1_0oaGs7uzM"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-primary tracking-tight leading-none group-hover:text-secondary transition-colors">
+            Hers Cafe
+          </span>
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase mt-1">
+            Boutique Bistro • Clifton, Karachi
+          </span>
+</div>
+</a>
+<!-- Desktop Nav Cluster -->
+<nav class="hidden lg:flex items-center gap-8">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-secondary hover:after:w-full after:transition-all" href="#story">
+          Story &amp; Ambience
+        </a>
+<a class="font-label-lg text-label-lg text-primary font-bold transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-secondary" href="#menu">
+          Artisan Menu
+        </a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-secondary hover:after:w-full after:transition-all" href="#dine-in">
+          Dine-In &amp; Courtyard
+        </a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-secondary hover:after:w-full after:transition-all" href="#connoisseur">
+          Connoisseur Club
+        </a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-secondary hover:after:w-full after:transition-all" href="#locations">
+          Locations &amp; Hours
+        </a>
+</nav>
+<!-- Right CTAs & Operational Status -->
+<div class="flex items-center gap-3">
+<!-- Table Reservation / WhatsApp Button with Status Pill -->
+<a class="hidden xl:inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-low border border-outline-variant/50 hover:bg-surface-container transition-all text-on-surface" href="https://wa.me/923001234567" rel="noopener noreferrer" target="_blank">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim border border-tertiary-container shadow-sm"></span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Clifton Flagship Open</span>
+<span class="material-symbols-outlined text-outline text-base">chat</span>
+</a>
+<!-- Direct Online Order CTA -->
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary active:scale-95 transition-all shadow-md" href="#menu">
+<span class="material-symbols-outlined text-lg">room_service</span>
+<span>Direct Online Order</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Section 3: Quick Table Ordering Highlight Banner -->
+<aside aria-label="QR dining notice" class="bg-surface-container-high border-b border-outline-variant/30 py-2.5 px-4">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-base">qr_code_scanner</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+<strong class="font-semibold text-primary">Visiting us today?</strong> Scan table QR code at <span class="bg-surface-container px-2 py-0.5 rounded-md font-semibold text-secondary">Table 01-18</span> for frictionless ordering straight to our pastry bar &amp; kitchen.
+        </p>
+</div>
+<div class="flex items-center gap-4 text-xs font-label-md text-outline">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">flash_on</span> Fast Prep Time (~15 mins)
+        </span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">credit_card</span> Contactless Bill Pay
+        </span>
+</div>
+</div>
+</aside>
+<!-- Section 2: Hero Section -->
+<section class="relative overflow-hidden pt-10 pb-16 lg:py-20 bg-surface">
+<!-- Atmospheric subtle glow -->
+<div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-secondary-fixed/20 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -left-32 w-80 h-80 rounded-full bg-primary-fixed/25 blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Content Column -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<!-- Curated Badge -->
+<div class="inline-flex items-center gap-2 w-max px-3.5 py-1.5 rounded-full bg-surface-container border border-outline-variant/60 shadow-xs">
+<span class="material-symbols-outlined text-secondary text-base">verified</span>
+<span class="font-label-md text-label-md text-secondary font-bold tracking-wide uppercase">
+              Dine-In • Express Pickup • Direct Delivery
+            </span>
+</div>
+<!-- Main Hero Headline -->
+<h1 class="font-headline-lg text-headline-lg md:font-display-lg md:text-display-lg text-primary leading-tight">
+            Karachi's Artisanal Sanctuary for Specialty Coffee &amp; Indulgent Pastries
+          </h1>
+<!-- Editorial Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            Handcrafted double-smash burgers, flaky European viennoiserie, and single-origin brews crafted with passion in the heart of Clifton. Step inside our sunlit courtyard or experience doorstep perfection across Karachi.
+          </p>
+<!-- Dual Call to Action Buttons -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="px-7 py-3.5 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-all duration-200 shadow-lg hover:shadow-xl inline-flex items-center gap-2.5 active:scale-95" href="#menu">
+<span>Explore Full Menu</span>
+<span class="material-symbols-outlined text-lg">restaurant_menu</span>
+</a>
+<a class="px-7 py-3.5 rounded-full bg-surface-container-lowest text-primary border border-outline-variant font-label-lg text-label-lg hover:bg-surface-container transition-all duration-200 inline-flex items-center gap-2.5 active:scale-95 shadow-sm" href="#quick-order">
+<span class="material-symbols-outlined text-secondary text-lg">moped</span>
+<span>Order Direct for Delivery</span>
+</a>
+</div>
+<!-- Highlights Bar / Social Proof -->
+<div class="grid grid-cols-3 gap-4 pt-6 border-t border-outline-variant/40 mt-4 max-w-xl">
+<div>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">100%</p>
+<p class="font-body-sm text-body-sm text-outline">Scratch-Baked Brioche</p>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">88+ SCA</p>
+<p class="font-body-sm text-body-sm text-outline">Ethiopian &amp; Colombian Beans</p>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">4.9 ★</p>
+<p class="font-body-sm text-body-sm text-outline">1,800+ Karachi Diners</p>
+</div>
+</div>
+</div>
+<!-- Right Visual Showcase / Bento Composition -->
+<div class="lg:col-span-5 relative">
+<!-- Main Hero Image Frame -->
+<div class="relative rounded-3xl overflow-hidden bg-surface-container-high border border-outline-variant/40 shadow-2xl aspect-[4/5] group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Rich warm visual of Hers Cafe boutique interior in Karachi featuring a barista pouring intricate latte art with an espresso machine in background, next to a decadent double smash burger and flaky golden croissants on warm marble and oak tabletops." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOpwNfm_PHOivtWQIa37RDb7_sA5Me2jWxeWZ7BnnAEHOyoTm0-JXkfyA7Ee6WbsPqB6Fl1bwXMbY96EMlurtBSHDIwUYDIzOlu0WlicFoK_iYub5XaD7dNxEJhdQHx74gEVKrmeptOqIE41-7xlYhEfkKlRsRQ-pvGM0UDZ7l1UeJUzbV5VStS4KaoBNnX2Uu8zZ-3ZacqBtsmcKZax1kPlGF7RMNL9A0bPWhETuibBqaYHW6Pqwujg"/>
+<!-- Floating Badge: Signature Dish -->
+<div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-surface/95 backdrop-blur-md border border-outline-variant/40 shadow-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">local_cafe</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">Slow-Extracted Nitro Cold Brew</h4>
+<p class="font-body-sm text-body-sm text-outline">Single Origin Yirgacheffe • PKR 620</p>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center hover:bg-secondary hover:text-white transition-colors" title="Quick Add">
+<span class="material-symbols-outlined text-xl">add</span>
+</button>
+</div>
+<!-- Floating Top Tag -->
+<div class="absolute top-5 right-5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-md text-label-md border border-outline-variant/40 shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-sm">location_on</span>
+              Clifton Block 4
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Culinary Highlights / Featured Creations -->
+<section class="py-20 bg-surface-container-low border-y border-outline-variant/30" id="menu">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-fixed/50 text-secondary font-label-sm text-label-sm uppercase tracking-wider mb-2">
+            Master Chef Curations
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-primary">
+            Signature Culinary Creations
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-xl">
+            From sunrise breakfasts in our leafy terrace to midnight sweet cravings, experience Karachi's most talked-about comforting plates.
+          </p>
+</div>
+<!-- Filter Chips Carousel (Responsive) -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2 custom-scrollbar">
+<button class="px-5 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm whitespace-nowrap">
+            All Favorites
+          </button>
+<button class="px-5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:text-primary transition-colors font-label-md text-label-md whitespace-nowrap">
+            Smash Burgers
+          </button>
+<button class="px-5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:text-primary transition-colors font-label-md text-label-md whitespace-nowrap">
+            Pastries &amp; French Toast
+          </button>
+<button class="px-5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:text-primary transition-colors font-label-md text-label-md whitespace-nowrap">
+            Specialty Coffee
+          </button>
+</div>
+</div>
+<!-- Bento-style 4 Card Showcase -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1: Hers Signature Wagyu Smash Burger -->
+<div class="rounded-2xl bg-surface-container-lowest border border-outline-variant/40 overflow-hidden flex flex-col shadow-sm hover:shadow-lg transition-all duration-300 group">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up gourmet shot of a double wagyu beef smash burger with melted golden cheddar cheese, caramelized onions, and house aioli on a toasted artisanal brioche bun, presented on matte ceramic tableware in an upscale Karachi cafe setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbfJekDmF_pPtVTwEfV1WBLGNMZaWOcnzmmteAHg7U8guidIP4IeE5WTcN3r771wcLxUiZh4IUatYKAmdroSeLIC6Aknw2W1KojhFK3eCcpf4WljGuKoLYqrCRoDrLOQJB9leLEd9dy3EzkN8-Eibmpa3EdsUVpUPxr2__axXRb2yRCirWT_vBN_kU7nuiSWW4l-z_B_3KQaacS7MDwYq080a2wvHnORJi22NaHbfRbHHqOkcjc3cctw"/>
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wide font-bold">
+              Chef's Special
+            </span>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">The Hers Wagyu Smash</h3>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-1.5 leading-relaxed">
+                Double smashed wagyu patties, Wisconsin aged yellow cheddar, pickled jalapeño relish, secret house bistro sauce on toasted milk brioche.
+              </p>
+</div>
+<div class="mt-5 pt-4 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Price</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">PKR 1,290</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-primary-container text-on-primary hover:bg-primary transition-colors font-label-md text-label-md flex items-center gap-1.5 active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-base">shopping_bag</span> Add
+              </button>
+</div>
+</div>
+</div>
+<!-- Card 2: Lotus Biscoff French Toast -->
+<div class="rounded-2xl bg-surface-container-lowest border border-outline-variant/40 overflow-hidden flex flex-col shadow-sm hover:shadow-lg transition-all duration-300 group">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Editorial presentation of thick brioche French toast topped with warm caramelized Lotus Biscoff spread, crushed spiced cookies, whipped vanilla mascarpone, and organic honeycomb in soft natural daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc-w-o-0ym3z_l-ytDOnbOWGw_dbAw9bvbdEfOuCQVuMepza-_bAiBWAcxuzb2ZIIzAmf3NypMqpFyfpaxL48QWBvZfa4tsmYrC-LUCpY6jG5uvBnMOUHc23wReHJ_7C2I-pQUBs7c5Jy5HLKOVypMJHboLsBI8W-UUHTNbRCmS7qs3tQ-U9s2LT3h7ISgIYaLAiRup1FgElzZYGqwv-6xrP7PPmOeRNlu42xSqOMdOXxF7LAspzfzPA"/>
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-wide font-bold">
+              All-Day Brunch
+            </span>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Lotus Biscoff French Toast</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1.5 leading-relaxed">
+                Twenty-four hour soaked caramelized brioche, warm Belgian speculoos lava, quenelle of Madagascar vanilla cream, spiced cookie crumble.
+              </p>
+</div>
+<div class="mt-5 pt-4 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Price</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">PKR 980</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-primary-container text-on-primary hover:bg-primary transition-colors font-label-md text-label-md flex items-center gap-1.5 active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-base">shopping_bag</span> Add
+              </button>
+</div>
+</div>
+</div>
+<!-- Card 3: Handcrafted Iced Spanish Latte -->
+<div class="rounded-2xl bg-surface-container-lowest border border-outline-variant/40 overflow-hidden flex flex-col shadow-sm hover:shadow-lg transition-all duration-300 group">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Layered iced Spanish latte in a ribbed glass showing distinct layers of condensed milk, cold whole milk, and rich dark espresso crema with crystal clear ice cubes on a polished cafe bar counter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrpVP_WFj7ArSsHUwgHT9IQVaLU3Y8NhJuG--EoDBaP-Q6KtNIO4WU6MGzvGaQDyuo6YuL-g-loVfpvzdivNONK7-rFhObrkjCtmuczFr0I_rJYtOn0vl741eksHrPKEdMxMMPnZYaoRRs6buXwyyqDSbnsA8QW62Qlzw5T_h5iwPSQdGrPBKcmnZ2d-h7rfIWgxvdYEhKL9z3SL34sJ7mnvoE5Ti6HWSEQv7_p4xN0I5Ld4ahILj3QA"/>
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wide font-bold">
+              Cold Bar Favorite
+            </span>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Iced Spanish Latte</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1.5 leading-relaxed">
+                Signature double ristretto extracted over artisanal infused condensed milk, cold farm-fresh whole milk, served over hand-cut crystal clear ice.
+              </p>
+</div>
+<div class="mt-5 pt-4 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Price</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">PKR 680</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-primary-container text-on-primary hover:bg-primary transition-colors font-label-md text-label-md flex items-center gap-1.5 active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-base">shopping_bag</span> Add
+              </button>
+</div>
+</div>
+</div>
+<!-- Card 4: Truffle Wild Mushroom Tagliatelle -->
+<div class="rounded-2xl bg-surface-container-lowest border border-outline-variant/40 overflow-hidden flex flex-col shadow-sm hover:shadow-lg transition-all duration-300 group">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Elegant swirl of handmade artisan tagliatelle pasta draped in a glossy wild mushroom black truffle cream sauce with shaved 24-month aged parmesan and microgreens in a deep ceramic bowl." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJCB1tTSFQVcMin_Ywp4efgS22guGS67IsXqYfICYr_T03-zUHQdLMeX7D_tFJUJkmzZNYyy-Cgbdtf0WoNEGvA_kOrpSrRGivPh4-e-kIRw1Eh-AcSNRC5l3pdaIcuUTYfQaa9uNpF2SHChXJf_0zWpKfk1iZIgBPWAkHmHzibxMWZEHLOzEuGM3zrM591VKQaBy2V6y_NnVVPr3F2C82v5Zun_QNLtW4Pag4NRXuKFS_WvbhYpl30w"/>
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-wide font-bold">
+              House Handmade
+            </span>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Truffle Wild Mushroom Tagliatelle</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1.5 leading-relaxed">
+                Hand-rolled egg pasta ribbon ribbons, roasted porcini and cremini mushrooms, white truffle emulsified butter, and aged 24-month Reggiano.
+              </p>
+</div>
+<div class="mt-5 pt-4 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Price</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">PKR 1,650</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-primary-container text-on-primary hover:bg-primary transition-colors font-label-md text-label-md flex items-center gap-1.5 active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-base">shopping_bag</span> Add
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- View Complete Menu Banner -->
+<div class="mt-12 text-center">
+<a class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-surface-container-lowest text-primary border border-outline-variant hover:border-primary transition-colors font-label-lg text-label-lg shadow-sm" href="#full-menu">
+<span>Explore All 48 Handcrafted Cafe Items</span>
+<span class="material-symbols-outlined text-lg">arrow_outward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Section 5: The Hers Story & Ambience Showcase -->
+<section class="py-24 bg-surface" id="story">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Left Editorial Story -->
+<div class="lg:col-span-6 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container border border-outline-variant/50 w-max text-outline font-label-sm text-label-sm uppercase tracking-wider">
+            Our Clifton Philosophy
+          </div>
+<h2 class="font-headline-lg text-headline-lg md:font-display-lg md:text-display-lg text-primary leading-tight">
+            Born from a Deep Love for Slow Mornings &amp; Pure Ingredients
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Hers Cafe began with a straightforward, uncompromising dream: to bring Karachi an intimate European-style bistro atmosphere where coffee is treated like fine wine and bread is baked fresh each morning using fermented doughs, natural French butters, and no shortcuts.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Nestled inside the serene neighborhood of Block 4 Clifton, our tranquil courtyard provides an open-air respite from Karachi's bustling rhythms. Whether you are holding a morning strategy meeting over our Ethiopian batch brews, catching up with friends on our velvet banquettes, or satisfying a midnight craving for hot brioche, Hers Cafe is your second home.
+          </p>
+<!-- Key Pillar Bullets -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/30 flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-2xl">bakery_dining</span>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">In-House Bakery</h4>
+<p class="font-body-sm text-body-sm text-outline mt-1">Proofed 36 hours for exceptional crumb &amp; flakiness.</p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/30 flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-2xl">yard</span>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">Garden Courtyard</h4>
+<p class="font-body-sm text-body-sm text-outline mt-1">Sun-dappled open air terrace with cooling misters.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Visual Showcase: Asymmetric Photo Grid -->
+<div class="lg:col-span-6 grid grid-cols-2 gap-4 relative">
+<!-- Ambient decor element -->
+<div class="col-span-2 rounded-3xl overflow-hidden aspect-[16/9] shadow-lg border border-outline-variant/40">
+<img class="w-full h-full object-cover" data-alt="Sunlit courtyard dining area of Hers Cafe Karachi featuring lush green tropical plants, wrought iron bistro chairs, warm stone pavers, and couples enjoying coffee on a bright peaceful morning." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaV14dlsTua_Ba8jXkuy-1MhdXstUVQDO2pH4ot-igKEAGwdQEhEv3ivpOeAiLt6ycMf5L1iHHvdsh6TckqSU92FDgPSx3LE4YeGFySWCHj_UikxekAEYcOWLympW9gldgQpOPKgSViagqlvQbU9uZC6_pSW4R9gRnpqyM1K74o3K6NY-rbIuyOpzQ0Wh-HpJFw8yIvyhsl5lFemD0l1cODOZsuoVrH6jEW3GthdaTI2YxSIvBxTi19Q"/>
+</div>
+<div class="rounded-2xl overflow-hidden aspect-square shadow-md border border-outline-variant/40">
+<img class="w-full h-full object-cover" data-alt="Skilled specialty coffee barista dialing in single origin espresso beans on a polished La Marzocco machine inside Hers Cafe Clifton, with steam and warm ambient bistro lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjBLYRjczzh2wy_4aBfcwKDVJ2_7iaki6NPqLIkVEuC5GKBNeIRz15y0PFBkFF_p8-wGnoaCHAJXLhpAWpoTdmpHIfyrjzcj6Y9dLH7gifu-v7lZXy8Dpn3G5RIa3dVYveeX2VVGUZ2tpHickOxWxHL9ZpPWf4TLHsIqZP0-khjYMfE2nAeMWIZXuEG4fwDGfOXzs1hxooX2qug-FGwEbCXWUiNbi4Polmd8rCjtWDCw0QvCSoQq-00A"/>
+</div>
+<div class="rounded-2xl overflow-hidden aspect-square shadow-md border border-outline-variant/40">
+<img class="w-full h-full object-cover" data-alt="Display counter at Hers Cafe loaded with fresh baked pain au chocolat, sourdough boules, pistachio croissants, and fruit tartlets illuminated under warm boutique cafe lamps." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvtAL5dHLB-Z2lma_ACF9C8W-qN7erwngnBfM2LfpacXZxgh8IEeoLnk4lNXyY50V4YYMb-A8Czls3stzLBqR5to4gmOI-EWp9bCKfYGiXpLZSXdv1EJDmvrgzVNqvkE_SGFjgFLMabE5xSsjR0eRE7ivhvONMLuwAz8kn5kFx5rIi2KJ48ZjiIrV12UZ21X7QV4uXJ5vyJTqYMbw87DjCx6-37tOVTdbu9u6ocLTVfbkjIe0Hha8YfQ"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Guest Perks & Connoisseur Club -->
+<section class="py-20 bg-primary text-on-primary relative overflow-hidden" id="connoisseur">
+<!-- Background Motif Pattern -->
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffdbcc_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="max-w-3xl mx-auto text-center mb-14">
+<span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-widest">
+          Loyalty &amp; Tasting Circle
+        </span>
+<h2 class="font-headline-lg text-headline-lg md:font-display-lg md:text-display-lg text-white mt-4">
+          Join The Hers Connoisseur Club
+        </h2>
+<p class="font-body-lg text-body-lg text-surface-variant/80 mt-3">
+          Elevate every visit. Earn reward credits with every bite, unlock secret quarterly menu tastings, and receive birthday treats crafted by our executive pastry chef.
+        </p>
+</div>
+<!-- Perks Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 rounded-2xl bg-surface-container-highest/10 border border-outline-variant/20 backdrop-blur-sm flex flex-col items-start justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-2xl">loyalty</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-white font-bold">5% Dining Back</h3>
+<p class="font-body-md text-body-md text-surface-variant/80 mt-2">
+              Automatically accumulate 5% cashback on all direct website orders and courtyard table checkouts to redeem against future orders.
+            </p>
+</div>
+<div class="mt-6 flex items-center gap-2 font-label-md text-label-md text-secondary-fixed">
+<span>Instant Mobile Wallet</span> →
+          </div>
+</div>
+<div class="p-8 rounded-2xl bg-surface-container-highest/10 border border-outline-variant/20 backdrop-blur-sm flex flex-col items-start justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary text-on-secondary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-2xl">cake</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-white font-bold">Birthday Patisserie</h3>
+<p class="font-body-md text-body-md text-surface-variant/80 mt-2">
+              Celebrate your milestone with a complimentary whole miniature celebration cake or artisanal dessert box prepared freshly for you.
+            </p>
+</div>
+<div class="mt-6 flex items-center gap-2 font-label-md text-label-md text-secondary-fixed">
+<span>Annual Chef Gift</span> →
+          </div>
+</div>
+<div class="p-8 rounded-2xl bg-surface-container-highest/10 border border-outline-variant/20 backdrop-blur-sm flex flex-col items-start justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface text-primary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-2xl">science</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-white font-bold">Cupping &amp; Tastings</h3>
+<p class="font-body-md text-body-md text-surface-variant/80 mt-2">
+              Gain exclusive quarterly invitations to private coffee cuppings with international guest roasters and seasonal preview tastings.
+            </p>
+</div>
+<div class="mt-6 flex items-center gap-2 font-label-md text-label-md text-secondary-fixed">
+<span>Exclusive Access</span> →
+          </div>
+</div>
+</div>
+<!-- Quick Signup Callout Strip -->
+<div class="mt-12 p-6 rounded-2xl bg-primary-container border border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed/20 text-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">card_membership</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-white font-bold">Sign Up in 10 Seconds</h4>
+<p class="font-body-sm text-body-sm text-surface-variant/80">No app download needed. Connect your WhatsApp or Phone Number.</p>
+</div>
+</div>
+<form class="flex w-full sm:w-auto items-center gap-2" onsubmit="event.preventDefault(); alert('Welcome to Hers Connoisseur Club!');">
+<input class="px-4 py-2.5 rounded-full bg-surface text-on-surface font-body-sm text-body-sm focus:outline-none border-0 placeholder:text-outline w-full sm:w-60" placeholder="0300 1234567" type="tel"/>
+<button class="px-6 py-2.5 rounded-full bg-secondary hover:bg-secondary-container hover:text-on-secondary-container text-white font-label-md text-label-md transition-all whitespace-nowrap active:scale-95" type="submit">
+            Join Club
+          </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Section 7: Real-Time Karachi Cafe Hours & Location Card -->
+<section class="py-20 bg-surface" id="locations">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- Info Card (Left) -->
+<div class="lg:col-span-5 bg-surface-container-low p-8 lg:p-10 rounded-3xl border border-outline-variant/40 flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="px-3.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wider font-bold">
+                Open Everyday
+              </span>
+<span class="font-label-md text-label-md text-secondary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span> Live Kitchen
+              </span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary font-bold">
+              Visit Our Clifton Flagship
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+              Centrally placed near Bilawal Roundabout and the historic Clifton coastline, featuring both quiet indoor study corners and a lively courtyard.
+            </p>
+<!-- Detailed Specs -->
+<div class="space-y-6 mt-8">
+<!-- Location Address -->
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-xl">location_on</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">Address</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+                    Street 4, Block 4, Clifton, Karachi, Pakistan<br/>
+<span class="text-xs text-outline">(Near Bilawal Roundabout &amp; Sea View Boulevard)</span>
+</p>
+</div>
+</div>
+<!-- Timings -->
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-xl">schedule</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">Service Hours</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+<strong>Monday – Sunday:</strong> 8:00 AM – 12:30 AM<br/>
+<span class="text-xs text-secondary font-medium">Boutique Breakfast served daily until 1:00 PM</span>
+</p>
+</div>
+</div>
+<!-- Contact & WhatsApp -->
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-xl">call</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">Phone &amp; Direct WhatsApp</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+                    Reception: +92 21 3582 4499<br/>
+                    WhatsApp Orders: +92 300 1234567
+                  </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action Buttons -->
+<div class="pt-8 mt-8 border-t border-outline-variant/30 flex flex-wrap gap-3">
+<a class="px-5 py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors flex items-center gap-2" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-base">directions</span> Get Directions
+            </a>
+<a class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface border border-outline-variant hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-2" href="https://wa.me/923001234567?text=Hello%20Hers%20Cafe%20Karachi,%20I%20would%20like%20to%20reserve%20a%20table" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-base">table_restaurant</span> Reserve Table
+            </a>
+</div>
+</div>
+<!-- Interactive Map Preview Graphic & Delivery Zones (Right) -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-3xl border border-outline-variant/40 overflow-hidden flex flex-col shadow-sm">
+<!-- Stylized Map Graphic View -->
+<div class="relative w-full h-80 sm:h-96 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Editorial stylized map view of Clifton and DHA Karachi coastal area centered on Block 4 with a customized Hers Cafe cafe pin marker showing nearby Sea View beach and serene city boulevards in light cream and warm sepia tones." data-location="Karachi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-iExbE6oQA0YHkmNDvQFD0HGGl4uiIQEGNzRsoWU1vfBDvnaPSRCF0lXnYYS1-JU7tTYdI0u_lZDVmowqfA1pMGLVFhHGXEbg6ueTraZX7MgtbxQdUe3AaL39zbxzsDtIvCBr_DhAyfbYU3Uo5SB1yx728wu43_qbvNnWk2CV6aM5FRAf3Hcx9hceb_sR9MfbU1OB6R2v-V483bdocM-uVYRksz7gZ3bIaZmxKvRtGRgBVnJRnVl-9w"/>
+<!-- Map Overlay Card -->
+<div class="absolute top-4 left-4 p-3.5 rounded-xl bg-surface/95 backdrop-blur-md border border-outline-variant/40 shadow-md max-w-xs">
+<p class="font-label-md text-label-md text-primary font-bold">Hers Cafe Flagship</p>
+<p class="font-body-sm text-body-sm text-outline">Block 4 Clifton • Valet parking available on entrance</p>
+</div>
+</div>
+<!-- Delivery Zones Info Strip -->
+<div class="p-6 bg-surface-container-lowest border-t border-outline-variant/30">
+<h4 class="font-title-md text-title-md text-primary font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-xl">electric_moped</span>
+              Official Direct Delivery Radius (Avg 30-40 Mins)
+            </h4>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4 text-xs font-label-md">
+<span class="p-2.5 rounded-lg bg-surface-container border border-outline-variant/30 text-on-surface text-center">
+                Clifton (Blocks 1-9)
+              </span>
+<span class="p-2.5 rounded-lg bg-surface-container border border-outline-variant/30 text-on-surface text-center">
+                DHA Phase 1, 2, 4
+              </span>
+<span class="p-2.5 rounded-lg bg-surface-container border border-outline-variant/30 text-on-surface text-center">
+                DHA Phase 5 &amp; 6
+              </span>
+<span class="p-2.5 rounded-lg bg-surface-container border border-outline-variant/30 text-on-surface text-center">
+                DHA Phase 7 &amp; 8
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 8: Social & Instagram Community Grid -->
+<section class="py-20 bg-surface-container-low border-t border-outline-variant/30">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between mb-10 gap-4">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Social Feed</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">#HersCafeKarachi Moments</h2>
+<p class="font-body-md text-body-md text-outline mt-1">Tag us on Instagram to be featured on our communal story wall.</p>
+</div>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-lowest border border-outline-variant text-primary font-label-md text-label-md hover:bg-surface-container transition-colors shadow-xs" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-secondary text-lg">photo_camera</span>
+<span>Follow @HersCafeKarachi</span>
+</a>
+</div>
+<!-- 6-Item Bento Community Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<div class="aspect-square rounded-2xl overflow-hidden bg-surface-container border border-outline-variant/30 relative group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Artisanal pour over coffee dripper in action on an oak wooden table surrounded by warm morning cafe shadows at Hers Cafe in Karachi." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYG15w4FjautsGdx3u-_5vl1bgCDpSo0EWTMwdMXJYKjKzHO6i5US2YNlfa0oDICTnftSakvKLNVvcFo8Z5N2Hxi50yATRN9v66YlD7ZZgf7ohnFjkn6qDcvNb3sBP57paoyO3lV_KRH79fd7FQODjVLhqPsLWkjnq7bXFBqoaXe1TmmNUGS2qVdp-eMKgRU-iEkc5j2H-jyIuqsDyI_5fRYk9FKU4Wbo1F6YpYyfbB8Ons533TrQ4FQ"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</div>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden bg-surface-container border border-outline-variant/30 relative group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Two cheerful young women laughing and enjoying high tea and artisan cakes on the sunny outdoor terrace of Hers Cafe Clifton." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6l3yzcuhFiMnGLkd7nHyOtdRzpmQYcunJ6IPN6vC4fJIE7lM0qwlU5jNDdayQtYpWzAdF4bpAlAfsJ5j6WJ6s97u_Y0mWWK9mxXLWYfqrUCTM7WBEnIlTSqeI9_dHFfpueKKsuSI1Hu8KagIq_zRzchXfvBT28zdUqv3vRZYSUlZhyWZPBMYXLUuVmse8sX959GdTmYuZI8M5RgD9KQAcrTjWoxehR4kBlnhCR3NH3R-SdPInRTsHbg"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</div>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden bg-surface-container border border-outline-variant/30 relative group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Stack of golden caramelized Belgian waffles with fresh berries and warm maple syrup at a weekend brunch table in Karachi." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC9i_uP3mgocAL8430uhCTAPcQKYBIhhzXC7efswcf-3mbXUZpq5nhefu_JCEj1iCIZN66tIz-w92mUBLMyYMmGOP9umQeaRgYPaPWoZxqu32Qb9YFPqJNnHv9diCwP3kQKrs8o5qgti71_90bF89Eanwq2j9BLF_rPGfTb4qLlPk7H7VdR6HZVLuNjLna76Csahw_2ycsrE6gfiGnpPBMIGGLUQjiEJpo6-gfIcCg2vLmeKkwMWeF2g"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</div>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden bg-surface-container border border-outline-variant/30 relative group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Top-down flatlay photo of a laptop, artisan cappuccino with swan latte art, and notebook on a marble bistro table at Hers Cafe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqopPjVVJMGTfj_dYdcRkfEunle01u3dBjQ5zP0AEg4kbKKFF1USS93MmqdelFukmfkl1aHjIcQnAVOlwzwnC9ePfJyvhyBqpI5d3munc8XzIvTE0Ul97CATU5_wS83cFyxmjPo3O0o28iRiROeHl9k7QSA-v68pRs6FfyfDKTzxMcC0NTb5pAeUAsWUl3etl8zo6zuzAkpcqt786qx-FAaai3bmUYy1Yc3znWZpINDwyT6Ks_KsKhag"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</div>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden bg-surface-container border border-outline-variant/30 relative group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A chef carefully garnishing fresh truffle tagliatelle with micro parsley in the open kitchen of Hers Cafe in Clifton Karachi." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBPvY96kCzQLH2GNeUNsp8Qa08r0YVUrXLXt3OhHLM6hp07AUgt0DzRBF30r9hwiHJecm8xmw2eZTNF3RF-29_ZVoUie4t29gcY6EXGTJ-VufBQvTCUk3m6e1X3oU24zzR5QNk9zauntluyXVL9jC59kYfCW4o-ZdIzCJqekTaLXS4ESPaEuY5Tm3_ScORbWh4pQLqm46xzOJZWQPzRmcrWmPKXqEVxjZmO20kpLfAAmMycPceqDPosg"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</div>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden bg-surface-container border border-outline-variant/30 relative group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Night view of Hers Cafe Karachi exterior with soft warm fairy lights strung through courtyard trees and welcoming brass bistro lettering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM3l3c2UWngsPbRH20kmYC579hdJFJZBTg-ynWHohDJ80oquyh8dwAk-DyRpbYYVRKokTbc6GEp8otJN5hUjvFqS0P_tGa1rVDTIxTeXSRC2ma9qLssQpJkw8UAYUmQhsUPmzXZsdEmXACnvtscUtWoUwo9_g415d8WqEmyyPrKVkQBGLvH72-H5wuANBcBgi1AhcHDdm2grTdXEyPZ2ydyDxqUIxpAsN8vfC0iTpC75gkg2emL4SjTQ"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 9: Comprehensive Footer -->
+<footer class="bg-primary text-on-primary pt-16 pb-12 border-t border-outline-variant/20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Top Row: Brand & Quick Links -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-outline-variant/20">
+<!-- Brand identity lockup -->
+<div class="lg:col-span-2 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface p-1 shadow-sm overflow-hidden flex items-center justify-center">
+<img alt="Hers Cafe Official Mascot Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO4jTWmGsE8C6QoRfOkPmVAU8hCEz0eBj4ppPGoDg-ohkqzaw_UIUzv21E_Tw_ednNoErjF2mABlSnmHGsqJo7PyZO0Wu-gkvyIf0TMHpE8n3XUGrvBhCOKYkWbiq8dHC4zirT6xnmJMOLUjIyMygqMY_hX0ZxcEOY4ue4QcxRpeYg7kLclb_o9yCWPrc91uvx8cT87twQn4Zw9pXpv03Z6BCgiRjIu1O3VHYPK11-8yshQxfq7LILUBon1_0oaGs7uzM"/>
+</div>
+<div>
+<span class="font-headline-md text-headline-md font-bold text-white tracking-tight">Hers Cafe</span>
+<p class="font-label-sm text-label-sm text-surface-variant/70 uppercase tracking-widest">Karachi • Est. 2022</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-surface-variant/80 max-w-sm leading-relaxed mt-2">
+            An artisanal culinary sanctuary celebrated for European patisserie techniques, specialty grade roast profiles, and comfortable bistro dining in Clifton, Karachi.
+          </p>
+<div class="flex items-center gap-3 mt-2">
+<a class="w-9 h-9 rounded-full bg-surface-container-highest/20 hover:bg-secondary transition-colors flex items-center justify-center text-white" href="https://instagram.com">
+<span class="material-symbols-outlined text-lg">camera_alt</span>
+</a>
+<a class="w-9 h-9 rounded-full bg-surface-container-highest/20 hover:bg-secondary transition-colors flex items-center justify-center text-white" href="https://facebook.com">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-9 h-9 rounded-full bg-surface-container-highest/20 hover:bg-secondary transition-colors flex items-center justify-center text-white" href="https://wa.me/923001234567">
+<span class="material-symbols-outlined text-lg">chat</span>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="font-title-md text-title-md text-white font-semibold mb-4">Discover</h4>
+<ul class="space-y-2.5 font-body-sm text-body-sm text-surface-variant/80">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#menu">Breakfast &amp; Brunch</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#menu">Wagyu Smash Burgers</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#menu">Viennoiserie &amp; Croissants</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#menu">Specialty Espresso Bar</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#connoisseur">Connoisseur Club Rewards</a></li>
+</ul>
+</div>
+<!-- Direct Services -->
+<div>
+<h4 class="font-title-md text-title-md text-white font-semibold mb-4">Experiences</h4>
+<ul class="space-y-2.5 font-body-sm text-body-sm text-surface-variant/80">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#dine-in">Courtyard Dining</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#locations">Table Reservations</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#connoisseur">Private Events &amp; Birthdays</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#menu">Direct Clifton Delivery</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#locations">Corporate Coffee Catering</a></li>
+</ul>
+</div>
+<!-- Karachi Ordering Hub -->
+<div>
+<h4 class="font-title-md text-title-md text-white font-semibold mb-4">Direct Orders</h4>
+<p class="font-body-sm text-body-sm text-surface-variant/80 mb-3">
+            Open today until 12:30 AM.<br/>
+            Hot food dispatched within 25 minutes.
+          </p>
+<a class="font-headline-sm text-headline-sm text-secondary-fixed font-bold block hover:underline" href="tel:+922135824499">
+            +92 21 3582 4499
+          </a>
+<span class="inline-block mt-3 px-3 py-1 rounded-full bg-surface-container-highest/20 text-surface-variant text-xs">
+            Sindh Sales Tax Reg: 327729-1
+          </span>
+</div>
+</div>
+<!-- Bottom Row: Compliance & Copyright -->
+<div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-body-sm text-surface-variant/60">
+<p>
+          © 2024 Hers Cafe Karachi. Handcrafted with passion. All rights reserved.
+        </p>
+<div class="flex items-center gap-6">
+<a class="hover:text-white transition-colors" href="#">Food Safety &amp; Hygiene Standards</a>
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Dining</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

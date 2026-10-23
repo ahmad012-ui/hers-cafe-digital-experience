@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hers Cafe — Live Table Status</title>
+<!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed": "#b9efc5",
+            "surface": "#fcf9f4",
+            "error": "#ba1a1a",
+            "outline-variant": "#d4c3bd",
+            "surface-container-low": "#f6f3ee",
+            "primary-fixed-dim": "#e9bdab",
+            "on-secondary-fixed-variant": "#793019",
+            "surface-container-high": "#ebe8e3",
+            "inverse-on-surface": "#f3f0eb",
+            "primary-fixed": "#ffdbcc",
+            "on-tertiary-fixed": "#00210e",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#ffdbd0",
+            "surface-dim": "#dcdad5",
+            "on-tertiary-fixed-variant": "#1e5031",
+            "on-primary": "#ffffff",
+            "background": "#fcf9f4",
+            "tertiary": "#001a0a",
+            "on-secondary-fixed": "#3a0a00",
+            "on-surface-variant": "#504440",
+            "on-primary-fixed-variant": "#5e4032",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#ffb59f",
+            "on-background": "#1c1c19",
+            "tertiary-fixed-dim": "#9dd3aa",
+            "on-tertiary-container": "#699c77",
+            "on-secondary": "#ffffff",
+            "outline": "#82746f",
+            "inverse-primary": "#e9bdab",
+            "inverse-surface": "#31302d",
+            "surface-container": "#f0ede9",
+            "primary-container": "#3d2317",
+            "surface-variant": "#e5e2dd",
+            "surface-bright": "#fcf9f4",
+            "on-secondary-container": "#772f18",
+            "surface-tint": "#785748",
+            "tertiary-container": "#003117",
+            "on-primary-container": "#af8878",
+            "secondary-container": "#fe997a",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "error-container": "#ffdad6",
+            "primary": "#250f05",
+            "on-primary-fixed": "#2d150a",
+            "secondary": "#97472e",
+            "on-surface": "#1c1c19",
+            "surface-container-highest": "#e5e2dd"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "2.5rem",
+            "gutter": "1rem",
+            "gutter-desktop": "1.5rem",
+            "space-lg": "1.5rem",
+            "margin-desktop": "3rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "margin-tablet": "2rem",
+            "margin": "1rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "display-lg": ["Playfair Display"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Playfair Display"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-ring-pulse {
+      animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.08); opacity: 0.4; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md min-h-screen pb-40 antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TOP APP BAR (Shared Components JSON Anchor) -->
+<header class="bg-surface/90 backdrop-blur-md sticky top-0 z-40 w-full shadow-sm">
+<div class="flex justify-between items-center w-full px-4 h-16 max-w-7xl mx-auto">
+<!-- Back / Leading Anchor -->
+<a class="flex items-center gap-2 text-primary hover:bg-surface-container active:scale-95 transition-all p-2 rounded-xl" href="#" title="Back to Menu">
+<span class="material-symbols-outlined text-primary" data-icon="table_restaurant">table_restaurant</span>
+<span class="font-headline-sm text-headline-sm hidden sm:inline text-primary">Back to Menu</span>
+</a>
+<!-- Headline Anchor -->
+<div class="flex flex-col items-center">
+<h1 class="font-headline-md text-headline-md font-bold text-primary tracking-tight">Live Table Status</h1>
+<span class="text-secondary font-label-sm text-label-sm tracking-wide">Hers Cafe • Clifton, Karachi</span>
+</div>
+<!-- Table Indicator / Trailing Anchor -->
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1.5 bg-surface-container-high px-3 py-1.5 rounded-full border border-outline-variant/40">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span class="font-label-lg text-label-lg text-primary">Table 07</span>
+</div>
+<button aria-label="Room service" class="p-2 text-primary hover:bg-surface-container active:scale-95 transition-all rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="room_service">room_service</span>
+</button>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="max-w-4xl mx-auto px-4 sm:px-6 pt-6 space-y-6">
+<!-- HERO LIVE STATUS CARD (Bento / Warm Glassmorphic Hybrid) -->
+<section class="bg-surface-container-lowest rounded-3xl p-6 sm:p-8 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] border border-outline-variant/40 relative overflow-hidden">
+<!-- Ambient decorative warm glow -->
+<div class="absolute -top-16 -right-16 w-56 h-56 bg-secondary-fixed/40 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Header row inside hero -->
+<div class="flex flex-wrap items-center justify-between gap-4 border-b border-outline-variant/30 pb-5">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant">Active Order Tracking</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-headline-md text-headline-md font-bold text-primary">#HC-8429</span>
+<span class="bg-[#FAF0EC] text-[#A34B32] font-label-sm text-label-sm px-2.5 py-1 rounded-full border border-secondary-fixed font-bold">Dine-In Priority</span>
+</div>
+</div>
+<!-- Kitchen Station Alert Badge -->
+<div class="flex items-center gap-2 bg-surface-container-low px-3.5 py-2 rounded-2xl border border-outline-variant/40 shadow-xs">
+<span class="material-symbols-outlined text-secondary" data-icon="skillet" data-weight="fill" style="font-variation-settings: 'FILL' 1;">skillet</span>
+<div class="text-left">
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-none">Kitchen Station</p>
+<p class="font-label-lg text-label-lg text-primary">Grill Station 1 • Chef Farhan</p>
+</div>
+</div>
+</div>
+<!-- Circular Meter & Dynamic Status Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center py-6">
+<!-- Dial Progress Meter (Col 1-5) -->
+<div class="md:col-span-5 flex flex-col items-center justify-center">
+<div class="relative w-44 h-44 flex items-center justify-center">
+<!-- SVG Circular Gauge -->
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 120 120">
+<circle cx="60" cy="60" fill="transparent" r="50" stroke="#f0ede9" stroke-width="8"></circle>
+<circle class="transition-all duration-1000 ease-out" cx="60" cy="60" fill="transparent" r="50" stroke="#3D2317" stroke-dasharray="314.159" stroke-dashoffset="138" stroke-linecap="round" stroke-width="8"></circle>
+<circle class="transition-all duration-1000 ease-out" cx="60" cy="60" fill="transparent" r="50" stroke="#97472e" stroke-dasharray="314.159" stroke-dashoffset="260" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center px-2">
+<span class="material-symbols-outlined text-secondary mb-1" data-icon="timer">timer</span>
+<span class="font-display-lg text-headline-lg font-bold text-primary leading-none">12</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold mt-1 tracking-wider uppercase">Mins Left</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 text-center">Estimated delivery to Table 07</p>
+</div>
+<!-- Live Description & Visual Status (Col 6-12) -->
+<div class="md:col-span-7 flex flex-col justify-center space-y-4">
+<div class="inline-flex items-center gap-2 bg-[#FEF7EB] text-[#92400E] border border-outline-variant/30 px-3 py-1.5 rounded-full w-fit">
+<span class="h-2 w-2 rounded-full bg-[#92400E] animate-ping"></span>
+<span class="font-label-md text-label-md">Live Cooking in Progress</span>
+</div>
+<h2 class="font-display-lg text-headline-md sm:text-headline-lg font-bold text-primary leading-snug">
+            Preparing Your Sizzling Smash Burger
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Fresh brioche buns are being toasted with garlic-herb butter while our prime beef chuck patties sear at high temperature for the signature caramelized crust.
+          </p>
+<!-- Step Progress Indicator -->
+<div class="pt-2">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-md text-label-md text-primary font-bold">Step 2 of 4: Preparing &amp; Grilling</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">58% Completed</span>
+</div>
+<!-- Multi-segment segmented progress bar -->
+<div class="grid grid-cols-4 gap-2 h-2.5 w-full">
+<!-- Step 1: Order Confirmed -->
+<div class="bg-primary-container rounded-full h-full"></div>
+<!-- Step 2: Preparing (Active) -->
+<div class="bg-secondary rounded-full h-full relative overflow-hidden">
+<div class="absolute inset-0 bg-secondary-fixed/50 animate-pulse"></div>
+</div>
+<!-- Step 3: Plating & Quality -->
+<div class="bg-surface-variant rounded-full h-full"></div>
+<!-- Step 4: Table Service -->
+<div class="bg-surface-variant rounded-full h-full"></div>
+</div>
+<div class="grid grid-cols-4 gap-1 text-[10px] font-label-sm text-on-surface-variant mt-1.5 text-center">
+<span class="font-bold text-primary">Received</span>
+<span class="font-bold text-secondary">Preparing</span>
+<span>Plating</span>
+<span>Serving</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ITEMS IN THIS BATCH SECTION -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="restaurant_menu">restaurant_menu</span>
+          Items In This Batch
+        </h3>
+<span class="font-label-md text-label-md text-on-surface-variant">3 Dishes &amp; Drinks</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Item 1: Smash Burger -->
+<article class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/40 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] flex flex-col justify-between hover:shadow-md transition-all">
+<div>
+<div class="relative w-full h-36 rounded-xl overflow-hidden mb-3 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Artisanal smash burger with double caramelized beef patties, melted aged cheddar, crisp pickles, and special bistro sauce on a warm toasted brioche bun, presented on matte ceramic plate against warm bistro lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFVHRLUjg0He0wUkr3jMNX6IEI80QmZGcSqc6taNoo9UDQD_Xlla0NL_u_QFEYI00AZ0YZaPgcH8mPq9UkpOIpfxstKLqR6nIRLjjXQhmZU07GfXgsu4RimtKa68uBFHOuH8T28Tnv7iIHh8BK22G8SO-UwJjuGAn904G3g7ahTG9A32nfKfk82Qmqit-tJz99c4KwsiKoJu8SxLfS4YkRBQF9zVkeYJdbWtZ7tv1Wx3nQl52NtuuOQg"/>
+<span class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold shadow-xs">
+                1x
+              </span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-bold leading-tight">The Hers Signature Smash Burger</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Double Wagyu smash, caramelized shallot jam, cheddar</p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between">
+<span class="bg-[#FAF0EC] text-[#A34B32] font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold flex items-center gap-1 border border-secondary-fixed/50">
+<span class="material-symbols-outlined text-xs" data-icon="cooking">cooking</span> In Kitchen
+            </span>
+<span class="font-label-lg text-label-lg text-primary font-bold">PKR 1,650</span>
+</div>
+</article>
+<!-- Item 2: Nashville Hot Chicken -->
+<article class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/40 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] flex flex-col justify-between hover:shadow-md transition-all">
+<div>
+<div class="relative w-full h-36 rounded-xl overflow-hidden mb-3 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Golden crisp deep-fried Nashville hot chicken tender sandwich with creamy coleslaw and spicy cayenne glaze served in a rustic artisanal cafe setting with warm ambient background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMFHga_1yGalV4F5GRnZDIVamyjWIKyMhShFQo6IQY_aMi-9Bl2J95bxSRHP01yCh2freyh_THg4WB_t92FTea39CnTPhxAYuI82-qadR_nz9WtYHsrdmf2KgKHVHNH8Pa3IBAa9rAcbqASrH4Cp8pmg68bgvNznMHbs9VHqZHETuLpUzlt-lQYw7YaktrLLT6foXOOuIxYXJWpEXtaRRyLZNadhyeoHHkbdVmnFQOU-z08jLO08NJOA"/>
+<span class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold shadow-xs">
+                1x
+              </span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-bold leading-tight">Crispy Nashville Hot Chicken</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Spiced buttermilk dredge, house dill brine, garlic mayo</p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between">
+<span class="bg-[#FAF0EC] text-[#A34B32] font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold flex items-center gap-1 border border-secondary-fixed/50">
+<span class="material-symbols-outlined text-xs" data-icon="skillet">skillet</span> In Kitchen
+            </span>
+<span class="font-label-lg text-label-lg text-primary font-bold">PKR 1,499</span>
+</div>
+</article>
+<!-- Item 3: Iced Spanish Latte (Ready) -->
+<article class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/40 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] flex flex-col justify-between hover:shadow-md transition-all relative">
+<div>
+<div class="relative w-full h-36 rounded-xl overflow-hidden mb-3 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Two tall glasses of iced Spanish latte showing layered espresso, sweetened condensed milk, and fresh whole milk over crystal clear ice cubes on a polished wooden cafe counter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFNi7OQSuHmQbQjHD2qzpuZKJhDbP42nP3R8Qdw_f3o77Dv_QqJFZUYOwy6PXAblqGy_VsFUMKWRgD6CgJaWngrEGycpEBwfhG_w6fm3bWOe0NrMHE9v1mEJSEOKcaeu36BBQIgLOYWsFOQotVQmKhUVjHfnQRX9zCm1PvDXFsnUMKCQigrnog67zITDu7ZdFPq5VRQwLxfwwKyslWN1a1I-_DAip2rHetQcJMHN_xL3JieqXxjTgxpQ"/>
+<span class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold shadow-xs">
+                2x
+              </span>
+<span class="absolute top-2 right-2 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold flex items-center gap-1 shadow-xs">
+<span class="material-symbols-outlined text-xs" data-icon="check_circle">check_circle</span> Ready
+              </span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-bold leading-tight">Iced Spanish Latte</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Double espresso shot, condensed milk infusion, whole milk</p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between">
+<span class="bg-[#EBF3EE] text-[#2A5235] font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold flex items-center gap-1 border border-[#C2DEC9]">
+<span class="material-symbols-outlined text-xs" data-icon="local_cafe">local_cafe</span> Ready at Beverage Bar ☕
+            </span>
+<span class="font-label-lg text-label-lg text-primary font-bold">PKR 1,700</span>
+</div>
+</article>
+</div>
+</section>
+<!-- INTERACTIVE TABLE UTILITIES / REASSURING ACTIONS (Bento Grid Style) -->
+<section class="space-y-4 pt-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="concierge">concierge</span>
+          Table Services &amp; Assistance
+        </h3>
+<span class="font-label-md text-label-md text-on-surface-variant">Instant Table 07 Dispatch</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Utility 1: Table Bell / Server Call (Prominent Card) -->
+<div class="bg-primary-container text-on-primary rounded-2xl p-5 shadow-lg flex flex-col justify-between transition-all cursor-pointer select-none active:scale-98" id="server-call-card" onclick="toggleServerCall()">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary border border-outline/30">
+<span class="material-symbols-outlined text-2xl" data-icon="notifications_active" data-weight="fill" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary px-2.5 py-1 rounded-full text-on-secondary font-bold" id="server-status-badge">
+              Tap to Ring
+            </span>
+</div>
+<div class="mt-6">
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-primary">Ring Table Bell</h4>
+<p class="font-body-sm text-body-sm text-on-primary-container mt-1">Summons your dedicated server directly to Table 07 in &lt; 60 seconds.</p>
+</div>
+<button class="mt-4 w-full bg-surface-container-lowest text-primary py-2.5 rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 hover:bg-surface-container transition-all" type="button">
+<span class="material-symbols-outlined text-lg" data-icon="room_service">room_service</span>
+            Call Server to Table
+          </button>
+</div>
+<!-- Utility 2: Cutlery & Napkins Toggle -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/40 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="flatware">flatware</span>
+</div>
+<button aria-label="Toggle Cutlery Request" class="w-10 h-6 bg-surface-variant rounded-full relative p-0.5 transition-colors focus:outline-none" id="toggle-cutlery" onclick="toggleRequest('cutlery')">
+<span class="block w-5 h-5 bg-surface-container-lowest rounded-full shadow-md transform transition-transform" id="knob-cutlery"></span>
+</button>
+</div>
+<div class="mt-4">
+<h4 class="font-title-md text-title-md text-primary font-bold">Cutlery &amp; Napkins</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Extra forks, steak knives, wet wipes, and bistro linen napkins.</p>
+</div>
+<div class="mt-4 py-2 px-3 bg-surface-container rounded-xl text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 transition-all" id="feedback-cutlery">
+<span class="material-symbols-outlined text-sm" data-icon="info">info</span>
+<span>Not requested</span>
+</div>
+</div>
+<!-- Utility 3: Ice / Water Quick Toggle -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/40 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="water_drop">water_drop</span>
+</div>
+<button aria-label="Toggle Water Request" class="w-10 h-6 bg-surface-variant rounded-full relative p-0.5 transition-colors focus:outline-none" id="toggle-water" onclick="toggleRequest('water')">
+<span class="block w-5 h-5 bg-surface-container-lowest rounded-full shadow-md transform transition-transform" id="knob-water"></span>
+</button>
+</div>
+<div class="mt-4">
+<h4 class="font-title-md text-title-md text-primary font-bold">Chilled Ice &amp; Water</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Carat carafe with fresh filtered water and lime ice cubes.</p>
+</div>
+<div class="mt-4 py-2 px-3 bg-surface-container rounded-xl text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 transition-all" id="feedback-water">
+<span class="material-symbols-outlined text-sm" data-icon="info">info</span>
+<span>Not requested</span>
+</div>
+</div>
+</div>
+<!-- Reassuring Table Modification Note -->
+<div class="bg-surface-container-high/60 border border-outline-variant/40 rounded-2xl p-4 flex items-start gap-3 mt-3">
+<span class="material-symbols-outlined text-secondary mt-0.5" data-icon="support_agent">support_agent</span>
+<div class="flex-1">
+<p class="font-title-md text-title-md text-primary font-bold">Need to modify something?</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Please notify your server immediately at <span class="font-bold text-primary">Table 07</span>. Dietary adjustments or allergy precautions can be updated before plating.
+          </p>
+</div>
+</div>
+</section>
+</main>
+<!-- SECONDARY FLOATING QUICK ACTION: View Full Digital Receipt -->
+<div class="fixed bottom-20 left-0 right-0 z-40 px-4 pointer-events-none">
+<div class="max-w-md mx-auto pointer-events-auto">
+<button class="w-full bg-primary-container text-on-primary py-3 px-5 rounded-2xl shadow-[0_8px_30px_-6px_rgba(61,35,23,0.3)] border border-outline-variant/30 flex items-center justify-between active:scale-98 transition-all hover:bg-primary" onclick="toggleReceiptModal()">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="receipt_long">receipt_long</span>
+<div class="text-left">
+<p class="font-label-sm text-label-sm text-on-primary-container leading-none">Bill Summary</p>
+<p class="font-label-lg text-label-lg font-bold text-on-primary">View Full Digital Receipt</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary-fixed">Rs. 4,849</span>
+<span class="material-symbols-outlined text-on-primary" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</div>
+</button>
+</div>
+</div>
+<!-- BOTTOM NAVIGATION BAR (Shared Components JSON Anchor) -->
+<!-- Contextual State: "Active Order" is active destination -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 bg-surface/95 backdrop-blur-md shadow-[0_-4px_24px_rgba(61,35,23,0.08)]">
+<!-- Destination 1: Menu -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:text-primary transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-label-sm text-label-sm">Menu</span>
+</a>
+<!-- Destination 2: Favorites -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:text-primary transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="font-label-sm text-label-sm">Favorites</span>
+</a>
+<!-- Destination 3: Active Order (MANDATORY ACTIVE STATE MATCH) -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary rounded-2xl px-3 py-1.5 transition-all active:scale-95 duration-150 relative shadow-sm" href="#">
+<span class="absolute -top-1 -right-1 flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span class="material-symbols-outlined" data-icon="receipt_long" data-weight="fill" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="font-label-sm text-label-sm font-bold">Active Order</span>
+</a>
+<!-- Destination 4: Assistance -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:text-primary transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="concierge">concierge</span>
+<span class="font-label-sm text-label-sm">Assistance</span>
+</a>
+</nav>
+<!-- MODAL: Full Digital Receipt (Interactive Overlay) -->
+<div class="fixed inset-0 z-50 bg-[#1E110A]/50 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 transition-opacity" id="receipt-modal">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-t-3xl sm:rounded-3xl p-6 shadow-[0_20px_48px_-8px_rgba(61,35,23,0.24)] border border-outline-variant/40 space-y-4 max-h-[795px] overflow-y-auto">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-3">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Digital Receipt</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Order #HC-8429 • Table 07</p>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-surface-variant" onclick="toggleReceiptModal()">
+<span class="material-symbols-outlined text-lg" data-icon="close">close</span>
+</button>
+</div>
+<!-- Line items -->
+<div class="space-y-3 font-body-md text-body-md">
+<div class="flex justify-between">
+<span>1x The Hers Signature Smash Burger</span>
+<span class="font-bold">PKR 1,650</span>
+</div>
+<div class="flex justify-between">
+<span>1x Crispy Nashville Hot Chicken</span>
+<span class="font-bold">PKR 1,499</span>
+</div>
+<div class="flex justify-between">
+<span>2x Iced Spanish Latte (@ 850)</span>
+<span class="font-bold">PKR 1,700</span>
+</div>
+<div class="border-t border-outline-variant/20 pt-2 flex justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Subtotal</span>
+<span>PKR 4,849</span>
+</div>
+<div class="flex justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Sindh Sales Tax (13%)</span>
+<span class="text-secondary font-medium">Included</span>
+</div>
+<div class="flex justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Table Service Charge</span>
+<span class="text-tertiary-container font-medium">Waived (Bistro Promotion)</span>
+</div>
+<div class="border-t-2 border-primary pt-3 flex justify-between items-center text-primary">
+<span class="font-headline-sm text-headline-sm font-bold">Grand Total</span>
+<span class="font-headline-md text-headline-md font-bold text-secondary">PKR 4,849</span>
+</div>
+</div>
+<div class="pt-2 flex gap-3">
+<button class="flex-1 bg-surface-container text-primary py-3 rounded-2xl font-label-lg text-label-lg font-bold hover:bg-surface-variant transition-colors" onclick="toggleReceiptModal()">
+          Close
+        </button>
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-2xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-1.5 hover:bg-primary-container transition-colors" onclick="alert('Digital receipt sent to your phone!')">
+<span class="material-symbols-outlined text-lg" data-icon="download">download</span> Download PDF
+        </button>
+</div>
+</div>
+</div>
+<!-- Inline Vanilla Interactions -->
+<script>
+    let serverCalled = false;
+    const requestStates = { cutlery: false, water: false };
+
+    function toggleServerCall() {
+      serverCalled = !serverCalled;
+      const card = document.getElementById('server-call-card');
+      const badge = document.getElementById('server-status-badge');
+      
+      if (serverCalled) {
+        card.classList.remove('bg-primary-container');
+        card.classList.add('bg-secondary');
+        badge.innerText = 'Server Dispatched (0:45)';
+        badge.className = 'font-label-sm text-label-sm bg-surface-container-lowest text-secondary px-2.5 py-1 rounded-full font-bold animate-pulse';
+      } else {
+        card.classList.remove('bg-secondary');
+        card.classList.add('bg-primary-container');
+        badge.innerText = 'Tap to Ring';
+        badge.className = 'font-label-sm text-label-sm bg-secondary px-2.5 py-1 rounded-full text-on-secondary font-bold';
+      }
+    }
+
+    function toggleRequest(type) {
+      requestStates[type] = !requestStates[type];
+      const toggleBtn = document.getElementById(`toggle-${type}`);
+      const knob = document.getElementById(`knob-${type}`);
+      const feedback = document.getElementById(`feedback-${type}`);
+
+      if (requestStates[type]) {
+        toggleBtn.classList.remove('bg-surface-variant');
+        toggleBtn.classList.add('bg-secondary');
+        knob.classList.add('translate-x-4');
+        feedback.className = 'mt-4 py-2 px-3 bg-[#EBF3EE] text-[#2A5235] border border-[#C2DEC9] rounded-xl font-label-md text-label-md flex items-center gap-1.5 transition-all';
+        feedback.innerHTML = '<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span><span>Server notified • On the way</span>';
+      } else {
+        toggleBtn.classList.remove('bg-secondary');
+        toggleBtn.classList.add('bg-surface-variant');
+        knob.classList.remove('translate-x-4');
+        feedback.className = 'mt-4 py-2 px-3 bg-surface-container rounded-xl text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 transition-all';
+        feedback.innerHTML = '<span class="material-symbols-outlined text-sm" data-icon="info">info</span><span>Not requested</span>';
+      }
+    }
+
+    function toggleReceiptModal() {
+      const modal = document.getElementById('receipt-modal');
+      modal.classList.toggle('hidden');
+      modal.classList.toggle('flex');
+    }
+  </script>
+</body></html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hers Cafe — Dine-In Tray &amp; Cart (Table 07)</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed": "#b9efc5",
+            "surface": "#fcf9f4",
+            "error": "#ba1a1a",
+            "outline-variant": "#d4c3bd",
+            "surface-container-low": "#f6f3ee",
+            "primary-fixed-dim": "#e9bdab",
+            "on-secondary-fixed-variant": "#793019",
+            "surface-container-high": "#ebe8e3",
+            "inverse-on-surface": "#f3f0eb",
+            "primary-fixed": "#ffdbcc",
+            "on-tertiary-fixed": "#00210e",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#ffdbd0",
+            "surface-dim": "#dcdad5",
+            "on-tertiary-fixed-variant": "#1e5031",
+            "on-primary": "#ffffff",
+            "background": "#fcf9f4",
+            "tertiary": "#001a0a",
+            "on-secondary-fixed": "#3a0a00",
+            "on-surface-variant": "#504440",
+            "on-primary-fixed-variant": "#5e4032",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#ffb59f",
+            "on-background": "#1c1c19",
+            "tertiary-fixed-dim": "#9dd3aa",
+            "on-tertiary-container": "#699c77",
+            "on-secondary": "#ffffff",
+            "outline": "#82746f",
+            "inverse-primary": "#e9bdab",
+            "inverse-surface": "#31302d",
+            "surface-container": "#f0ede9",
+            "primary-container": "#3d2317",
+            "surface-variant": "#e5e2dd",
+            "surface-bright": "#fcf9f4",
+            "on-secondary-container": "#772f18",
+            "surface-tint": "#785748",
+            "tertiary-container": "#003117",
+            "on-primary-container": "#af8878",
+            "secondary-container": "#fe997a",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "error-container": "#ffdad6",
+            "primary": "#250f05",
+            "on-primary-fixed": "#2d150a",
+            "secondary": "#97472e",
+            "on-surface": "#1c1c19",
+            "surface-container-highest": "#e5e2dd"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "2.5rem",
+            "gutter": "1rem",
+            "gutter-desktop": "1.5rem",
+            "space-lg": "1.5rem",
+            "margin-desktop": "3rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "margin-tablet": "2rem",
+            "margin": "1rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "display-lg": ["Playfair Display"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Playfair Display"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      display: none;
+    }
+    .custom-scroll {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col font-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed pb-36">
+<!-- TOP BAR (Dedicated Dine-In Tray Header) -->
+<header class="sticky top-0 z-40 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm transition-all">
+<div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+<!-- Back Navigation & Cafe Identity -->
+<div class="flex items-center gap-3">
+<a aria-label="Go back to menu" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container active:scale-95 transition-all" href="#menu">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</a>
+<div class="flex items-center gap-2">
+<img alt="Hers Cafe" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlSchyz9AXAaLiJNy6fW1xwoC6yH4VBRMr9mVk8O3EfWwbABiKGn6VPt-v9bV6fRkeoLkBQOnp7Xha8BwTMXfB1JyKYQoHj_a60hIpQJKxAN_4onJZVGmjRUtCLQ0C_ibWeP-1HQLdFmX7cQ4eP9LfsyfcRu68XPEyAjI6VNeKPrnhTjPjR6aQsPznYkWATE8WK3Oacekzi0FAmaNagYK-aabC5SSxyDCDFMveNR4qZsP0stSuJx4VMU19XVf0296W-FU"/>
+<div class="h-4 w-px bg-outline-variant/40 hidden sm:block"></div>
+<span class="font-headline-md text-headline-sm text-primary tracking-tight hidden sm:inline-block">Tray</span>
+</div>
+</div>
+<!-- Table 07 Courtyard Hall Badge -->
+<div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container rounded-full border border-outline-variant/40">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">table_restaurant</span>
+<span class="font-label-md text-label-md text-primary font-bold">Table 07</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant hidden md:inline">Courtyard Hall</span>
+</div>
+<!-- Clear All Action -->
+<button aria-label="Clear all items in tray" class="flex items-center gap-1.5 px-3 py-1.5 text-on-surface-variant hover:text-error hover:bg-error-container/20 rounded-full transition-all text-label-md font-label-md active:scale-95" onclick="confirmClearTray()">
+<span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+<span class="hidden sm:inline">Clear All</span>
+</button>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="max-w-4xl mx-auto w-full px-4 pt-6 space-y-6">
+<!-- SECTION 1: Active Table Order Header -->
+<section class="bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/30 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-primary-container text-on-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-pulse"></span>
+            ACTIVE DINE-IN
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Karachi Flagship</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">Dine-In • Table 07</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">group</span>
+          Courtyard Hall • 3 Guests Ordering • Server: Hamza K.
+        </p>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low px-4 py-3 rounded-xl border border-outline-variant/30">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">receipt_long</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">TOTAL ITEMS</span>
+<span class="font-headline-sm text-headline-sm text-primary">4 Items</span>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Order Items List (Rich Item Cards) -->
+<section class="space-y-4">
+<div class="flex items-center justify-between px-1">
+<h2 class="font-headline-sm text-headline-sm text-primary">Selected Items</h2>
+<span class="font-label-md text-label-md text-secondary cursor-pointer hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">add_circle</span> Add More Items
+        </span>
+</div>
+<!-- Item Card 1: Smash Burger -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 sm:p-5 border border-outline-variant/30 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] transition-all hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)]">
+<div class="flex flex-col sm:flex-row gap-4">
+<div class="w-full sm:w-28 h-28 rounded-xl overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="A gourmet artisan double smash burger on a brioche bun with dripping melted cheddar cheese and truffle mayo glaze, photographed under warm bistro lighting on textured rustic ceramic ware in deep espresso and oat tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxcT89GAUHmf-najB82rxXJU7DvhpuiRoZJX0UJ-6t7xLvJA5iRssIGAtpioR3DmxgNXi-NGTadW80gOqI2pFOAaoshnyD2jNRUZzTZMzhNhMKiOJhdtvkJ3mAXQ8KCjTUKin_nj4Q0-mXfypohkTdUb4ozo0tVCCIrMeMl6Eni2ItvzlmDBfY9cIo95UYm2yfTev6g9HMShpj8c3Cy7RwrbKTB4HnGoKYJW0mEutGpekmiRlW8KgNOQ"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-2">
+<div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-[#FAF0EC] text-[#A34B32] mb-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    Chef's Special
+                  </span>
+<h3 class="font-title-md text-title-md text-primary">The Hers Signature Smash Burger</h3>
+</div>
+<button aria-label="Remove item" class="text-on-surface-variant hover:text-error transition-colors p-1">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modifiers -->
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Double Smash • Extra Cheddar Slice • Truffle Mayo
+              </p>
+<!-- Special Request Note Tag -->
+<div class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface text-body-sm border border-outline-variant/30">
+<span class="material-symbols-outlined text-[14px] text-secondary">edit_note</span>
+<span class="font-body-sm text-body-sm italic">“No raw onions please”</span>
+</div>
+</div>
+<!-- Price and Quantity Row -->
+<div class="flex items-center justify-between mt-4 pt-3 border-t border-outline-variant/20">
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight">Rs. 1,570</span>
+<div class="flex items-center bg-surface-container rounded-full p-1 border border-outline-variant/40">
+<button aria-label="Decrease quantity" class="w-8 h-8 rounded-full flex items-center justify-center bg-surface-container-lowest text-primary shadow-sm hover:bg-surface-container-high transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-9 text-center font-title-md text-title-md text-primary">1</span>
+<button aria-label="Increase quantity" class="w-8 h-8 rounded-full flex items-center justify-center bg-primary-container text-on-primary shadow-sm hover:bg-primary transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Item Card 2: Nashville Hot Chicken Burger -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 sm:p-5 border border-outline-variant/30 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] transition-all hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)]">
+<div class="flex flex-col sm:flex-row gap-4">
+<div class="w-full sm:w-28 h-28 rounded-xl overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="A crispy fried Nashville hot chicken burger stacked tall with spicy crimson glaze, sliced dill pickles, and creamy coleslaw on a glossy toasted brioche bun, surrounded by warm ambient cafe tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJN37EEspPbT_EniZgFrYyprP1ipuq7KcOOhketGCmKfFcOHyNyx_UmsG6qREqkY2GZZjLpyMqIIRhiOE71sFCdeVh13MvE0CdbZdIxdhYQrJ33oY72ZOEeqaG9Pmn2CK_waQXa-vB5mJYk0kam8gdjjldQHUAIaj918kZ4OSdLN_sD_q_KwR9T8ztwd49rpqLAoYPMWwz1FarC8Q3Fydasn7TYW4UUhG4blUqaRSz-rbPSoIo7jcYXQ"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-2">
+<div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-[#FDEFEF] text-[#991B1B] mb-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                    Spicy
+                  </span>
+<h3 class="font-title-md text-title-md text-primary">Crispy Nashville Hot Chicken Burger</h3>
+</div>
+<button aria-label="Remove item" class="text-on-surface-variant hover:text-error transition-colors p-1">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modifiers -->
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Blazing Heat • Pickles Extra
+              </p>
+</div>
+<!-- Price and Quantity Row -->
+<div class="flex items-center justify-between mt-4 pt-3 border-t border-outline-variant/20">
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight">Rs. 1,180</span>
+<div class="flex items-center bg-surface-container rounded-full p-1 border border-outline-variant/40">
+<button aria-label="Decrease quantity" class="w-8 h-8 rounded-full flex items-center justify-center bg-surface-container-lowest text-primary shadow-sm hover:bg-surface-container-high transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-9 text-center font-title-md text-title-md text-primary">1</span>
+<button aria-label="Increase quantity" class="w-8 h-8 rounded-full flex items-center justify-center bg-primary-container text-on-primary shadow-sm hover:bg-primary transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Item Card 3: Iced Spanish Latte (Qty: 2) -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 sm:p-5 border border-outline-variant/30 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] transition-all hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)]">
+<div class="flex flex-col sm:flex-row gap-4">
+<div class="w-full sm:w-28 h-28 rounded-xl overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="An artisanal iced Spanish latte served in an elegant fluted bistro glass, showing layered creamy oat milk, caramelized condensed milk drizzle, and rich espresso crema over crystal clear ice." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnsfKfjYqakACQwsHZ4r9wZSX0FDCFjLEQBBjpVqG4D8_GWO1aQtu6f0_RRAbTdqhUxTDnMGsIHfOPDP8fRPGTFBlbjqSlL3whJGuvf8Y4zO71qx3LLt4ukhmZDy3cQjFpASZs2idDekcZxEu_sJ5N-eOUjCTBZ_6ie_PCfcO-lndYFyk5CyR53ajQ8f4QSs-OknxeZixd78-IQejO3s1G_QXOH_hiZD5UazsTRhy5gRB6GYevWBGFhw"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-2">
+<div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-[#FEF7EB] text-[#92400E] mb-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    Popular Blend
+                  </span>
+<h3 class="font-title-md text-title-md text-primary">Iced Spanish Latte</h3>
+</div>
+<button aria-label="Remove item" class="text-on-surface-variant hover:text-error transition-colors p-1">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modifiers -->
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Condensed milk drizzle • Oat milk substitution
+              </p>
+</div>
+<!-- Price and Quantity Row -->
+<div class="flex items-center justify-between mt-4 pt-3 border-t border-outline-variant/20">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight">Rs. 1,360</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Rs. 680 × 2</span>
+</div>
+<div class="flex items-center bg-surface-container rounded-full p-1 border border-outline-variant/40">
+<button aria-label="Decrease quantity" class="w-8 h-8 rounded-full flex items-center justify-center bg-surface-container-lowest text-primary shadow-sm hover:bg-surface-container-high transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-9 text-center font-title-md text-title-md text-primary">2</span>
+<button aria-label="Increase quantity" class="w-8 h-8 rounded-full flex items-center justify-center bg-primary-container text-on-primary shadow-sm hover:bg-primary transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Pairs Great with Your Table (Quick Upsell Cards) -->
+<section class="space-y-3">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Pairs Great with Your Table</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chef recommendations</span>
+</div>
+<!-- Carousel / Bento Upsell Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+<!-- Upsell 1: Truffle Fries -->
+<div class="bg-surface-container-lowest rounded-2xl p-3.5 border border-outline-variant/30 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] flex items-center gap-3.5 hover:border-secondary transition-all">
+<div class="w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A bowl of hand-cut golden parmesan truffle fries dusted with fresh herbs and served with garlic aioli dipping sauce in a chic ceramic dish, warm lighting on rustic cafe table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiepKli7DndmmXbzexOJtKodwIVfv26BwyMu8eiyU_NG0lZA6vkzbY7mN2soOopWU0I4bc4s0CAOBhq-XF0q2PAyRZh7RA65_8-6xIN_HT9ThTT5tR6Y5g0XJg-NupRw67hUcRrS7u7MtKa3r5WqOoQC6_1izuq9xCuxEe4d56coTB6FtpoDGUwhZsVrIKLU5VVTB58dKVjfa5LB2-fi6FjQl3hXGduHAQAxE3WEmN2eZLcZf7OhSzgQ"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-0.5">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-[#EBF3EE] text-[#2A5235] border border-[#C2DEC9]">VEG</span>
+</div>
+<h4 class="font-title-md text-title-md text-primary truncate">Truffle Fries</h4>
+<span class="font-body-md text-body-md text-secondary font-bold">Rs. 480</span>
+</div>
+<button class="px-3.5 py-2 rounded-full bg-surface-container hover:bg-primary-container hover:text-on-primary text-primary border border-outline-variant/40 font-label-md text-label-md transition-all active:scale-95 shrink-0 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">add</span>
+            Add
+          </button>
+</div>
+<!-- Upsell 2: Nutella French Toast -->
+<div class="bg-surface-container-lowest rounded-2xl p-3.5 border border-outline-variant/30 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] flex items-center gap-3.5 hover:border-secondary transition-all">
+<div class="w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Thick-cut golden brioche Nutella French toast topped with fresh strawberries, toasted hazelnuts, and a dusting of powdered sugar, served on a warm earthenware cafe plate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEbW2KoQ_aL8fbt1O9mRkhy5NeOqEdmfJK1eeq9azqOcSlg4sY2fxLPixqSF0Vkh9pGBCHDh_X9dAArTGG9LhkfqNrycEFh8wT0HqbdtKUIwOm76XnQbBRQ52td_h1uPwwR0GJAqTwmBqm6EA_6fCDcZxyrO4goskGIuOWN1I3aI-i4A9eOhIsMEuBtFvRNEXQiCR0JayI7ygeYxy7KIRWdbJJOFMGk45dtAItTp-XSEFxK9NKM1wiFw"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-0.5">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-[#FEF7EB] text-[#92400E]">SWEET</span>
+</div>
+<h4 class="font-title-md text-title-md text-primary truncate">Nutella French Toast</h4>
+<span class="font-body-md text-body-md text-secondary font-bold">Rs. 890</span>
+</div>
+<button class="px-3.5 py-2 rounded-full bg-surface-container hover:bg-primary-container hover:text-on-primary text-primary border border-outline-variant/40 font-label-md text-label-md transition-all active:scale-95 shrink-0 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">add</span>
+            Add
+          </button>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Chef / Kitchen Special Instructions Box -->
+<section class="bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/30 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] space-y-2.5">
+<div class="flex items-center justify-between">
+<label class="font-title-md text-title-md text-primary flex items-center gap-2" for="kitchen-instructions">
+<span class="material-symbols-outlined text-secondary text-[20px]">soup_kitchen</span>
+          Kitchen &amp; Table Special Instructions
+        </label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Optional</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Our culinary team in Karachi prepares every course fresh. Let us know any table preferences or dietary needs.
+      </p>
+<div class="relative">
+<textarea class="w-full bg-[#FDFCFA] border-1.5 border-outline-variant/60 rounded-xl p-3.5 text-body-md text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary-container focus:ring-0 transition-colors resize-none" id="kitchen-instructions" placeholder="Add allergy notes, spice adjustments or extra napkins..." rows="3"></textarea>
+<div class="absolute bottom-3 right-3 flex items-center gap-1 text-[11px] font-label-sm text-on-surface-variant/70">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+          Sent direct to kitchen display
+        </div>
+</div>
+</section>
+<!-- SECTION 5: Bill & Payment Breakdown Card -->
+<section class="bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/30 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] space-y-4">
+<div class="flex items-center justify-between border-b border-outline-variant/20 pb-3">
+<h3 class="font-headline-sm text-headline-sm text-primary">Bill &amp; Tax Breakdown</h3>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant">Dine-In Invoice</span>
+</div>
+<div class="space-y-2.5">
+<div class="flex items-center justify-between text-body-md">
+<span class="text-on-surface-variant">Items Subtotal (4 items)</span>
+<span class="font-title-md text-primary">Rs. 4,110</span>
+</div>
+<div class="flex items-center justify-between text-body-md">
+<span class="text-on-surface-variant flex items-center gap-1">
+            Sindh Sales Tax (SST 13%)
+            <span class="material-symbols-outlined text-[15px] text-on-surface-variant/60" title="Statutory SST applied on food services">info</span>
+</span>
+<span class="font-title-md text-primary">Rs. 534</span>
+</div>
+<div class="flex items-center justify-between text-body-md">
+<span class="text-on-surface-variant flex items-center gap-1">
+            Dine-In Service Charge (5%)
+            <span class="material-symbols-outlined text-[15px] text-on-surface-variant/60" title="Table service &amp; courtyard stewardship">room_service</span>
+</span>
+<span class="font-title-md text-primary">Rs. 205</span>
+</div>
+<div class="pt-3 border-t border-dashed border-outline-variant/40 flex items-center justify-between">
+<div>
+<span class="block font-title-md text-title-md text-primary font-bold">Table Total</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Includes all taxes &amp; gratuity charges</span>
+</div>
+<span class="font-headline-md text-headline-md text-primary font-bold tracking-tight">Rs. 4,849</span>
+</div>
+</div>
+<!-- Payment Notice Badge -->
+<div class="rounded-xl bg-surface-container-low p-3 border border-outline-variant/30 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]">credit_card</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="font-semibold text-primary">Pay after meal</strong> at cashier counter or via contactless card reader directly at Table 07.
+        </p>
+</div>
+</section>
+</main>
+<!-- BOTTOM FIXED TRAY ACTION BAR -->
+<aside class="fixed bottom-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-md border-t border-outline-variant/30 shadow-[0_-4px_24px_rgba(61,35,23,0.08)] py-3 px-4">
+<div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+<!-- Secondary: Continue Ordering -->
+<a class="w-full sm:w-auto px-6 h-12 rounded-full border border-outline-variant/50 bg-surface-container-low hover:bg-surface-container text-primary font-label-lg text-label-lg flex items-center justify-center gap-2 transition-all active:scale-95" href="#menu">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+        Continue Ordering
+      </a>
+<!-- Primary CTA: Send Order to Kitchen -->
+<button class="w-full sm:flex-1 h-12 rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg flex items-center justify-between px-6 shadow-md transition-all active:scale-95 group" onclick="sendOrderToKitchen()">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] group-hover:rotate-12 transition-transform">restaurant</span>
+<span>Send Order to Kitchen</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span>
+<span class="font-headline-sm text-title-md tracking-tight">Rs. 4,849</span>
+</div>
+</button>
+</div>
+</aside>
+<!-- Interactive Script for micro-interactions -->
+<script>
+    function confirmClearTray() {
+      if (confirm("Are you sure you want to clear your current dine-in order for Table 07?")) {
+        alert("Tray cleared. Returning to menu.");
+      }
+    }
+
+    function sendOrderToKitchen() {
+      const btn = event.currentTarget;
+      btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-[20px]">progress_activity</span> Sending to Courtyard Kitchen...`;
+      setTimeout(() => {
+        alert("🎉 Order #H-702 sent to the Kitchen! Chef has started preparing your burgers and lattes. Table 07.");
+        btn.innerHTML = `<span class="material-symbols-outlined text-[20px]">check_circle</span> Order Confirmed!`;
+      }, 1200);
+    }
+  </script>
+</body></html>

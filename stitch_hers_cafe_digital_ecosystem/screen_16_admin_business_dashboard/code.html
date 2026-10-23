@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-background text-on-background" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Screen 16 — Admin &amp; Business Dashboard | Hers Cafe</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration matching the Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#1e5031",
+            "on-tertiary-fixed": "#00210e",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#ffb59f",
+            "inverse-surface": "#31302d",
+            "surface-container-low": "#f6f3ee",
+            "on-secondary-fixed-variant": "#793019",
+            "surface-variant": "#e5e2dd",
+            "secondary-container": "#fe997a",
+            "primary-fixed": "#ffdbcc",
+            "secondary": "#97472e",
+            "primary-container": "#3d2317",
+            "tertiary-container": "#003117",
+            "inverse-on-surface": "#f3f0eb",
+            "on-surface-variant": "#504440",
+            "on-tertiary-container": "#699c77",
+            "tertiary-fixed": "#b9efc5",
+            "surface-container-lowest": "#ffffff",
+            "background": "#fcf9f4",
+            "on-primary-container": "#af8878",
+            "surface-container": "#f0ede9",
+            "outline-variant": "#d4c3bd",
+            "on-primary-fixed-variant": "#5e4032",
+            "on-surface": "#1c1c19",
+            "surface-dim": "#dcdad5",
+            "outline": "#82746f",
+            "on-secondary-container": "#772f18",
+            "on-primary-fixed": "#2d150a",
+            "error-container": "#ffdad6",
+            "primary": "#250f05",
+            "surface": "#fcf9f4",
+            "on-tertiary": "#ffffff",
+            "surface-tint": "#785748",
+            "surface-container-high": "#ebe8e3",
+            "on-background": "#1c1c19",
+            "primary-fixed-dim": "#e9bdab",
+            "surface-container-highest": "#e5e2dd",
+            "on-secondary-fixed": "#3a0a00",
+            "error": "#ba1a1a",
+            "tertiary": "#001a0a",
+            "on-error": "#ffffff",
+            "on-primary": "#ffffff",
+            "surface-bright": "#fcf9f4",
+            "tertiary-fixed-dim": "#9dd3aa",
+            "inverse-primary": "#e9bdab",
+            "secondary-fixed": "#ffdbd0",
+            "on-secondary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1rem",
+            "margin-desktop": "3rem",
+            "space-xl": "2.5rem",
+            "space-sm": "0.5rem",
+            "margin-tablet": "2rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "gutter-desktop": "1.5rem",
+            "space-lg": "1.5rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "display-lg": ["Playfair Display"],
+            "headline-md": ["Playfair Display"],
+            "title-md": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Playfair Display"],
+            "label-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="h-full flex overflow-hidden font-body-md text-on-surface antialiased bg-background">
+<!-- LEFT SIDEBAR NAVIGATION -->
+<aside class="w-72 bg-surface-container-lowest flex-shrink-0 flex flex-col justify-between shadow-[4px_0_24px_rgba(61,35,23,0.04)] z-30 transition-all duration-300 hidden lg:flex">
+<div class="flex flex-col h-full">
+<!-- Brand Mascot & Identity Header -->
+<div class="px-6 py-5 flex items-center gap-3">
+<div class="relative w-12 h-12 rounded-2xl bg-surface-container-low p-1.5 flex items-center justify-center shadow-sm">
+<img alt="Hers Cafe Mascot" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7Rof9Rqp3tLlAYoTHyCTNRK2k6bMCFAswmH4Ah1ZUdqQFQCkYhpIjYOlFuxa-AFpOVp_9L_f-nljrK5d82o51Wg6UNA4cBX7OTLtdQf7zWBDaUexg8xJ2ETORv2h-KVAq9z49XJk8aMeyznueMnxTBnpurO2mUKdVqnKwmE1i5Mw9fFoTbAL3gmRebGcMUE5DDfOk4dlBCKt3J3lY4gEsyuVE4HU0o9cnkdi8E5RX0O4TIERGWXPUaphh0bfaeKE5ugQ"/>
+<span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-tertiary-fixed rounded-full ring-2 ring-surface-container-lowest" title="Karachi Node Active"></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-sm font-bold text-primary tracking-tight">Hers Café</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium tracking-wide">Clifton Flagship • Karachi</span>
+</div>
+</div>
+<!-- Branch Quick Switcher Banner -->
+<div class="px-5 mb-3">
+<div class="bg-surface-container-low rounded-2xl p-3 flex items-center justify-between shadow-sm cursor-pointer hover:bg-surface-variant/50 transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="storefront">storefront</span>
+<div>
+<p class="font-label-md text-label-md text-primary font-bold leading-tight">Clifton Flagship (Block 4)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">17 Active Tables • Kitchen Live</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="unfold_more">unfold_more</span>
+</div>
+</div>
+<!-- Nav Items -->
+<div class="px-4 py-2 flex-1 overflow-y-auto space-y-1.5">
+<p class="px-3 pt-2 pb-1 font-label-sm text-label-sm text-outline uppercase tracking-wider font-bold">Core Console</p>
+<!-- 1. Dashboard (Active) -->
+<a class="flex items-center gap-3.5 px-3.5 py-3 rounded-2xl bg-primary-container text-on-primary font-title-md text-title-md shadow-sm transition-all duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="grid_view" data-weight="fill" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span>Dashboard</span>
+<span class="ml-auto w-2 h-2 rounded-full bg-secondary-container"></span>
+</a>
+<!-- 2. Live Orders & KDS Feed -->
+<a class="flex items-center gap-3.5 px-3.5 py-3 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="kitchen">kitchen</span>
+<span class="font-title-md text-title-md">Live Orders &amp; KDS Feed</span>
+<span class="ml-auto px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold">8 Live</span>
+</a>
+<!-- 3. Menu & Recipe Management -->
+<a class="flex items-center gap-3.5 px-3.5 py-3 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="menu_book">menu_book</span>
+<span class="font-title-md text-title-md">Menu &amp; Recipe Management</span>
+</a>
+<!-- 4. Table & Floor Layout -->
+<a class="flex items-center gap-3.5 px-3.5 py-3 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="table_restaurant">table_restaurant</span>
+<span class="font-title-md text-title-md">Table &amp; Floor Layout</span>
+<span class="ml-auto px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">14/17</span>
+</a>
+<!-- 5. Customers & Connoisseur Club -->
+<a class="flex items-center gap-3.5 px-3.5 py-3 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="loyalty">loyalty</span>
+<span class="font-title-md text-title-md">Customers &amp; Connoisseur Club</span>
+</a>
+<p class="px-3 pt-4 pb-1 font-label-sm text-label-sm text-outline uppercase tracking-wider font-bold">Accounting &amp; Supply</p>
+<!-- 6. Financial Reports & Tax (SST) -->
+<a class="flex items-center gap-3.5 px-3.5 py-3 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="receipt_long">receipt_long</span>
+<span class="font-title-md text-title-md">Financial Reports &amp; Tax (SST)</span>
+</a>
+<!-- 7. Inventory & Raw Ingredients -->
+<a class="flex items-center gap-3.5 px-3.5 py-3 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="inventory_2">inventory_2</span>
+<span class="font-title-md text-title-md">Inventory &amp; Ingredients</span>
+<span class="ml-auto w-2.5 h-2.5 rounded-full bg-error" title="Stock alert active"></span>
+</a>
+<!-- 8. Settings -->
+<a class="flex items-center gap-3.5 px-3.5 py-3 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="settings">settings</span>
+<span class="font-title-md text-title-md">Settings</span>
+</a>
+</div>
+<!-- Manager / GM User Profile Footer -->
+<div class="p-4 mt-auto">
+<div class="bg-surface-container-low rounded-2xl p-3 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-sm shadow-sm">
+              GM
+            </div>
+<div>
+<p class="font-label-lg text-label-lg text-primary font-bold leading-snug">Fatima Zahra</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">Owner / GM Access</p>
+</div>
+</div>
+<button class="p-1.5 text-on-surface-variant hover:text-primary rounded-xl hover:bg-surface-container transition-colors" title="Lock Console">
+<span class="material-symbols-outlined text-[20px]" data-icon="lock">lock</span>
+</button>
+</div>
+</div>
+</div>
+</aside>
+<!-- MAIN VIEWPORT CONTAINER -->
+<div class="flex-1 flex flex-col h-full min-w-0 overflow-hidden">
+<!-- TOP BAR (Shared Component TopAppBar compliant styling) -->
+<header class="bg-surface/90 backdrop-blur-md shadow-sm sticky top-0 z-40 flex justify-between items-center w-full px-6 h-18 py-3.5 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<!-- Mobile Drawer Toggle -->
+<button aria-label="Open Navigation" class="lg:hidden p-2 rounded-xl text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[24px]" data-icon="table_restaurant">table_restaurant</span>
+</button>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-sm font-bold text-primary tracking-tight">Hers Cafe • Management Console</span>
+<span class="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold uppercase tracking-wider">Operational</span>
+</div>
+<p class="hidden sm:block font-body-sm text-body-sm text-on-surface-variant">Live bistro telemetry • Karachi, Sindh (PKR Financials)</p>
+</div>
+</div>
+<!-- Controls Right: Branch Selector, Date, Quick Service Action -->
+<div class="flex items-center gap-3">
+<!-- Date Badge -->
+<div class="hidden md:flex items-center gap-2 bg-surface-container-lowest px-3.5 py-2 rounded-2xl shadow-sm text-primary">
+<span class="material-symbols-outlined text-secondary text-[18px]" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-md text-label-md font-bold">Today, 24 Oct 2024</span>
+</div>
+<!-- Sync Indicator -->
+<div class="hidden xl:flex items-center gap-2 px-3 py-2 rounded-2xl bg-surface-container-low text-on-surface-variant text-label-md font-label-md">
+<span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+<span>Synced 18s ago</span>
+</div>
+<!-- Quick POS/Floor Table Action -->
+<button class="flex items-center gap-2 bg-primary-container text-on-primary px-4 py-2.5 rounded-2xl font-label-md text-label-md font-bold shadow-sm hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="room_service">room_service</span>
+<span class="hidden sm:inline">New Dine-In Order</span>
+</button>
+</div>
+</header>
+<!-- DASHBOARD SCROLLABLE CANVAS -->
+<main class="flex-1 overflow-y-auto px-6 py-6 space-y-6 max-w-7xl mx-auto w-full pb-24 md:pb-12">
+<!-- SECTION 1: EXECUTIVE KPI METRIC CARDS -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- KPI 1: Gross Revenue -->
+<div class="bg-surface-container-lowest rounded-3xl p-5 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] flex flex-col justify-between transition-all hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)]">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Today's Gross Revenue</span>
+<span class="w-10 h-10 rounded-2xl bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]" data-icon="payments">payments</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<h3 class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">PKR 284,650</h3>
+</div>
+<div class="mt-2.5 flex items-center gap-2">
+<span class="inline-flex items-center text-[12px] font-bold text-emerald-800 bg-tertiary-fixed px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px] mr-0.5" data-icon="trending_up">trending_up</span>
+                +14.2%
+              </span>
+<span class="font-body-sm text-body-sm text-outline text-[11px]">vs last Thursday</span>
+</div>
+</div>
+</div>
+<!-- KPI 2: Total Orders & Average Check -->
+<div class="bg-surface-container-lowest rounded-3xl p-5 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] flex flex-col justify-between transition-all hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)]">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Total Orders Today</span>
+<span class="w-10 h-10 rounded-2xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" data-icon="receipt_long">receipt_long</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<h3 class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">148 Orders</h3>
+</div>
+<div class="mt-2.5 flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Avg Order Value:</span>
+<span class="font-bold text-primary font-label-md text-label-md">PKR 1,923</span>
+</div>
+</div>
+</div>
+<!-- KPI 3: Dine-In Occupancy -->
+<div class="bg-surface-container-lowest rounded-3xl p-5 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] flex flex-col justify-between transition-all hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)]">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Active Dine-In Occupancy</span>
+<span class="w-10 h-10 rounded-2xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]" data-icon="chair">chair</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline justify-between">
+<h3 class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">82%</h3>
+<span class="font-label-md text-label-md text-secondary font-bold">14 of 17 Tables</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container rounded-full h-2 mt-3 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full" style="width: 82%"></div>
+</div>
+</div>
+</div>
+<!-- KPI 4: Direct vs 3rd Party Split -->
+<div class="bg-surface-container-lowest rounded-3xl p-5 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] flex flex-col justify-between transition-all hover:shadow-[0_8px_30px_-6px_rgba(61,35,23,0.12)] relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-tertiary-fixed/30 pointer-events-none"></div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Direct vs 3rd Party Split</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Save 22% Comm.</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<h3 class="font-headline-md text-headline-md font-bold text-primary">68% Direct</h3>
+<span class="text-body-sm font-body-sm text-outline">/ 32% Aggregator</span>
+</div>
+<div class="mt-2.5 flex items-center gap-1.5">
+<div class="h-2 rounded-full bg-primary-container" style="width: 68%" title="68% Direct (WhatsApp/QR/Dine-in)"></div>
+<div class="h-2 rounded-full bg-secondary-container" style="width: 32%" title="32% Foodpanda/Delivery"></div>
+</div>
+<p class="mt-2 text-[11px] font-body-sm text-on-surface-variant leading-tight">Direct channel retention saving PKR 18,200 commission today</p>
+</div>
+</div>
+</section>
+<!-- SECTION 2 & 3: SALES VELOCITY & CHANNEL BREAKDOWN (BENTO GRID) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Hourly Sales Velocity & Rush Surge Visualizer (8 cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-3xl p-6 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]" data-icon="insights">insights</span>
+<h2 class="font-headline-md text-headline-sm font-bold text-primary">Hourly Sales Velocity &amp; Order Flow</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time throughput highlighting Karachi coffee rush, lunch, and Clifton late-night dessert surge</p>
+</div>
+<!-- Segment Toggles -->
+<div class="inline-flex p-1 bg-surface-container-low rounded-2xl">
+<button class="px-3 py-1 rounded-xl bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold shadow-sm">Today (Hourly)</button>
+<button class="px-3 py-1 rounded-xl text-on-surface-variant font-label-sm text-label-sm font-semibold hover:text-primary">Weekly Trend</button>
+</div>
+</div>
+<!-- Stylized Velocity Histogram & Rush Points -->
+<div class="h-60 w-full flex items-end gap-2 sm:gap-3.5 pt-8 pb-3 px-2 border-b border-surface-container">
+<!-- 9 AM (Breakfast/Espresso Kickoff) -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
+<div class="text-[10px] font-bold text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">18k</div>
+<div class="w-full bg-primary-fixed-dim/70 rounded-t-xl group-hover:bg-primary transition-colors" style="height: 38%;"></div>
+<span class="font-label-sm text-[11px] text-outline">9 AM</span>
+</div>
+<!-- 10 AM (Morning Rush Peak) -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group relative">
+<span class="absolute -top-3 text-[10px] bg-primary text-on-primary px-1.5 py-0.5 rounded-md font-bold hidden sm:block whitespace-nowrap">Espresso Rush</span>
+<div class="text-[10px] font-bold text-primary">34k</div>
+<div class="w-full bg-primary-container rounded-t-xl" style="height: 64%;"></div>
+<span class="font-label-sm text-[11px] text-primary font-bold">11 AM</span>
+</div>
+<!-- 12 PM (Transition) -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
+<div class="text-[10px] font-bold text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">22k</div>
+<div class="w-full bg-surface-container-highest rounded-t-xl group-hover:bg-primary-container transition-colors" style="height: 42%;"></div>
+<span class="font-label-sm text-[11px] text-outline">12 PM</span>
+</div>
+<!-- 1 PM (Lunch Rush Start) -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
+<div class="text-[10px] font-bold text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">41k</div>
+<div class="w-full bg-secondary-fixed rounded-t-xl group-hover:bg-secondary transition-colors" style="height: 72%;"></div>
+<span class="font-label-sm text-[11px] text-outline">1 PM</span>
+</div>
+<!-- 2 PM (Lunch Smash Burger Peak) -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group relative">
+<div class="text-[10px] font-bold text-secondary">49k</div>
+<div class="w-full bg-secondary rounded-t-xl" style="height: 84%;"></div>
+<span class="font-label-sm text-[11px] text-secondary font-bold">2 PM</span>
+</div>
+<!-- 4 PM (Afternoon Lull) -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
+<div class="text-[10px] font-bold text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">16k</div>
+<div class="w-full bg-surface-container rounded-t-xl" style="height: 28%;"></div>
+<span class="font-label-sm text-[11px] text-outline">4 PM</span>
+</div>
+<!-- 6 PM (Evening High Tea / Pastry) -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
+<div class="text-[10px] font-bold text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">28k</div>
+<div class="w-full bg-primary-fixed rounded-t-xl group-hover:bg-primary transition-colors" style="height: 52%;"></div>
+<span class="font-label-sm text-[11px] text-outline">6 PM</span>
+</div>
+<!-- 8 PM (Dinner Start) -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
+<div class="text-[10px] font-bold text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">42k</div>
+<div class="w-full bg-secondary-fixed-dim rounded-t-xl group-hover:bg-secondary transition-colors" style="height: 76%;"></div>
+<span class="font-label-sm text-[11px] text-outline">8 PM</span>
+</div>
+<!-- 10 PM (Clifton Late-Night Dessert Surge) -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group relative">
+<span class="absolute -top-3 text-[10px] bg-secondary text-on-secondary px-1.5 py-0.5 rounded-md font-bold hidden sm:block whitespace-nowrap">Dessert Surge</span>
+<div class="text-[10px] font-bold text-primary font-bold">56k</div>
+<div class="w-full bg-primary-container rounded-t-xl relative overflow-hidden" style="height: 98%;">
+<div class="absolute inset-x-0 top-0 h-1.5 bg-secondary"></div>
+</div>
+<span class="font-label-sm text-[11px] text-primary font-bold">10 PM</span>
+</div>
+<!-- 11 PM (Late Dine-In Orders) -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
+<div class="text-[10px] font-bold text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">30k</div>
+<div class="w-full bg-surface-container-highest rounded-t-xl group-hover:bg-primary-container transition-colors" style="height: 54%;"></div>
+<span class="font-label-sm text-[11px] text-outline">11 PM</span>
+</div>
+</div>
+<!-- Bottom Velocity Legend -->
+<div class="flex flex-wrap items-center justify-between gap-4 pt-3 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-5">
+<span class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-primary-container"></span>
+                Dine-In Kitchen Surge
+              </span>
+<span class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-secondary"></span>
+                Beverage &amp; French Toast Velocity
+              </span>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">Peak Throughput: 10:15 PM (52 guests seated)</span>
+</div>
+</div>
+<!-- Operational Channels Breakdown (4 cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-3xl p-6 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline-md text-headline-sm font-bold text-primary">Channel Breakdown</h2>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-low font-bold text-on-surface-variant">4 Streams</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-5">Revenue split across dining rooms, takeaway, and digital dispatch.</p>
+<div class="space-y-4">
+<!-- Channel 1: Table QR Dine-In -->
+<div class="bg-surface-container-low/70 rounded-2xl p-3.5 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-xl bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]" data-icon="qr_code_scanner">qr_code_scanner</span>
+</span>
+<span class="font-label-lg text-label-lg font-bold text-primary">Table QR Dine-In</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-primary">PKR 142,300</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>74 completed orders</span>
+<span class="font-bold text-secondary">50.0% of total</span>
+</div>
+</div>
+<!-- Channel 2: Direct Website / WhatsApp Delivery -->
+<div class="bg-surface-container-low/70 rounded-2xl p-3.5 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-xl bg-emerald-800 text-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]" data-icon="chat">chat</span>
+</span>
+<span class="font-label-lg text-label-lg font-bold text-primary">Direct WhatsApp / Web</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-primary">PKR 76,850</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>41 dispatch orders</span>
+<span class="font-bold text-emerald-800">27.0% (Zero Fee)</span>
+</div>
+</div>
+<!-- Channel 3: Takeaway Pickup -->
+<div class="bg-surface-container-low/70 rounded-2xl p-3.5 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-xl bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]" data-icon="shopping_bag">shopping_bag</span>
+</span>
+<span class="font-label-lg text-label-lg font-bold text-primary">Takeaway Pickup</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-primary">PKR 28,100</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>15 pickup counters</span>
+<span class="font-bold text-outline">9.8%</span>
+</div>
+</div>
+<!-- Channel 4: External Foodpanda -->
+<div class="bg-surface-container-low/70 rounded-2xl p-3.5 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-xl bg-rose-700 text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]" data-icon="moped">moped</span>
+</span>
+<span class="font-label-lg text-label-lg font-bold text-primary">Foodpanda Aggregator</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-primary">PKR 37,400</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>18 courier orders</span>
+<span class="font-bold text-rose-800">13.2% (22% Comm.)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-surface-container mt-4 flex items-center justify-between text-[12px]">
+<span class="text-on-surface-variant font-medium">Blended SST (13% Sindh Tax):</span>
+<span class="font-bold text-primary">PKR 32,746 Recorded</span>
+</div>
+</div>
+</section>
+<!-- SECTION 4 & 5: TOP SELLING ITEMS & INVENTORY ALERTS (SPLIT ROW) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Top Selling Menu Items & Velocity (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-3xl p-6 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)]">
+<div class="flex items-center justify-between mb-5">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]" data-icon="local_fire_department">local_fire_department</span>
+<h2 class="font-headline-md text-headline-sm font-bold text-primary">Top Selling Items &amp; Culinary Velocity</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time dish performance based on Karachi diner demand</p>
+</div>
+<a class="font-label-md text-label-md text-secondary font-bold hover:underline flex items-center gap-1" href="#">
+              Menu Matrix
+              <span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- Ranked List -->
+<div class="space-y-3.5">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-3 rounded-2xl bg-surface-container-low/60 hover:bg-surface-container-low transition-all">
+<div class="flex items-center gap-3.5">
+<div class="w-8 h-8 rounded-xl bg-primary text-on-primary font-bold text-sm flex items-center justify-center font-headline-sm">
+                  1
+                </div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-bold">The Hers Signature Smash Burger</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Double smashed beef chuck, cheddar melt, homemade potato brioche</p>
+</div>
+</div>
+<div class="text-right flex-shrink-0 ml-4">
+<span class="font-label-lg text-label-lg font-bold text-primary block">PKR 59,340</span>
+<span class="inline-block px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold">46 sold</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-3 rounded-2xl bg-surface-container-low/60 hover:bg-surface-container-low transition-all">
+<div class="flex items-center gap-3.5">
+<div class="w-8 h-8 rounded-xl bg-secondary text-on-secondary font-bold text-sm flex items-center justify-center font-headline-sm">
+                  2
+                </div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-bold">Iced Spanish Latte</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Double shot house roast, condensed milk cream layer, artisan ice</p>
+</div>
+</div>
+<div class="text-right flex-shrink-0 ml-4">
+<span class="font-label-lg text-label-lg font-bold text-primary block">PKR 39,440</span>
+<span class="inline-block px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold">58 sold</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between p-3 rounded-2xl bg-surface-container-low/60 hover:bg-surface-container-low transition-all">
+<div class="flex items-center gap-3.5">
+<div class="w-8 h-8 rounded-xl bg-primary-fixed-dim text-on-primary-fixed font-bold text-sm flex items-center justify-center font-headline-sm">
+                  3
+                </div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-bold">Lotus Biscoff French Toast</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Caramelized brioche cube, biscoff drizzle, clotted cream gelato</p>
+</div>
+</div>
+<div class="text-right flex-shrink-0 ml-4">
+<span class="font-label-lg text-label-lg font-bold text-primary block">PKR 31,360</span>
+<span class="inline-block px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold">32 sold</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex items-center justify-between p-3 rounded-2xl bg-surface-container-low/60 hover:bg-surface-container-low transition-all">
+<div class="flex items-center gap-3.5">
+<div class="w-8 h-8 rounded-xl bg-surface-container-high text-on-surface-variant font-bold text-sm flex items-center justify-center font-headline-sm">
+                  4
+                </div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-bold">Truffle Parmesan Fries</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hand-cut russet crisps, white truffle oil, grated aged reggiano</p>
+</div>
+</div>
+<div class="text-right flex-shrink-0 ml-4">
+<span class="font-label-lg text-label-lg font-bold text-primary block">PKR 18,720</span>
+<span class="inline-block px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold">39 sold</span>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="flex items-center justify-between p-3 rounded-2xl bg-surface-container-low/60 hover:bg-surface-container-low transition-all">
+<div class="flex items-center gap-3.5">
+<div class="w-8 h-8 rounded-xl bg-surface-container-high text-on-surface-variant font-bold text-sm flex items-center justify-center font-headline-sm">
+                  5
+                </div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-bold">Pistachio Rose Milk Cake</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Three-milk cardamom sponge, crushed Iranian pistachios, dried rose</p>
+</div>
+</div>
+<div class="text-right flex-shrink-0 ml-4">
+<span class="font-label-lg text-label-lg font-bold text-primary block">PKR 23,520</span>
+<span class="inline-block px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold">24 sold</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Inventory Alerts & Supply Trigger (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-3xl p-6 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[22px]" data-icon="notification_important">notification_important</span>
+<h2 class="font-headline-md text-headline-sm font-bold text-primary">Raw Material &amp; Stock Alerts</h2>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">3 Critical</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Active prep stations requiring immediate store room replenishment.</p>
+<div class="space-y-3">
+<!-- Alert 1 -->
+<div class="border border-error-container/80 bg-surface-container-low rounded-2xl p-4 flex items-start gap-3">
+<span class="material-symbols-outlined text-error text-[24px] mt-0.5" data-icon="bakery_dining">bakery_dining</span>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<h5 class="font-label-lg text-label-lg font-bold text-primary">Fresh Brioche Buns</h5>
+<span class="text-error font-bold font-label-sm text-label-sm">Only 18 units left</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Automated reorder dispatched to Clifton Bakery Partner (Expected: 11:30 PM tonight).</p>
+<div class="mt-2.5 flex items-center gap-2">
+<button class="px-3 py-1 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm font-bold">Acknowledge</button>
+<button class="px-3 py-1 rounded-xl bg-surface-variant text-primary font-label-sm text-label-sm font-semibold">Vendor Dial</button>
+</div>
+</div>
+</div>
+<!-- Alert 2 -->
+<div class="border border-outline-variant/40 bg-surface-container-low rounded-2xl p-4 flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px] mt-0.5" data-icon="set_meal">set_meal</span>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<h5 class="font-label-lg text-label-lg font-bold text-primary">Wagyu Chuck Blend</h5>
+<span class="text-secondary font-bold font-label-sm text-label-sm">6.2 kg left</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Enough for approximately 38 burgers. Peak dessert hour approaching.</p>
+</div>
+</div>
+<!-- Alert 3 -->
+<div class="border border-outline-variant/40 bg-surface-container-low rounded-2xl p-4 flex items-start gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-[24px] mt-0.5" data-icon="coffee">coffee</span>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<h5 class="font-label-lg text-label-lg font-bold text-primary">Oat Milk Barista Edition</h5>
+<span class="text-on-surface-variant font-bold font-label-sm text-label-sm">Low stock (4 Liters)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Standard cow milk and condensed milk reserves intact.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-outline">Inventory Audited: 4:30 PM by Sous Chef</span>
+<button class="font-label-md text-label-md text-secondary font-bold hover:underline flex items-center gap-1">
+              Full Store Log
+              <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- SECTION 6: RECENT LIVE ORDERS FEED TABLE -->
+<section class="bg-surface-container-lowest rounded-3xl p-6 shadow-[0_4px_20px_-4px_rgba(61,35,23,0.06)]">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]" data-icon="table_restaurant">table_restaurant</span>
+<h2 class="font-headline-md text-headline-sm font-bold text-primary">Real-Time Floor &amp; Order Pipeline</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live feed of pending, cooking, and bill-requested dining parties</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-1.5 rounded-2xl bg-surface-container-low text-primary font-label-md text-label-md font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]" data-icon="filter_list">filter_list</span>
+              All Channels
+            </button>
+<button class="px-3.5 py-1.5 rounded-2xl bg-primary-container text-on-primary font-label-md text-label-md font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]" data-icon="refresh">refresh</span>
+              Auto-Sync On
+            </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-surface-container font-label-sm text-label-sm text-outline uppercase tracking-wider">
+<th class="py-3 px-4">Order ID &amp; Time</th>
+<th class="py-3 px-4">Guest / Table</th>
+<th class="py-3 px-4">Channel</th>
+<th class="py-3 px-4">Items Summary</th>
+<th class="py-3 px-4">Bill Amount</th>
+<th class="py-3 px-4">Status</th>
+<th class="py-3 px-4 text-right">Quick Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md">
+<!-- Order 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-4">
+<span class="font-label-lg text-label-lg font-bold text-primary block">#HC-2094</span>
+<span class="font-body-sm text-body-sm text-outline text-[11px]">2 mins ago (10:24 PM)</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-label-md text-label-md font-bold text-primary">Table 07 (Patio)</span>
+<span class="block text-body-sm font-body-sm text-on-surface-variant">4 Guests • Bill Requested</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]" data-icon="table_bar">table_bar</span>
+                    Table QR
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-body-sm">
+                  2x Smash Burger, 2x Spanish Latte, 1x Biscoff Toast
+                </td>
+<td class="py-3.5 px-4">
+<span class="font-label-lg text-label-lg font-bold text-primary">PKR 5,420</span>
+<span class="block text-[11px] text-outline font-body-sm">Cash / Card split</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Bill Requested
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="px-3.5 py-1.5 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm font-bold hover:brightness-110 active:scale-95 transition-all">
+                    Settle &amp; Clear
+                  </button>
+</td>
+</tr>
+<!-- Order 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-4">
+<span class="font-label-lg text-label-lg font-bold text-primary block">#HC-2093</span>
+<span class="font-body-sm text-body-sm text-outline text-[11px]">7 mins ago (10:19 PM)</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-label-md text-label-md font-bold text-primary">Bilal Mansoor</span>
+<span class="block text-body-sm font-body-sm text-on-surface-variant">DHA Phase 6 • Delivery</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-900 font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]" data-icon="chat">chat</span>
+                    WhatsApp Direct
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-body-sm">
+                  1x Pistachio Rose Milk Cake, 2x Cortado Special
+                </td>
+<td class="py-3.5 px-4">
+<span class="font-label-lg text-label-lg font-bold text-primary">PKR 2,450</span>
+<span class="block text-[11px] text-emerald-800 font-body-sm">Prepaid Raast Instant</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-900 font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-700"></span>
+                    Rider Dispatched
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="px-3.5 py-1.5 rounded-xl bg-surface-container-high text-primary font-label-sm text-label-sm font-bold hover:bg-surface-variant active:scale-95 transition-all">
+                    Track Rider
+                  </button>
+</td>
+</tr>
+<!-- Order 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-4">
+<span class="font-label-lg text-label-lg font-bold text-primary block">#HC-2092</span>
+<span class="font-body-sm text-body-sm text-outline text-[11px]">11 mins ago (10:15 PM)</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-label-md text-label-md font-bold text-primary">Table 12 (Main Bistro)</span>
+<span class="block text-body-sm font-body-sm text-on-surface-variant">2 Guests • Dining</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]" data-icon="table_bar">table_bar</span>
+                    Table QR
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-body-sm">
+                  1x Lotus Biscoff French Toast, 1x Flat White
+                </td>
+<td class="py-3.5 px-4">
+<span class="font-label-lg text-label-lg font-bold text-primary">PKR 1,780</span>
+<span class="block text-[11px] text-outline font-body-sm">Open Tab</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                    Kitchen Plating
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="px-3.5 py-1.5 rounded-xl bg-surface-container-high text-primary font-label-sm text-label-sm font-bold hover:bg-surface-variant active:scale-95 transition-all">
+                    KDS View
+                  </button>
+</td>
+</tr>
+<!-- Order 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-4">
+<span class="font-label-lg text-label-lg font-bold text-primary block">#HC-2091</span>
+<span class="font-body-sm text-body-sm text-outline text-[11px]">18 mins ago (10:08 PM)</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-label-md text-label-md font-bold text-primary">Takeaway Counter</span>
+<span class="block text-body-sm font-body-sm text-on-surface-variant">Ayesha Khan (Walk-in)</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]" data-icon="shopping_bag">shopping_bag</span>
+                    Pickup
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-body-sm">
+                  3x Iced Spanish Latte, 1x Cinnamon Cruffin
+                </td>
+<td class="py-3.5 px-4">
+<span class="font-label-lg text-label-lg font-bold text-primary">PKR 2,820</span>
+<span class="block text-[11px] text-tertiary font-body-sm">Paid POS</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-900 font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                    Ready for Pickup
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="px-3.5 py-1.5 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold hover:brightness-105 active:scale-95 transition-all">
+                    Handover Done
+                  </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+<!-- MOBILE BOTTOM NAVIGATION (Shared Component BottomNavBar execution for responsive viewport) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 bg-surface/95 backdrop-blur-md shadow-[0_-4px_24px_rgba(61,35,23,0.08)]">
+<!-- 1. Menu (Destination) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:text-primary transition-colors active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="menu_book">menu_book</span>
+<span class="font-label-sm text-label-sm">Menu</span>
+</a>
+<!-- 2. Favorites -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:text-primary transition-colors active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+<span class="font-label-sm text-label-sm">Favorites</span>
+</a>
+<!-- 3. Active Order (Semantic Match: Live Orders / Dashboard operations active) -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary rounded-2xl px-3 py-1.5 transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="receipt_long" data-weight="fill" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="font-label-sm text-label-sm font-bold">Active Order</span>
+</a>
+<!-- 4. Assistance -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:text-primary transition-colors active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="concierge">concierge</span>
+<span class="font-label-sm text-label-sm">Assistance</span>
+</a>
+</nav>
+</div>
+</body></html>

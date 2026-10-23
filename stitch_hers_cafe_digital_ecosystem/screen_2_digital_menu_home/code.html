@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hers Cafe Karachi — Dine-In Menu</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-tint": "#785748",
+            "inverse-on-surface": "#f3f0eb",
+            "surface-container-low": "#f6f3ee",
+            "secondary": "#97472e",
+            "primary": "#250f05",
+            "primary-fixed": "#ffdbcc",
+            "surface-container-highest": "#e5e2dd",
+            "surface-variant": "#e5e2dd",
+            "on-error": "#ffffff",
+            "inverse-surface": "#31302d",
+            "primary-container": "#3d2317",
+            "surface-container": "#f0ede9",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#2d150a",
+            "inverse-primary": "#e9bdab",
+            "outline": "#82746f",
+            "on-secondary-fixed": "#3a0a00",
+            "on-surface-variant": "#504440",
+            "surface-bright": "#fcf9f4",
+            "surface-dim": "#dcdad5",
+            "on-secondary-container": "#772f18",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "on-primary-fixed-variant": "#5e4032",
+            "error-container": "#ffdad6",
+            "tertiary": "#001a0a",
+            "background": "#fcf9f4",
+            "on-secondary-fixed-variant": "#793019",
+            "outline-variant": "#d4c3bd",
+            "tertiary-fixed": "#b9efc5",
+            "secondary-fixed-dim": "#ffb59f",
+            "primary-fixed-dim": "#e9bdab",
+            "on-tertiary-container": "#699c77",
+            "on-error-container": "#93000a",
+            "surface-container-high": "#ebe8e3",
+            "on-tertiary-fixed-variant": "#1e5031",
+            "tertiary-fixed-dim": "#9dd3aa",
+            "on-background": "#1c1c19",
+            "on-tertiary-fixed": "#00210e",
+            "on-surface": "#1c1c19",
+            "secondary-fixed": "#ffdbd0",
+            "surface": "#fcf9f4",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-container": "#af8878",
+            "secondary-container": "#fe997a",
+            "on-tertiary": "#ffffff",
+            "tertiary-container": "#003117"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-desktop": "1.5rem",
+            "margin-desktop": "3rem",
+            "space-xs": "0.25rem",
+            "margin": "1rem",
+            "space-md": "1rem",
+            "margin-tablet": "2rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "gutter": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "headline-sm": ["Plus Jakarta Sans"],
+            "display-lg": ["Playfair Display"],
+            "title-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "label-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Playfair Display"]
+          },
+          "fontSize": {
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .card-shadow {
+      box-shadow: 0 4px 20px -4px rgba(61, 35, 23, 0.06);
+    }
+    .card-shadow-hover {
+      box-shadow: 0 8px 30px -6px rgba(61, 35, 23, 0.12);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md min-h-screen pb-36">
+<!-- TopAppBar Component (from Shared Components JSON with Mobile Brand Integrations) -->
+<header class="bg-surface/90 dark:bg-inverse-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm sticky top-0 z-40 w-full transition-all">
+<div class="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
+<!-- Leading: Logo & Brand Identity -->
+<div class="flex items-center gap-2.5">
+<img alt="Hers Cafe Mascot" class="h-10 w-auto object-contain drop-shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCccNeqoAzhHjppzId8_quovwmvkfhx7Y0X4HTQ_HXioKAlpdzRWpdJ8PW61NfrUVFyTNGuHkmwq13nlUgTo0RYC5JWVzhC4pAcb2Tvp7-Ss8MiyLoPnplb6jwTnTdGTrQKRaDBQvlov_bg-2SbQ47D2osf-I-DjxQd43EaXw0X3PMvPUb-osFFzilvKhMZw86idIpzSi_rVQtxWDrpUjJGlhu7aUAJks6brBgY_5NaSIFkJLnAST78tnhs5cWiiheE7aI"/>
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm font-bold text-primary dark:text-inverse-primary tracking-tight leading-none">Hers Cafe</span>
+<span class="text-[10px] font-label-sm text-surface-tint tracking-wider font-semibold uppercase mt-0.5">Karachi Bistro</span>
+</div>
+</div>
+<!-- Trailing: Table Identifier Pill & Server Call Quick Action -->
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1.5 bg-surface-container border border-outline-variant/40 rounded-full py-1.5 px-3 text-on-surface active:scale-95 transition-all">
+<span class="material-symbols-outlined text-secondary text-[16px]" data-icon="table_restaurant" style="font-variation-settings: 'FILL' 1;">table_restaurant</span>
+<span class="font-label-md text-label-md text-primary font-bold">Table 07</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[14px]" data-icon="expand_more">expand_more</span>
+</button>
+<button aria-label="Room service" class="w-9 h-9 flex items-center justify-center rounded-full bg-surface-container-high text-primary hover:bg-surface-container active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="room_service">room_service</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Container -->
+<main class="max-w-7xl mx-auto px-4 pt-4 space-y-6">
+<!-- Search and Filter Bar -->
+<section class="relative">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[20px] pointer-events-none" data-icon="search">search</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/60 rounded-2xl pl-10 pr-12 py-3 text-body-md text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary-container focus:ring-0 transition-colors shadow-sm" placeholder="Search coffee, burgers, pastas, desserts..." type="search"/>
+<button aria-label="Filter menu" class="absolute right-2.5 p-1.5 rounded-xl bg-surface-container text-primary active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]" data-icon="tune">tune</span>
+</button>
+</div>
+</section>
+<!-- Menu Categories (Horizontal Pill Scroll) -->
+<section>
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 -mx-4 px-4">
+<!-- Active Pill: All Items -->
+<button class="flex items-center gap-1.5 bg-primary-container text-on-primary px-4 py-2 rounded-full font-label-lg text-label-lg shrink-0 shadow-sm transition-transform active:scale-95">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container inline-block"></span>
+          All Items
+        </button>
+<!-- Category Pills -->
+<button class="bg-surface-container-lowest border border-outline-variant/60 text-on-surface-variant hover:text-primary px-4 py-2 rounded-full font-label-lg text-label-lg shrink-0 transition-colors active:scale-95">
+          Artisan Coffee
+        </button>
+<button class="bg-surface-container-lowest border border-outline-variant/60 text-on-surface-variant hover:text-primary px-4 py-2 rounded-full font-label-lg text-label-lg shrink-0 transition-colors active:scale-95">
+          Gourmet Burgers
+        </button>
+<button class="bg-surface-container-lowest border border-outline-variant/60 text-on-surface-variant hover:text-primary px-4 py-2 rounded-full font-label-lg text-label-lg shrink-0 transition-colors active:scale-95">
+          Sandwiches &amp; Paninis
+        </button>
+<button class="bg-surface-container-lowest border border-outline-variant/60 text-on-surface-variant hover:text-primary px-4 py-2 rounded-full font-label-lg text-label-lg shrink-0 transition-colors active:scale-95">
+          Fresh Pastas
+        </button>
+<button class="bg-surface-container-lowest border border-outline-variant/60 text-on-surface-variant hover:text-primary px-4 py-2 rounded-full font-label-lg text-label-lg shrink-0 transition-colors active:scale-95">
+          Sweet Bakes
+        </button>
+<button class="bg-surface-container-lowest border border-outline-variant/60 text-on-surface-variant hover:text-primary px-4 py-2 rounded-full font-label-lg text-label-lg shrink-0 transition-colors active:scale-95">
+          Coolers &amp; Shakes
+        </button>
+</div>
+</section>
+<!-- Featured Specials Section (Horizontal Carousel Cards) -->
+<section class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Featured Specials</h2>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Chef's Picks</span>
+</div>
+<!-- Carousel Track -->
+<div class="flex gap-4 overflow-x-auto no-scrollbar -mx-4 px-4 pb-2 snap-x snap-mandatory">
+<!-- Card 1: Chef's Signature Smash Burger -->
+<article class="min-w-[85%] sm:min-w-[340px] snap-center bg-surface-container-lowest rounded-3xl border border-outline-variant/40 overflow-hidden card-shadow flex flex-col justify-between">
+<div class="relative">
+<img class="w-full h-44 object-cover" data-alt="A gourmet smash burger with double juicy beef patties glistening with melted sharp yellow cheddar cheese, savory dark caramelized onions, crisp pickles inside a toasted golden brioche bun. Shot close-up under warm ambient cafe lighting with a soft blurred bistro background in cream and rich espresso hues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsWstvMYvahRAUfsfcd-Yi6dPUiJPWeXYAJc5k1_e1EIsNbqcj1683a31jbf7_-C7P_5ukoOVxpraevktEDTCFj97NI5y6kRI0zx1JvaYZTjx8OnycYB0wOh6CTE1-NnA8S9mwQGHv7g6owsh7Qk3Vl07UJW3HtYZKjmKRnYEee2vFnOBCJzB6IsM2bjsB8bOHrMrK2Awk6Vp2kA5yp5dRerckFcQEhFanAUg8V4OhyBvieSY8-z3hZA"/>
+<!-- Chef's Special Badge -->
+<div class="absolute top-3 left-3 bg-[#FAF0EC] border border-[#E8C5BA] text-[#A34B32] font-label-sm text-label-sm uppercase px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+              Chef's Special
+            </div>
+<!-- Favorite button -->
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-primary-container shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold line-clamp-1">Chef's Signature Smash Burger</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">
+                Double beef patty, melted cheddar, caramelized onions, brioche bun.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="text-body-sm text-on-surface-variant">Price</span>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">Rs. 1,290</p>
+</div>
+<button class="bg-primary-container text-on-primary hover:bg-primary active:scale-95 transition-all px-4 py-2 rounded-2xl flex items-center gap-1.5 shadow-sm">
+<span class="font-label-lg text-label-lg font-bold">Add</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2: Hers Lotus Cheesecake French Toast -->
+<article class="min-w-[85%] sm:min-w-[340px] snap-center bg-surface-container-lowest rounded-3xl border border-outline-variant/40 overflow-hidden card-shadow flex flex-col justify-between">
+<div class="relative">
+<img class="w-full h-44 object-cover" data-alt="Decadent artisanal French toast crafted from thick golden-brown brioche bread soaked in rich vanilla bean custard. Generously drizzled with melted Lotus Biscoff speculoos cream, topped with a velvety quenelle of mascarpone whipped cream and crushed biscuit crumble. Warm natural sunlight in a chic rustic pastry cafe setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQY2b0H87owxFNz4WTi_fmbBFuQ124zzWQkNX1HTgMQQ3_7r_ve7UwmLUIH1l440yQ4htYJ6r5_0UDQtcdhZmrQZYoW2RxTGHjiM5TwbDWM3B5uKkHQd5t5_WF-tty23pehQbcGxTonSOgvDiV2w_xG4635nknlmnpUYXIGFJiCz3rEH9x6kas5iH_KcM5Lwa3Qp8mOwKEjg-FzWCC6FHk86gQrvsHYY8ZzxuNfoInolLiPVNDdRWp1g"/>
+<!-- Best Value / Sweet Favorite Badge -->
+<div class="absolute top-3 left-3 bg-[#FEF7EB] border border-[#F2D7B2] text-[#92400E] font-label-sm text-label-sm uppercase px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]" data-icon="local_fire_department" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+              Must Try
+            </div>
+<!-- Favorite button -->
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-primary-container shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold line-clamp-1">Hers Lotus Cheesecake French Toast</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">
+                Brioche soaked in vanilla custard, Lotus Biscoff spread, whipped mascarpone.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="text-body-sm text-on-surface-variant">Price</span>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">Rs. 1,150</p>
+</div>
+<button class="bg-primary-container text-on-primary hover:bg-primary active:scale-95 transition-all px-4 py-2 rounded-2xl flex items-center gap-1.5 shadow-sm">
+<span class="font-label-lg text-label-lg font-bold">Add</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Popular Items (Asymmetric Bento/Card Layout) -->
+<section class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]" data-icon="trending_up">trending_up</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Popular Right Now</h2>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">All Day Cafe</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Popular 1: Iced Spanish Latte -->
+<article class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 p-3 card-shadow flex gap-3.5 items-center hover:card-shadow-hover transition-all">
+<div class="relative w-28 h-28 rounded-xl overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Tall clear glass containing an artisanal iced Spanish latte showing layered textures of rich dark espresso cascading over creamy cold condensed milk and whole milk over crystalline ice cubes. Styled on an organic marble cafe table with morning sunlight in a serene warm atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKYRzqePC2k7IwgQXboDEpuMGMn9nbOT--JZi0aw5FJb-NPbRhVTfCDGb6r0CzYpfxNC0Gsd4gkWfTl0gTGoEpeOm4EOSAfZG7X9nh0CLee4uEevwY8_nRFfkdDPzBwGPDAXWIFDbY5HooSqQNHAVmPal6yck-NM8rOEV78MzfdqmLI9X1LKnHga8KOV3RlGkqA-1F6waoLogpjcqWHSZnfZRwr7nqb32xFLin5QOsToZ5-PpCcTQiCg"/>
+<span class="absolute bottom-1.5 left-1.5 bg-surface-container-lowest/90 backdrop-blur-xs text-[10px] font-bold text-primary px-1.5 py-0.5 rounded-md">
+              Cold Bar
+            </span>
+</div>
+<div class="flex-1 flex flex-col justify-between h-full py-0.5">
+<div>
+<div class="flex items-center justify-between">
+<span class="bg-[#EBF3EE] text-[#2A5235] font-label-sm text-[10px] px-2 py-0.5 rounded-full font-bold">Bestseller</span>
+</div>
+<h3 class="font-headline-sm text-title-md text-primary font-bold mt-1 line-clamp-1">Iced Spanish Latte</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+                Condensed milk drizzle, double shot espresso, velvety milk.
+              </p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1">
+<span class="font-headline-sm text-title-md text-primary font-bold">Rs. 680</span>
+<button aria-label="Add Iced Spanish Latte" class="w-8 h-8 rounded-xl bg-primary-container text-on-primary flex items-center justify-center active:scale-90 transition-transform shadow-xs">
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Popular 2: Crispy Buttermilk Chicken Sandwich -->
+<article class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 p-3 card-shadow flex gap-3.5 items-center hover:card-shadow-hover transition-all">
+<div class="relative w-28 h-28 rounded-xl overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Crispy golden deep-fried buttermilk chicken breast sandwich served on a shiny glazed artisanal brioche bun with glistening spicy honey glaze, crisp tangy purple cabbage slaw, and creamy fresh herb mayonnaise. Warm food photography style emphasizing texture and appetite appeal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu-ZVxAZJXRN6eLRf4m26-bQKGhUzJ68Bk6phOTORutZHC53DnwRzB0IGITXNmmcgzgRRnqe-MuRO-1ltdehOQeMIDPeWMUHrET1EvVgdb4EEQLc3oxAcWANlNzukm1OZyf8k5rdryLpDDUwaXbfj5qJoVcmx4Pf2i9jE_ApA2mqPuMl7q39nqbhwERkIH4MWf7FKSyl8X8EJ2754H7MoBgE0AsdlXlcKYKmTftwc1kWhcZRTmg8sNEw"/>
+<span class="absolute bottom-1.5 left-1.5 bg-[#FDEFEF] text-[#991B1B] text-[10px] font-bold px-1.5 py-0.5 rounded-md flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[10px]" data-icon="local_fire_department" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+              Spicy
+            </span>
+</div>
+<div class="flex-1 flex flex-col justify-between h-full py-0.5">
+<div>
+<div class="flex items-center justify-between">
+<span class="bg-[#FEF7EB] text-[#92400E] font-label-sm text-[10px] px-2 py-0.5 rounded-full font-bold">Gourmet Bun</span>
+</div>
+<h3 class="font-headline-sm text-title-md text-primary font-bold mt-1 line-clamp-1">Crispy Buttermilk Chicken Sandwich</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+                Spicy honey glaze, purple slaw, herb mayo.
+              </p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1">
+<span class="font-headline-sm text-title-md text-primary font-bold">Rs. 1,080</span>
+<button aria-label="Add Crispy Buttermilk Chicken Sandwich" class="w-8 h-8 rounded-xl bg-primary-container text-on-primary flex items-center justify-center active:scale-90 transition-transform shadow-xs">
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Popular 3: Creamy Truffle Fettuccine -->
+<article class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 p-3 card-shadow flex gap-3.5 items-center hover:card-shadow-hover transition-all">
+<div class="relative w-28 h-28 rounded-xl overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Handmade fresh ribbon fettuccine pasta swirled in an opulent creamy white garlic and parmesan sauce, topped with seared wild earthy mushrooms, aged parmesan cheese curls, and aromatic black truffle oil drizzle. High-end culinary plating in an artisanal ceramic bowl." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_cBEhmc2FPsQ8MVoLrbN_f7xLOYLW2rxJKj-DuKvLhi-bUszlTC6nYgmH9M5eReJ_MMFRqpUxnCF7mJmN19ZIRmwWfqZlxce2EM1ES-4SEDr51pAU-QqkU5cL1G4YC4Pzjzui1YWgbDQ_CqrQquSKqmHxbepmjuijXKNxY-O_x_Up9VT_HnmvRKiFnNqT1Xh1cJLe6prBaDmLgxzStP_R3A_mZbcqQPB8ygI2f0zttjsD88DyqvC0Wg"/>
+<span class="absolute bottom-1.5 left-1.5 bg-[#EBF3EE] text-[#2A5235] text-[10px] font-bold px-1.5 py-0.5 rounded-md flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[10px]" data-icon="eco" style="font-variation-settings: 'FILL' 1;">eco</span>
+              Veg
+            </span>
+</div>
+<div class="flex-1 flex flex-col justify-between h-full py-0.5">
+<div>
+<div class="flex items-center justify-between">
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-[10px] px-2 py-0.5 rounded-full font-bold">Chef Handcrafted</span>
+</div>
+<h3 class="font-headline-sm text-title-md text-primary font-bold mt-1 line-clamp-1">Creamy Truffle Fettuccine</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+                Wild mushrooms, parmesan shavings, truffle oil.
+              </p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1">
+<span class="font-headline-sm text-title-md text-primary font-bold">Rs. 1,420</span>
+<button aria-label="Add Creamy Truffle Fettuccine" class="w-8 h-8 rounded-xl bg-primary-container text-on-primary flex items-center justify-center active:scale-90 transition-transform shadow-xs">
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Dine-In Hospitality Banner -->
+<section class="bg-surface-container-high rounded-3xl p-5 border border-outline-variant/40 flex items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]" data-icon="soup_kitchen">soup_kitchen</span>
+<span class="font-label-md text-label-md font-bold uppercase tracking-wide">Live Karachi Kitchen</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Need customization?</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Inform your server or request modifications directly from your table.</p>
+</div>
+<button class="shrink-0 bg-surface-container-lowest text-primary border border-outline-variant/60 font-label-lg text-label-lg px-4 py-2.5 rounded-2xl active:scale-95 transition-transform flex items-center gap-1">
+<span>Request Notes</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="edit_note">edit_note</span>
+</button>
+</section>
+</main>
+<!-- Sticky Bottom Cart Floating Pill (Style Guidance specification) -->
+<aside class="fixed bottom-16 left-0 w-full z-40 px-4 pointer-events-none mb-2">
+<div class="max-w-md mx-auto pointer-events-auto">
+<div class="bg-primary-container/95 backdrop-blur-md text-on-primary p-2.5 pl-4 rounded-full shadow-[0_8px_30px_rgba(61,35,23,0.3)] border border-outline/30 flex items-center justify-between transition-transform active:scale-98">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-bold text-label-md">
+            2
+          </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary-fixed">Current Dine-In Tray</span>
+<span class="font-headline-sm text-title-md font-bold text-on-primary">Rs. 1,970</span>
+</div>
+</div>
+<button class="bg-secondary text-on-secondary px-5 py-2.5 rounded-full font-label-lg text-label-lg flex items-center gap-1.5 shadow-sm hover:brightness-110 active:scale-95 transition-all">
+<span>View Order</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- BottomNavBar Component (Executed strictly from Shared Components JSON) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 bg-surface/95 dark:bg-inverse-surface/95 backdrop-blur-md border-t border-outline-variant/30 shadow-[0_-4px_24px_rgba(61,35,23,0.08)]">
+<!-- Tab 1: Menu (Active State as per JSON instructions & semantic intent) -->
+<a class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary-fixed text-on-primary dark:text-on-primary-fixed rounded-2xl px-3 py-1.5 transition-all active:scale-95" href="#menu">
+<span class="material-symbols-outlined text-[20px]" data-icon="menu_book" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="text-label-sm font-label-sm font-bold mt-0.5">Menu</span>
+</a>
+<!-- Tab 2: Favorites -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-3 py-1.5 hover:text-primary dark:hover:text-inverse-primary transition-colors active:scale-95" href="#favorites">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+<span class="text-label-sm font-label-sm mt-0.5">Favorites</span>
+</a>
+<!-- Tab 3: Active Order -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-3 py-1.5 hover:text-primary dark:hover:text-inverse-primary transition-colors active:scale-95 relative" href="#order">
+<span class="material-symbols-outlined text-[20px]" data-icon="receipt_long">receipt_long</span>
+<span class="text-label-sm font-label-sm mt-0.5">Active Order</span>
+<span class="absolute top-1 right-2 w-2 h-2 rounded-full bg-secondary"></span>
+</a>
+<!-- Tab 4: Assistance -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-3 py-1.5 hover:text-primary dark:hover:text-inverse-primary transition-colors active:scale-95" href="#assistance">
+<span class="material-symbols-outlined text-[20px]" data-icon="concierge">concierge</span>
+<span class="text-label-sm font-label-sm mt-0.5">Assistance</span>
+</a>
+</nav>
+</body></html>
